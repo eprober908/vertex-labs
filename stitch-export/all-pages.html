@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETHER_LABS | Next-Gen Neural Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eefc",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { background-color: #070e1b; color: #e2e8fb; font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .glass-card { background: rgba(28, 38, 57, 0.4); backdrop-filter: blur(20px); }
+      .inner-bevel-light { box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5); }
+      .glow-cyan { box-shadow: 0 0 20px rgba(0, 238, 252, 0.15); }
+      .text-glow-primary { text-shadow: 0 0 12px rgba(143, 245, 255, 0.4); }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-['Space_Grotesk']">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Artifacts</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Process</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Neural_Network</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-['Space_Grotesk'] font-bold text-xs uppercase tracking-widest scale-100 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(0,238,252,0.3)]">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<!-- SideNav (Desktop Only) -->
+<aside class="hidden xl:flex h-screen w-64 fixed left-0 top-0 z-40 flex-col pt-24 pb-8 px-6 space-y-6 bg-slate-950/60 backdrop-blur-3xl tonal-shift shadow-2xl shadow-cyan-900/20">
+<div class="mb-4">
+<div class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px] text-purple-400">STRATA_CATEGORIES</div>
+<div class="text-[8px] text-slate-500 font-mono">V0.1_BETA</div>
+</div>
+<nav class="space-y-4">
+<div class="flex items-center gap-4 py-3 px-4 text-purple-400 bg-purple-500/10 rounded-r-full border-r-4 border-purple-500 transition-transform duration-300">
+<span class="material-symbols-outlined text-lg">psychology</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px]">Generative AI</span>
+</div>
+<div class="flex items-center gap-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-lg">hub</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px]">Web3 Systems</span>
+</div>
+<div class="flex items-center gap-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-lg">layers</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px]">Spatial UI</span>
+</div>
+<div class="flex items-center gap-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-lg">memory</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px]">Neural Architectures</span>
+</div>
+<div class="flex items-center gap-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-lg">biotech</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-[10px]">Bio-Digital</span>
+</div>
+</nav>
+</aside>
+<main class="xl:pl-64">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-8">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 scale-110" data-alt="Massive 3D abstract glass sculpture glowing with cyan and purple light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1sGfxXq8WSd_FX62eNfxwb_URrCiwJ6efn_cwVjuSz7wsyFWpzBvJT-YGub88Y5eigNbN0RV_2FllXMbAbj47dsq_VKFtY64jAuDw3CKZPIH2yZjBFn1nVmnRG51R5RUliopAJhO4K4jZPB3Mfvl1pm2WdrME6GhbwcwcD-I6AJWXqTeucf0PBSMXYfzQAH1zR0W2WIov_OTBk0Y8hF-iDV1qoGefIh3QadgkMarE5QPKW7AA_j4DjZ9-mwo6ZfBs8P78nfPBCDE"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-5xl">
+<div class="mb-6 inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary">Intelligence Formed in the Void</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] text-glow-primary">
+                    FORGING THE <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">SYNTHETIC_ETHER</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+                    We engineer high-fidelity digital artifacts using neural architectures and bio-digital logic. Your vision, rendered in impossible dimensions.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-10 py-5 rounded-lg font-headline font-bold text-sm tracking-widest transition-all hover:shadow-[0_0_30px_rgba(143,245,255,0.4)] hover:-translate-y-1">
+                        INITIALIZE_STREAM
+                    </button>
+<button class="px-10 py-5 rounded-lg border border-outline-variant bg-surface-variant/20 backdrop-blur-lg font-headline font-bold text-sm tracking-widest text-on-surface hover:bg-surface-variant/40 transition-all">
+                        VIEW_ARCHIVE
+                    </button>
+</div>
+</div>
+</section>
+<!-- Solutions Bento Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-4 text-glow-primary">SOLUTIONS_MATRIX</h2>
+<div class="h-1 w-24 bg-gradient-to-r from-primary to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- AI Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light p-1">
+<div class="relative h-[400px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract 3D neural network visualizing AI flow in cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ZOKwV93HzhGn7z345ZUrl2LbUtDlnThR3ouvasmUi7AtrNcijRalvWxt6DpMUcohZvs6OF3uk1b3RclpJpVPQrrJwSdkHReTSWm2yi9FSosz5MeUHa_hHLbhmYBeQZcGiJKJMbQ0Sf-FPzghYxjXhHNilp990SmgaOkJ7KpismezjWlgxb9eaLRND93iY6-4qlk12-rK8s1bgiHe3ARqXCHlyTR-8H2dtD-fmX9wnuyDHXx5zYWhsFIU8z-4QKsGpgtPkxfSx4TX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary mb-2 block">MODULE_01</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Neural Architecture</h3>
+<p class="text-on-surface-variant max-w-md font-body">Deploying custom LLMs and generative pipelines that integrate seamlessly into legacy infrastructure.</p>
+</div>
+</div>
+</div>
+<!-- Web3 Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light p-1">
+<div class="relative h-[400px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Glowy 3D cube structures representing blockchain data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAFP_SVMplpTWX5zob3CvnwzlfeTqtmKhn0oYMfvb92RG_abkIgwTucAkLsbKyeKo5P6htiS0o50WBnlLqQeVGUMKjAZ2HEg5yhbXO8jwjc5UO9TY3_ajOF9bmZbY3CfbKQnkIXzMdi2dxZJ4dfvP8GE4BoYstKX8cp9_MExPDJ-9_GXkrYJ_FbH5bVY5Wb7sNGEXK_2Dxd37lZzZpW-d1GQWPGZEPBm8epW0SkcHUiJttq-_iUW_tUbcBTCdlL4jJp-8SeH4ZF5W-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-secondary mb-2 block">MODULE_02</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Web3 Systems</h3>
+<p class="text-on-surface-variant text-sm font-body">Secure, decentralized protocols built for the next era of value exchange.</p>
+</div>
+</div>
+</div>
+<!-- Spatial UI Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light p-1">
+<div class="relative h-[400px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="3D floating user interface elements in dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiFNr-ifOr5p_SnEB9NhzpCxF27GFE_pHh14xlQe2ERVwQ-x5-3ZMlREIgEiBGDM562HjwU9K6KHOEt2Dkd49DnHR49UxsRhToHCw2a7kFk8R_VSe06o1cwl2-6hIRMM-J3eTeKFuG4k3ofI3Os2SmbU5MUDKxZPnDIExFw-DAEhzO1kIOdZqyHkX_VJO1snQ9UhRaycn_7SNUnNYyPho73isQ3U184EWvhLjlU2Axy6r6sVA3Q-cNusC5QEXIKeKbOONtcgZxUnFf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-tertiary mb-2 block">MODULE_03</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Spatial UI</h3>
+<p class="text-on-surface-variant text-sm font-body">Immersive experiences for AR/VR and the spatial computing revolution.</p>
+</div>
+</div>
+</div>
+<!-- Mobile Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light p-1">
+<div class="relative h-[400px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek glass mobile phone rendering with liquid gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8lOVfQb_FmP3MsroeRg0-M6Z0G2luPKwlq0N6y1ao0sevZIKFIJ4ZB18WEUFmqG4X3Upqitk-4eVqD_Om57ONLnxK_-sNIq7r9P9j6TrFnrl86gC9jDY6naOrsZhY4CYGQ-QVF_bjUPE-4rL0rngYlyfxb0MA-EbveGqlYtq-D4NVZMA0gIy0QkUbMrkxit10MozjEsllcD5zk8si4yRcRlAxqHu_hvmUHTvBPaaGXaDRwmfJJQ12CW_qUl7Gb_b266asVw1vDNJX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary-container mb-2 block">MODULE_04</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Hyper-Responsive Mobility</h3>
+<p class="text-on-surface-variant max-w-md font-body">Blazing fast mobile native applications optimized for low-latency neural data streams.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-6 uppercase">The_Extraction_Process</h2>
+<p class="font-body text-on-surface-variant">Moving from raw data to refined experience through our proprietary four-stage methodology.</p>
+</div>
+<div class="font-label text-[10px] tracking-[0.5em] text-slate-600 border-b border-slate-800 pb-2">SEQ_001_TO_SEQ_004</div>
+</div>
+<div class="space-y-32">
+<!-- Step 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="text-6xl font-black text-primary/10 font-headline mb-4">01</div>
+<h3 class="font-headline text-3xl font-bold mb-6 tracking-wide">NEURAL_MAPPING</h3>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">We begin by analyzing the underlying logic of your ecosystem, mapping out data dependencies and user psychographics using deep-learning diagnostics.</p>
+<div class="flex gap-4">
+<span class="w-12 h-1 bg-primary rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+</div>
+</div>
+<div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+<img class="w-full aspect-square object-cover" data-alt="Complex 3D geometric nodes connected by glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXRvwrK0VQs2-Tq5wmY-GDB_UaykX_eaqQ0RA9wXPsd7zya79GtyKwD1mYkpKp7NL-mWl4bTONazyBfK_Imt_D3aIrCOckxe5wVKEnfjDYaxvuQplR8O9yRPNCS_-7KFypt53Ge5uol_KnWWRcB4Xs53Nasa8P9KGZYH8A10p78ymlmvx6Px5sOBxNIn4Y60E-3k9EE1DRaNB3-Y5UsheLAPeyzXEHs1nv-TRD4_Si3rX81U1AOck1j1N3W-4PrVNk2EZDE3uoVY53"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="rounded-2xl overflow-hidden shadow-2xl shadow-secondary/10">
+<img class="w-full aspect-square object-cover" data-alt="Liquid metal floating in mid-air with purple reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChOV-G_3Vfn4Gfbk1rdDgdOkYeQBYdBG2lVOLSaaQQ9sGdV5svE63sl-803lADzPwuQsLMNXoeRAVjDaPZ5sIeqkSi68bvBf_5QugHjnv4X1dVGYRsLqPojV9HfDrVwrgbWOI2HwOp3WtCZ0W7TxccavRkeVYqcoavSkLOA1HSXGt12lDWn9gFcTEiGZsLR2CHYztHdua9e4VmBe5xzG5bL7wZwCAyF_jF867_1eLymfwRtEB85pEqTEhwtpjVeTpltwKrbLYwFQ1d"/>
+</div>
+<div>
+<div class="text-6xl font-black text-secondary/10 font-headline mb-4">02</div>
+<h3 class="font-headline text-3xl font-bold mb-6 tracking-wide">SYNTHETIC_DESIGN</h3>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">Our designers utilize algorithmic generative tools to iterate through thousands of layout permutations, selecting the one that maximizes cognitive engagement.</p>
+<div class="flex gap-4">
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-12 h-1 bg-secondary rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="text-6xl font-black text-tertiary/10 font-headline mb-4">03</div>
+<h3 class="font-headline text-3xl font-bold mb-6 tracking-wide">CORE_ENGINEERING</h3>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8">Architecting the backbone. We build low-latency, highly scalable systems that thrive under high-concurrency neural loads.</p>
+<div class="flex gap-4">
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+<span class="w-12 h-1 bg-tertiary rounded-full"></span>
+<span class="w-2 h-1 bg-outline rounded-full"></span>
+</div>
+</div>
+<div class="order-1 md:order-2 rounded-2xl overflow-hidden shadow-2xl shadow-tertiary/10">
+<img class="w-full aspect-square object-cover" data-alt="Dark crystal structures with internal glowing core" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcPP2b70-Mn7_qJQib18Ez-KEsWJ87p3QKhwQaX4DvryD9C9Sg7h3LarlL5gANPa5Y-M__EdKlunH3WtKe68MQA5W58JGjgGfov5Z1tiTqhHpZQKM_IE5iTQxEBks0YAgHgtJ8jMI6CSbTvwys5U0fI9c1-Ep4QT8B3lubJfA7v25qg0djy-nZS_or-Zyvx5m7wMrKG6EWFmE1J_1A-_2MowjaACrq6cICZGMFXZkDvBcw0Pu9CcK5h3mrb3jTJaucAbLRu8k6RDkk"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl font-bold mb-4">VALIDATION_FEEDBACK</h2>
+<p class="font-body text-on-surface-variant">Verified signal from our global network of collaborators.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="glass-card p-10 rounded-2xl inner-bevel-light border border-primary/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D avatar profile with neon glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcm0Wk_kNjvc0EORrTqWbnmo_51SreEN4m7RDXCQe1E8mjSo7blHrh7nEkkZKNtlXM_blEth7_MmlSEnFoeWqmtEYPk82ZnzO4lmQ5JhSO1bu_WFfJLc1xs4TMhYZS4QDj8VqDBDtk8FKfwhP4Zx2yNDw1Ieun2dMv1Mql8Oqu_ZGllUTVyErNQAqHZ-5vFNTXq7uWyWk_mkZ2nxeRB9nVfdS7yfxraZguv72syD_vlSrUFKWN678zAykK6P5Wk_uqIhZYbUzxIjXd"/>
+</div>
+<div>
+<div class="font-headline text-sm font-bold">X_VECTOR_CORP</div>
+<div class="font-label text-[8px] tracking-widest text-primary uppercase">Chief Architect</div>
+</div>
+</div>
+<p class="font-body italic text-on-surface/80 leading-relaxed">"The level of fidelity achieved in the neural mapping phase exceeded our internal benchmarks by 40%. ETHER_LABS is the standard for the synthetic era."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-card p-10 rounded-2xl inner-bevel-light border border-secondary/5 hover:border-secondary/20 transition-all duration-500 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-secondary/20">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D orb with purple glass textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPQDyg-gw_r0ebTW0AzkNv42pVpMlGDT65anEznaRsmsnNBVgu66_45Sd-XRRN0StltRavMi8bmm8NaiEJ8V2yYYuU30_WKGXK2fmpksfBBm9gnuwrIpjaaKoY3l0wOZFakMTh3e_K8Rp_w9LWtmIbgqkRREorkZPu1xHucNg-lSsP6-sTWpbHfXKejynULTq5gO6aGhYKnMoxmbdtWsy9I7-NYR4DwuJLFfvjrNK1sl3ueehue5tr-NCFfyxRwCB0CJSIU-yrZfNp"/>
+</div>
+<div>
+<div class="font-headline text-sm font-bold">VOID_MINING</div>
+<div class="font-label text-[8px] tracking-widest text-secondary uppercase">Product Lead</div>
+</div>
+</div>
+<p class="font-body italic text-on-surface/80 leading-relaxed">"We transitioned our entire spatial interface to their design system. The user retention increase was instantaneous. Truly visionary work."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-card p-10 rounded-2xl inner-bevel-light border border-tertiary/5 hover:border-tertiary/20 transition-all duration-500 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-tertiary/20">
+<img class="w-full h-full object-cover" data-alt="Geometric prism with iridescent surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4nkKbsxpFn2UR6MT3F0efolDOCo9ua1nXfJWFcLhOvfPRZSdTP8wHQYiVMgRLp3mEFbRruLrQuAGAHXXf8yzh5LDsNdubJa889Y6UUuPfre6K5bNyJGoyZ6k_EEBOZ4Hz_4a90BTk8GtVI8GVQDFydY5XkFannFPqUbbYyaFT8IE1dcxbBIS9tyMDfSuerOfz8XMOUQznq0-s0glbVhTCi53k7kPt4TBVQ498cTs7b6d2Ep8ZLmy_xDLC3neXK_ZgEFjTvCwTID-6"/>
+</div>
+<div>
+<div class="font-headline text-sm font-bold">ALPHA_NODES</div>
+<div class="font-label text-[8px] tracking-widest text-tertiary uppercase">CTO</div>
+</div>
+</div>
+<p class="font-body italic text-on-surface/80 leading-relaxed">"Their approach to Bio-Digital logic allowed us to solve complex synchronization issues that had stalled our progress for months."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 relative px-8 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+<div class="max-w-4xl mx-auto relative z-10 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black mb-12 tracking-tighter uppercase">Ready_to_Initialize?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<button class="w-full md:w-auto px-12 py-6 bg-primary text-on-primary-fixed font-headline font-black text-sm tracking-[0.2em] rounded-lg transition-all hover:glow-cyan hover:scale-105 active:scale-95">
+                        BEGIN_PROTOCOLS
+                    </button>
+<a class="font-label text-xs tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">REQUEST_TECHNICAL_DEEP_DIVE -&gt;</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 relative overflow-hidden py-20 px-12 border-t border-cyan-900/30 glow-radiance-top">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto relative z-10">
+<div class="md:col-span-2">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-headline mb-4 uppercase">SYNTHETIC_ETHER</div>
+<p class="font-body text-slate-500 max-w-sm text-sm">Forging the next generation of digital infrastructure through neural research and aesthetic precision.</p>
+</div>
+<div class="space-y-4">
+<div class="font-label text-[10px] tracking-[0.2em] text-cyan-500 uppercase">ACCESS_POINTS</div>
+<ul class="space-y-2">
+<li><a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">TERMINAL</a></li>
+<li><a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">ENCRYPTION_POLICY</a></li>
+<li><a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">NEURAL_ACCESS</a></li>
+<li><a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">DATA_STREAM</a></li>
+</ul>
+</div>
+<div class="text-right">
+<div class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-500">©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.</div>
+</div>
+</div>
+<!-- Decorative background text -->
+<div class="absolute -bottom-10 -left-10 text-[20rem] font-black text-slate-900/10 pointer-events-none select-none font-headline">
+                ETHER
+            </div>
+</footer>
+</main>
+</body></html><!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eefc",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #070e1b; color: #e2e8fb; margin: 0; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(40px); background: rgba(28, 38, 57, 0.4); }
+        .hero-glow { background: radial-gradient(circle at 50% 50%, rgba(143, 245, 255, 0.15) 0%, transparent 70%); }
+        .inner-bevel { box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5); }
+        .text-glow-primary { text-shadow: 0 0 12px rgba(143, 245, 255, 0.4); }
+        .parallax-bg { background-attachment: fixed; background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-['Space_Grotesk']">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Artifacts</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Process</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Neural_Network</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label uppercase tracking-widest text-[10px] font-bold px-6 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all scale-100 active:scale-95">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-slate-950/60 backdrop-blur-3xl flex flex-col pt-24 pb-8 px-6 space-y-6 hidden lg:flex">
+<div class="mb-4">
+<h3 class="text-lg font-bold text-white font-label">STRATA_CATEGORIES</h3>
+<p class="text-purple-400 font-label tracking-widest uppercase text-[10px]">V0.1_BETA</p>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-purple-400 bg-purple-500/10 rounded-r-full border-r-4 border-purple-500 group transition-all duration-300" href="#gen-ai">
+<span class="material-symbols-outlined text-xl" data-icon="psychology">psychology</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Generative AI</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#web3">
+<span class="material-symbols-outlined text-xl" data-icon="hub">hub</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Web3 Systems</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#spatial">
+<span class="material-symbols-outlined text-xl" data-icon="layers">layers</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Spatial UI</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="memory">memory</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Neural Architectures</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="biotech">biotech</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Bio-Digital</span>
+</a>
+</nav>
+</aside>
+<main class="lg:pl-64">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-low via-background to-background"></div>
+<div class="absolute inset-0 hero-glow opacity-50"></div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-6 block">Technological_Ecosystem_V2</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black text-on-surface leading-tight tracking-tighter mb-8 text-glow-primary">
+                    DIMENSIONAL<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">SOLUTIONS</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
+                    We synthesize intelligence, decentralized trust, and immersive spatial computing into a cohesive digital monolith for the future of industry.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed rounded-lg font-label font-bold tracking-widest uppercase text-xs shadow-xl shadow-primary/10 hover:shadow-primary/30 transition-all">
+                        DEPLOY_NODE
+                    </button>
+<button class="px-8 py-4 glass-panel border border-outline-variant/30 rounded-lg font-label text-on-surface tracking-widest uppercase text-xs hover:bg-surface-variant/40 transition-all">
+                        VIEW_SPECS
+                    </button>
+</div>
+</div>
+<!-- Floating 3D Element Placeholder -->
+<div class="absolute top-1/4 right-10 w-64 h-64 opacity-40 blur-sm mix-blend-screen">
+<img class="w-full h-full object-contain" data-alt="Floating abstract 3D crystalline structure glowing blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQpKvFwANtZdTHYWYsGkoL35DL5InWOrNldL7ylbIDx6yRe8GJxRvPsWSU4yBMw0CoRQhSapnzIL3k59oImXn_5G2HMnF9pPSUZPaXGV9AwO5kJSkqBq4b3ZqBReYLjxLEUzQgxWJ5gw2expuETqrtig5TrJmpzwUR0emsP-lKmvOn5gOKk6joFVD2LJ8c3vi9D16MIeXqQK2_Vqu8ApfSSUfZohprS0OX0FBED9jJJKPqLQVvv50l5JgqsAzytwoQy0QvJlfbbIt8"/>
+</div>
+<div class="absolute bottom-1/4 left-10 w-48 h-48 opacity-30 blur-md">
+<img class="w-full h-full object-contain" data-alt="Floating abstract 3D torus shape with purple neon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDbJt9cgE3foDRbBYtcgaQFyG26DziuR_5kLa1cLWbkKF_7oBHB6-yC__6T7iFocN4A66ot0Kih4-3WOk1zg2ZmHlUQD_mtIRQK2nEmXMiZkTLy9AQl5NdmmsVhnKIc1Qvyq-V2foJXHzzoVUmhoSYpVnuozqhqNw373KeeGqfPPnLMl1sghH-BxlcwZ1tjBbT1OG2gUkqxyPZgk7X01YZ85wHBrGFB8ubALPS96fwtytV8SGhy2Cr_HK5qyvfpQIiO4dbWmPs7Wso"/>
+</div>
+</section>
+<!-- Service Category: Generative AI -->
+<section class="relative py-32 overflow-hidden" id="gen-ai">
+<div class="absolute inset-0 z-0 opacity-10 parallax-bg" data-alt="Microscopic neural network fiber pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQuFaWUaFrqi0tQnYPy0pDaKmh2o9kIiAUuTJSYBjXbpe2bZTuwlJ4Q9Hi0o0n5gzfR9Zt6MQzJujOET8NfsbRmcUo7BhFCkwHMkRJP1EKbA7_CnFKvAPGRgCLeseHUhjE6KB1A8zfbUJsRT46GJK9WJxawOQGWfB7oRuvfIMb1CDqo4P0xCK_XkTIF0s5_WBN4sLDaq4OEf8Be0r-ZM242hmvHhv5QSRpoq23BchpdWlQl_zJALPHKgxeSQgyltnt8odhrnj6oyxR');"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<span class="font-label text-secondary tracking-widest uppercase text-sm">STRATUM_01 / COGNITION</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">GENERATIVE_AI_ARCHITECTURES</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            Beyond simple prompts. We build custom LLM pipelines, specialized agentic workflows, and proprietary synthetic data generators that transform raw information into strategic intelligence.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 glass-panel inner-bevel rounded-xl">
+<h4 class="font-label text-primary text-xs tracking-widest mb-3">NEURAL_SYNTHESIS</h4>
+<p class="text-xs text-on-surface-variant">Custom training on enterprise datasets with zero-leakage security.</p>
+</div>
+<div class="p-6 glass-panel inner-bevel rounded-xl">
+<h4 class="font-label text-primary text-xs tracking-widest mb-3">AGENTIC_SWARMS</h4>
+<p class="text-xs text-on-surface-variant">Autonomous multi-agent systems for complex task orchestration.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-secondary/10 blur-3xl rounded-full"></div>
+<img class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_50px_rgba(214,116,255,0.3)]" data-alt="Intricate 3D render of a glowing human brain made of glass and fibers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPoVBIwgl34RROF7LLLJeaIudl2o97vwUI9EFx9Hngi2QWTvywLKvERKkyjb3O8jRc3LRI13fbbcCQhc4eAk9yy48c1OR4qzFJJ3Ok9PgV3gE6rAGNuLOCdwwBynkv1q4m1izNETkAuyPjkSqPPcCwQo2YISUJ-_0df9_6HrHUN_fl1sSidT4BjNVS-vyGcycmFwpMpqWY5VEui4aIOr0e7t69Oga1CiCaNmQIPj7K4pGdq53-7iaeJ_YXppDaqRdoum3IzRZ2TSB2"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Category: Web3 Systems -->
+<section class="relative py-32 overflow-hidden bg-surface-container-low" id="web3">
+<div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #00eefc 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full"></div>
+<img class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_50px_rgba(143,245,255,0.2)]" data-alt="High-detail 3D golden and silver block link representing blockchain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrh0VFuIRFX8qxk_6wUiG63B7VD-FhxiNdFXl4jtrB3KchHBGgtRwMpywpSuCCGPV4GdgXoDJ_LpU9sbTqBdat9_f2Wg4s_7l9yepNFXEc5fs9c2hBtXurI9mtBXRXqvWLzeCMo1_ZJOwFZR0a3bKuU2dHtnKxhOwsInE_D-kOcspl2VS5F6o_y9UUo7hGHO-24aTHccPcpqGWrVAoH651x8Q6NWmbU9N7ygC5ruNWS3oc3X7A_QnQHr4oJJR6UYwOord5M4rwjzs"/>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="hub" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<span class="font-label text-primary tracking-widest uppercase text-sm">STRATUM_02 / PROTOCOL</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">DECENTRALIZED_TRUST_SYSTEMS</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            Engineering secure, scalable Web3 ecosystems. From smart contract auditing to custom L2 chain deployment, we build the rails for the next economy of value.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-6 p-4 bg-surface-container-highest/40 rounded-xl inner-bevel">
+<span class="material-symbols-outlined text-secondary" data-icon="security">security</span>
+<div>
+<h5 class="font-label text-on-surface text-[10px] tracking-widest">CRYPTOGRAPHIC_AUDITS</h5>
+<p class="text-[10px] text-on-surface-variant">Zero-vulnerability assurance for smart protocol layers.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 bg-surface-container-highest/40 rounded-xl inner-bevel">
+<span class="material-symbols-outlined text-secondary" data-icon="token">token</span>
+<div>
+<h5 class="font-label text-on-surface text-[10px] tracking-widest">TOKENOMIC_MODELING</h5>
+<p class="text-[10px] text-on-surface-variant">Mathematical frameworks for sustainable digital economies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Category: Spatial UI -->
+<section class="relative py-32 overflow-hidden" id="spatial">
+<div class="absolute inset-0 z-0 opacity-10" style="background: linear-gradient(90deg, transparent 49.5%, #414857 50%, transparent 50.5%), linear-gradient(0deg, transparent 49.5%, #414857 50%, transparent 50.5%); background-size: 100px 100px;"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
+</div>
+<span class="font-label text-tertiary tracking-widest uppercase text-sm">STRATUM_03 / INTERFACE</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">SPATIAL_COMPUTING_UX</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            The screen is no longer a boundary. We design immersive interfaces for AR/VR environments, utilizing gaze-tracking, gesture-recognition, and spatial audio to redefine user interaction.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Volumetric_Design</span>
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Haptic_Feedback</span>
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Mixed_Reality</span>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-tertiary/10 blur-3xl rounded-full"></div>
+<img class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_50px_rgba(172,137,255,0.3)]" data-alt="Floating transparent glass cubes with digital UI elements inside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2H_t5iu3NIXEpvPaL2xjGQ-vmBDEU9nqI4NmIly4LGqFVqO5nbsPMcf7QqnisMXnO7b-SYsTUr5mZLBJ5pJV1AASYujQhxCiNeoDRLarhjnhVetaGRqrRWSPvu_ul_BOS9RHUbviTFKuAD_1xOU97zt-Xw12yaZs9OCVTB-mKYf4L6ZHtbkSZWKFDNMdMZWcB14AvCQems7Ckalf0DPd8BP7--XS_5PrN553nIQv53yzVHzGJcTNwBgZf2ybX_sTiOV6Bo1uv9vXu"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 relative overflow-hidden">
+<div class="max-w-4xl mx-auto glass-panel p-16 rounded-[2rem] text-center relative z-10 border border-outline-variant/10 shadow-2xl">
+<h3 class="font-headline text-4xl font-bold text-on-surface mb-6">READY_TO_INITIALIZE?</h3>
+<p class="font-body text-on-surface-variant mb-12 text-lg">Connect with our neural network to discuss your project requirements.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<input class="bg-surface-container-lowest border-none px-8 py-4 rounded-lg font-label text-xs tracking-widest focus:ring-2 focus:ring-primary outline-none min-w-[300px]" placeholder="ENCRYPTED_EMAIL_ADDRESS" type="email"/>
+<button class="bg-gradient-to-r from-secondary to-tertiary text-white px-10 py-4 rounded-lg font-label font-bold tracking-widest uppercase text-xs hover:scale-105 transition-transform shadow-lg shadow-secondary/20">
+                        OPEN_COMM_CHANNEL
+                    </button>
+</div>
+</div>
+<!-- Texture behind CTA -->
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto relative z-10">
+<div class="col-span-1 md:col-span-1">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-label mb-4">ETHER_LABS</div>
+<p class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-500">©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<h6 class="font-label text-cyan-500 text-[10px] tracking-widest mb-2">DIRECTORY</h6>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">ENCRYPTION_POLICY</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h6 class="font-label text-cyan-500 text-[10px] tracking-widest mb-2">DATA_STREAMS</h6>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">NEURAL_ACCESS</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">DATA_STREAM</a>
+</div>
+<div class="text-right">
+<div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center ml-auto mb-4 border border-cyan-500/20">
+<span class="material-symbols-outlined text-cyan-400" data-icon="arrow_upward">arrow_upward</span>
+</div>
+<span class="font-label text-slate-500 text-[8px] tracking-[0.3em]">TOP_OF_STACK</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
+</footer>
+</main>
+</body></html><!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETHER_LABS // PORTFOLIO_STRATA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eeef",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #070e1b;
+        color: #e2e8fb;
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(28, 38, 57, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .glow-primary {
+        box-shadow: 0 0 20px rgba(143, 245, 255, 0.15);
+      }
+      .inner-bevel {
+        box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .masonry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 1.5rem;
+      }
+      .span-v-2 { grid-row: span 2; }
+      .span-v-3 { grid-row: span 3; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-headline">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Solutions</a>
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-label uppercase tracking-[0.1em] text-xs" href="#">Artifacts</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Process</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Neural_Network</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-bold uppercase tracking-widest text-[10px] px-6 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all scale-95 active:scale-90">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex h-screen w-64 fixed left-0 top-0 z-40 bg-slate-950/60 backdrop-blur-3xl flex-col pt-24 pb-8 px-6 space-y-6 shadow-2xl shadow-cyan-900/20">
+<div class="mb-8">
+<h3 class="font-headline tracking-widest uppercase text-[10px] text-white font-bold">STRATA_CATEGORIES</h3>
+<p class="text-[8px] text-primary/50 font-label tracking-widest mt-1">V0.1_BETA</p>
+</div>
+<nav class="flex flex-col space-y-4">
+<button class="flex items-center space-x-4 text-purple-400 bg-purple-500/10 rounded-r-full border-r-4 border-purple-500 p-3 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Generative AI</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Web3 Systems</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Spatial UI</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Neural Architectures</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Bio-Digital</span>
+</button>
+</nav>
+</aside>
+<main class="lg:ml-64 pt-24 min-h-screen">
+<!-- Hero / Filter Section -->
+<header class="px-8 mb-16 relative overflow-hidden">
+<div class="max-w-7xl mx-auto py-12">
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface mb-4">ARTIFACT_GALLERY</h1>
+<p class="font-body text-on-surface-variant max-w-2xl text-lg leading-relaxed">
+                    A curated dimension of high-fidelity neural outputs, decentralized protocols, and spatial interfaces engineered within the Ether framework.
+                </p>
+<div class="mt-12 flex flex-wrap gap-4">
+<button class="px-6 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary font-label text-[10px] tracking-widest uppercase shadow-[0_0_15px_rgba(143,245,255,0.1)] transition-all hover:bg-primary/20">ALL_UNITS</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">CORE_NEURAL</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">DECENTRALIZED</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">SPATIAL_V01</button>
+</div>
+</div>
+<!-- Decorative Glow Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+</header>
+<!-- Project Grid (Masonry) -->
+<section class="px-8 pb-32">
+<div class="masonry-grid max-w-[1600px] mx-auto">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract iridescent 3D crystal structure glowing blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4VTw9GIA_oQNrkjC83Bq4X-evfO4tGjj-yzjgD3csDHxO9ddrE5JWRma7oEMuecCuXvj2KTtR8V3F2_d2pmWzvODvdxVWTx5IKSsUyuu03IrN5RwqlA6IVlxcWMYzgaj19xLC8lnHOa_tzmIPVya7EM9E2otO_sfKwWhz2Lyw5UGZvRgDv6-5tMM1UIAZGL8OSXQN_6CBnBIIJ4zQzaKz0bspuNyyXk8WAqdjXOEcfQXFDp2YEIZ-HafpdY38Ubc_9gyqbiSz_f54"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-primary tracking-[0.3em] uppercase mb-2 block">NEURAL_NET_V4</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">SYST_CRYSTAL</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">View Deployment // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-3 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="High detail 3D topological map of a digital planet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa_rnzeELWn5iDHxctfbr5wROvc4R6klHZQ2_GUO7Zr4iWqshBdcDX2RbmK2EsQQ9v370VnvfDA2T523KAzXzjU40CcuFyS_togSs2QOMcbR_mZLbA2pdBtn_810Xz8grIc_p80u1LSUjnAO7467MwAehonJpWgFi-UU7Mri5ddM9fu7hy5IapexNqxHuxCxCT8hAENmbOc-mgpa5dnmQrIr4nuw5AwA6ux6p96vbdaNtpxiWW-L15zZxL3DUCMW5bX94givtIrIow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-secondary tracking-[0.3em] uppercase mb-2 block">SPATIAL_INFRA</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">TERRA_01_GEN</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Access Matrix // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract fluid dark waves with neon purple glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuPoSgy5uzjgwVYbiF2LdU6xcwQRcHWxkc1uRdwW3IsKjhFpnAtWSvrSqmsxpUgicTRKcNIUgxgrrN8dU-eSx2PuJUSdN8AW33SX5py3HXpuG9zugL3K50LdztAYOE5RHb3GsNZhYyYYSGn-CbV-N1oeurunkjLVzVpxvHxeds8qYT8UmzSywgRhPm6eKgiJib5qWMsXeW5OMKpKDxm2LtXT55aBoSt803hnWUmeuho3q9D34eXLfqoz9XvO4C7OSCRTV7XKfJneG0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-tertiary tracking-[0.3em] uppercase mb-2 block">BIO_ENCRYPTION</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">PULSE_ENCRYPT</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Stream Data // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-3 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract glowing metallic sphere in a void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzy7JtaSM4peSTPuv5XTdD1y8siZjeSA7d4R1Lb6YZaBqWXdwX9IuY3tvRPOahlmczetlPlSCZ4StzGJzlXJ4CfBqthrYug8uB7feT8Cm0jD1IVJ2e_eDJN1Oao4zkh_rPi6ts3JWK9aKm4JWREh1SvCkDmuxIdJ2vPp_uB_UuYBaUyUuOqjYNhWTVj1GXPcvqUDO0769DrdLyZMDFTUXYgMS8XM_pV2M6nmSu0c8NTG8c6XaTpc8iI7NtUQIC67-epOM12ZPQG56E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-primary tracking-[0.3em] uppercase mb-2 block">PROTO_V02</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">VOID_ORB_CORE</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Initialize // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Detailed 3D procedural grid nodes glowing cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPZ2J1oNZD7Ytm0Z_3bcHDhJNYDrmi7idC_k19TOZn8L60bs1yCPl9mIBzbbzpiQxAUKdeKTs2MWmfDOQTB5L9dodpikWfaXe0RtXCjlikxkbDRHhE5H22_hiq7G3Yc926PLuFIOLnakphULTgFjYdgw4Ts7-2JZ_OXWoXDZPRRbW4EHo9eglwOBgSA66OQn302Kz9FgUMR98VlFjIs_oTNjcY7bCVwpSCKlkbessczFMN1SDzOAMI3mGyvJnOAlt5VtTWjY1X-gAx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-secondary tracking-[0.3em] uppercase mb-2 block">WEB3_NODES</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">STRATA_DEFI</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Verify Hash // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract 3D helix structure with glass material" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAISERMWM3PuEYUmxzZGGRGByjSylwY5t9ZLxMUfcStz58iQF3GeJlv1LYsaGe2OuICdu2dvyyuqgGfP_y0peMlnRb3zwITaNO_Y0H-tdGOe1I9JVa_BDmDe4GXVZJHVDPjppLdAkTjsrFMb5-R3tmj6HXv0X1t-wIKcieRibHqhJ4LrJMd85glWYCcaORyb1y1qjlDNAYn-qYwpcEfv6tLA3x7Jo9C5sP3xdobaUGNH8t8qE67fSztrb5POF2rSCTgPqsjv5FWqROj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-tertiary tracking-[0.3em] uppercase mb-2 block">NEURAL_DNA</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">GEN_SEQUENCE</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Analyze // 2024</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section: Start a Project -->
+<section class="relative py-40 overflow-hidden bg-slate-950 border-t border-cyan-900/30">
+<!-- Background Abstract Renders/Shapes -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-primary rounded-full blur-[180px]"></div>
+<div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary rounded-full blur-[150px]"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">
+                    READY_TO_BUILD_THE_VOID?
+                </h2>
+<p class="font-body text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto">
+                    Collaborate with ETHER_LABS to synthesize your digital footprint into a high-fidelity artifact. Our neural architecture is primed for expansion.
+                </p>
+<!-- Massive 3D Styled Button -->
+<button class="group relative inline-block p-1 rounded-2xl bg-gradient-to-br from-primary via-secondary to-tertiary shadow-[0_20px_60px_-15px_rgba(143,245,255,0.4)] transition-transform hover:scale-105 active:scale-95">
+<div class="px-12 py-6 bg-slate-950 rounded-[14px] flex items-center space-x-4">
+<span class="font-headline text-2xl font-black text-on-surface tracking-widest uppercase">START_MISSION</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30 shadow-[0_-20px_50px_rgba(0,240,255,0.05)]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto relative z-10">
+<div class="col-span-1 md:col-span-2">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-headline mb-6">ETHER_LABS</div>
+<p class="font-label tracking-[0.2em] text-[10px] text-slate-500 uppercase leading-relaxed max-w-xs">
+                        ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED. ENGINEERED_IN_THE_VOID_OF_NEURAL_PROCESSING.
+                    </p>
+</div>
+<div>
+<h4 class="font-headline text-[10px] tracking-widest uppercase text-cyan-500 mb-6">DIRECTORIES</h4>
+<ul class="space-y-4">
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">TERMINAL</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">ENCRYPTION_POLICY</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">NEURAL_ACCESS</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">DATA_STREAM</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-end space-y-6">
+<div class="flex space-x-6">
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="code">code</span>
+</div>
+<div class="flex items-center space-x-2 text-[8px] font-label text-slate-700 tracking-[0.5em] uppercase">
+<span>SYSTEM_STATUS</span>
+<div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+<span class="text-green-500/50">STABLE</span>
+</div>
+</div>
+</div>
+<!-- Background Glow -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-cyan-900/10 to-transparent pointer-events-none"></div>
+</footer>
+</main>
+<!-- Mobile Navigation Shell -->
+<div class="md:hidden fixed bottom-0 w-full z-50 glass-panel border-t border-outline-variant/10 px-4 py-3 flex justify-around items-center">
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[8px] font-label uppercase tracking-widest">GALLERY</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-cyan-400">
+<span class="material-symbols-outlined" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="text-[8px] font-label uppercase tracking-widest">ARTIFACTS</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="stream">stream</span>
+<span class="text-[8px] font-label uppercase tracking-widest">PROCESS</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="text-[8px] font-label uppercase tracking-widest">NODES</span>
+</button>
+</div>
+</body></html><!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eefc",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 38, 57, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .inner-bevel-light {
+        box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .glow-cyan {
+        box-shadow: 0 0 20px rgba(0, 238, 252, 0.3);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-headline">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Artifacts</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Process</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Neural_Network</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-headline font-bold text-xs uppercase tracking-widest scale-95 active:scale-90 transition-all duration-300 hover:glow-cyan">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<main class="relative pt-24">
+<section class="relative min-h-[819px] flex items-center px-8 md:px-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background/20 z-10"></div>
+<img alt="Cinematic abstract digital network landscape" class="w-full h-full object-cover opacity-40 scale-110" data-alt="Futuristic digital network of light and floating data particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnxlM22DxhtWNskB60v_3Hg_tCt20dCXoyiPc23v5pRxqBVhs-k_lRiHx4Wr9P48_r3GSiwKQrzI3YzP9JOM542xF7vnyTxxYR-4EQEEkDe0Jyzl6qIMKoxWab2FYXZvoejV9gugMhmxmTFCQDu_evOqt2Q4zDkjd4q3oj9BwWKiB-NJfz51CJdUgyeg63n1foHrQmzbg3RUT004KMU-IKWvWAmjzwTFXdIl5x--AB7zpIYgpIHJRPAYt-gtwRMvhCtwVjZwLwYYun"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="mb-6 flex items-center space-x-3">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-headline text-primary uppercase tracking-[0.2em] text-xs font-bold">The Visionary Core</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-headline font-black text-on-surface tracking-tighter leading-[0.9] mb-8">
+                    SYNTHESIZING <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">REALITY</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-2xl">
+                    We architect neural conduits between human intuition and machine intelligence, manifesting the next era of digital existence.
+                </p>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(0,238,252,0.4)]">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="hub">hub</span>
+</div>
+<div class="text-6xl font-headline font-black text-primary mb-2">942+</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">NEURAL_NODES_DEPLOYED</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Scalable architecture across distributed quantum networks.</p>
+</div>
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(214,116,255,0.4)]">
+<span class="material-symbols-outlined text-white" data-icon="psychology">psychology</span>
+</div>
+<div class="text-6xl font-headline font-black text-secondary mb-2">12.8ms</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">LATENCY_THRESHOLD</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Near-instantaneous cognitive bridge synchronization.</p>
+</div>
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-tertiary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(172,137,255,0.4)]">
+<span class="material-symbols-outlined text-white" data-icon="memory">memory</span>
+</div>
+<div class="text-6xl font-headline font-black text-tertiary mb-2">∞</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">DATA_FLOW_LIMIT</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Unrestricted throughput via holographic substrate.</p>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-background">
+<div class="max-w-7xl mx-auto mb-20">
+<h2 class="text-5xl font-headline font-bold text-on-surface tracking-tighter mb-4">ARCHITECTS_OF_THE_VOID</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Lead Architect portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" data-alt="Stylized 3D portrait of a tech lead with blue neon light accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfPHY0PKMCHIRUOHO6uTgS4CuaO5moDJtNzGSmEr5W8uzgcI2qrF9uaQD6dLd_Im7fnWX_CdD3h6hS9McpBBS6nKcJ7xQo1zIfvKp7-i6rscQyMh6c1KnQgI2q8W2XDINZh2mFiiqGPJw7bK2U23GHQT9aVx3sIJaA3ceWcmw4y5jfLB7pUxuGUh8vVVo1LPhMxb_wlBVtUt1ByQ0s_YwdWf-BT_HOVvgTU3CFZW3G4VIRbrVsy5RFad8mq10C9MJAH-K4Krp6nRNp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-primary uppercase tracking-widest text-[10px] mb-1">FOUNDING_ARCHITECT</div>
+<div class="text-2xl font-headline font-black text-on-surface">ELARA_SYNTH</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Neural Designer portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" data-alt="Futuristic portrait of a designer with purple geometric overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqaUOGMyHVK-WpRR6_RyWj3wxsqXkQYQQ8MrfhB00rQ0SFPk5qRElHsYbeHg8sxpmi03JDkX-e-OKy5swsg_m2EjUMfccnwmK7ZC2bB625UrwUBfHXHEYDB8CS8yqc_DRmsL45BcyA0ZaoBVHU4nDwgVbkMRvlf4VaUrkWWQwwE5pldUSu7LxGYm_VAG63-ZmLN36uJfXjfiZptb6C5rZ4oJ8LC-QDD6AZKMcgMEhdGqdhH3arlPfmidIHaM55nDLien5tjkXK8A4F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-secondary uppercase tracking-widest text-[10px] mb-1">NEURAL_DESIGNER</div>
+<div class="text-2xl font-headline font-black text-on-surface">KAI_V0ID</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Lead Bio-Engineer portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" data-alt="High-tech portrait of a bio-engineer with glowing digital DNA strand motifs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADn4k2LKM5xVcZDWzpTbtGWrdkKjKaMp_D4ULHgnUIW3qRh-2L7jvo7OkEdco8inwBubtcUJJPSsx-DkTADvpmdNZB5Kr_L1ksA6RLHXtlrtNrhFji06_Mv1XBL4VzV5nkThSKmF3aO7vrkacQfk994w-Hl58mvSVj1VsVDYVVB_SawpTfOzw0O7t2K8Yy-1DQ7cjYCnE9ZVD3wwTk0aJ_4CuGxZWPQmsLvd7PG5NmGhVhPFbPpIvQs1gAwe9wQrozxZPdufAoKV1T"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-tertiary uppercase tracking-widest text-[10px] mb-1">BIO_SYSTEMS_LEAD</div>
+<div class="text-2xl font-headline font-black text-on-surface">SARA_MORPH</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Quantum Lead portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" data-alt="Portrait of a developer with abstract glowing fractals in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn83qn1R-MEI29YeMmQ1xmyR_XFpPL30FyZ904YjTZd8iNsHP4BsO2qF_uaVJJOVxfYDTPepltJlTPHIEy7XkLj7vB_oz-3dYyKHJ1V2tOIBUlIADLl9DitVzzL944AQBlpeFeQ0Nld5NG-d3nnEZS-r4g0zHOQIcJyNfTw2QUySjFtaeS2QafU_mgDP66czdPZBISAdBt3NhZAO2imNUC1Ytkmxoyyrclw9KbSRgMWr5ek2Ps6iRa-hYEgRkJPv2XU5Z81FbSojNr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-primary-dim uppercase tracking-widest text-[10px] mb-1">QUANTUM_STREAMS</div>
+<div class="text-2xl font-headline font-black text-on-surface">JAX_ETHER</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
+<div class="max-w-xl text-center md:text-left">
+<h3 class="text-4xl font-headline font-black text-on-surface mb-6">READY_FOR_UPGRADE?</h3>
+<p class="text-on-surface-variant mb-8 font-light text-lg">Connect your interface to our neural backbone and begin the synthesis of your next architectural masterpiece.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container rounded-lg text-on-primary-container font-headline font-bold uppercase tracking-widest shadow-[0_0_30px_rgba(0,238,252,0.2)] hover:scale-105 transition-transform duration-300">
+                        LAUNCH_TERMINAL
+                    </button>
+<button class="px-10 py-5 glass-card rounded-lg text-on-surface font-headline font-bold uppercase tracking-widest inner-bevel-light hover:bg-surface-container-highest transition-colors duration-300">
+                        VIEW_RECORDS
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-30 shadow-[0_0_20px_rgba(0,240,255,0.5)]"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-headline mb-6">ETHER_LABS</div>
+<div class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-500">©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-headline text-cyan-500 uppercase tracking-widest text-xs mb-2">DIRECTORY</div>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">ENCRYPTION_POLICY</a>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-headline text-cyan-500 uppercase tracking-widest text-xs mb-2">CHANNELS</div>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">NEURAL_ACCESS</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">DATA_STREAM</a>
+</div>
+<div class="flex justify-end space-x-6">
+<div class="w-10 h-10 rounded-full border border-cyan-900/50 flex items-center justify-center hover:bg-cyan-500/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-slate-400 text-lg" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-cyan-900/50 flex items-center justify-center hover:bg-cyan-500/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-slate-400 text-lg" data-icon="language">language</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html># Design System Specification: The Synthetic Ether
+
+## 1. Overview & Creative North Star
+**Creative North Star: "The Luminescent Monolith"**
+
+This design system rejects the flat, sterile nature of modern SaaS interfaces in favor of a "Physical Digital" experience. We are building a world that feels heavy, expensive, and illuminated from within. By merging the soft, extruded volumes of Neomorphism with the refractive, translucent layering of Glassmorphism, we create a UI that feels like a high-end command deck carved from obsidian and light.
+
+To break the "template" look, designers must embrace **Intentional Asymmetry**. Large-scale 3D abstract renders should bleed off the edge of the canvas, while typography should utilize extreme scale shifts—pairing massive `display-lg` headlines with wide-tracked `label-sm` metadata to create an editorial, cinematic feel.
+
+---
+
+## 2. Colors & Surface Philosophy
+The palette is rooted in the void (`#070e1b`) and brought to life through "Neon Bioluminescence."
+
+### The "No-Line" Rule
+**Explicit Instruction:** You are prohibited from using 1px solid borders to define sections. Layout boundaries must be established exclusively through:
+1.  **Tonal Shifts:** Placing a `surface_container_high` card on a `surface` background.
+2.  **Glow Radiance:** Using a soft outer glow from a `primary` or `secondary` source to define an edge.
+3.  **Texture Transitions:** Moving from a solid dark background to a section with a subtle grain or 3D render.
+
+### Surface Hierarchy & Nesting
+Treat the UI as a series of nested obsidian plates.
+*   **Base Layer:** `surface` (#070e1b) – The infinite background.
+*   **Section Layer:** `surface_container_low` (#0c1322) – Large structural blocks.
+*   **Object Layer:** `surface_container_highest` (#1c2639) – Interactive cards and focal points.
+*   **The Glass Overlay:** Use `surface_variant` (#1c2639) at 40-60% opacity with a `20px` to `40px` backdrop-blur for floating navigation or modals.
+
+### Signature Textures & Gradients
+Never use a flat `primary` fill for large areas. Instead, use a **Core Glow Gradient**:
+*   **Primary Action:** Linear gradient (135°) from `primary` (#8ff5ff) to `primary_container` (#00eefc).
+*   **Accent Pulse:** Linear gradient (135°) from `secondary` (#d674ff) to `tertiary` (#ac89ff).
+
+---
+
+## 3. Typography
+We pair the brutalist, futuristic geometry of **Space Grotesk** with the high-legibility, humanist engineering of **Manrope**.
+
+*   **Display & Headlines (Space Grotesk):** These are your "Graphic Anchors." Use `display-lg` for hero statements. Apply a slight `letter-spacing: -0.02em` to headlines to give them a dense, authoritative "printed" look.
+*   **Body & Titles (Manrope):** Use for all functional content. `body-lg` should be the standard for readability.
+*   **Labels (Space Grotesk):** Always uppercase with `letter-spacing: 0.1em`. These act as technical "readouts" and should be paired with `primary` or `secondary` colors to highlight metadata.
+
+---
+
+## 4. Elevation & Depth
+In this system, depth is a product of light and shadow, not lines.
+
+### The Layering Principle
+Achieve lift by stacking tokens. A `surface_container_highest` element sitting on a `surface_dim` background provides enough natural contrast that no border or heavy shadow is required.
+
+### Ambient Shadows & Inner Bevels
+*   **Outer Shadows:** Use `on_surface` color at 5% opacity with a `48px` blur and `24px` Y-offset. This creates a "soft levitation" effect.
+*   **Neomorphic Inner Bevel:** To create the "pressed" or "extruded" look, use two subtle inner shadows:
+    1.  Top-Left: 2px 2px 4px rgba(255, 255, 255, 0.05)
+    2.  Bottom-Right: -2px -2px 4px rgba(0, 0, 0, 0.5)
+
+### The "Ghost Border" Fallback
+If contrast is required for accessibility, use a **Ghost Border**: `outline_variant` at 15% opacity. It should be felt, not seen.
+
+---
+
+## 5. Components
+
+### Buttons: The "Power Cell"
+*   **Primary:** A vibrant gradient fill (`primary` to `primary_container`) with a `0.5rem` (DEFAULT) corner radius. On hover, add a `primary_dim` outer glow.
+*   **Secondary:** Glassmorphic. `surface_variant` at 20% opacity, backdrop-blur 12px, with a `0.5rem` Ghost Border.
+*   **Tertiary:** `label-md` text in `primary` color with a small `4px` glowing dot to the left.
+
+### Inputs: The "Data Portal"
+*   **Field:** `surface_container_lowest` background. No border.
+*   **State:** On focus, the bottom edge gains a 2px `primary` glow, and the entire container subtly lightens to `surface_container_low`.
+
+### Cards: The "Monolith"
+*   **Forbid Dividers.** Separate content using the Spacing Scale (e.g., `8` (2.75rem) between header and body).
+*   **Background:** Use `surface_container_high`. If the card is interactive, increase to `surface_container_highest` on hover.
+
+### 3D Abstract Icons
+Instead of flat SVG icons for major features, use high-detail 3D renders of abstract shapes (spheres, toruses, or crystalline structures) that utilize the `secondary` and `tertiary` color ramps.
+
+---
+
+## 6. Do’s and Don’ts
+
+### Do:
+*   **Use Overlays:** Allow 3D imagery to sit behind text or peek out from behind glassmorphic panels.
+*   **Embrace Negative Space:** Use the `20` (7rem) and `24` (8.5rem) spacing tokens to let the "midnight" background breathe.
+*   **Vary Depth:** Mix sharp, high-surface cards with blurry, soft-focus background elements.
+
+### Don’t:
+*   **Don't use pure white.** Use `on_surface` (#e2e8fb) for text to maintain the "low-light" atmosphere.
+*   **Don't use 100% opaque borders.** They break the illusion of depth and light.
+*   **Don't use flat colors for CTAs.** Everything interactive should have a subtle gradient or light-source effect.
+*   **Don't use standard "Drop Shadows."** Always use tinted ambient shadows that reflect the background color.
