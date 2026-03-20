@@ -1,4 +1,5 @@
 import { PageFrame } from "@/components/site-chrome";
+import { RevealOnScroll } from "@/components/reveal-on-scroll";
 
 const sideNavItems = [
   { icon: "psychology", label: "Generative AI", active: true },
@@ -130,19 +131,21 @@ export default function HomePage() {
       <section className="relative flex min-h-[540px] items-center justify-center overflow-hidden px-5 pt-8 sm:px-6 md:min-h-screen md:px-8 md:pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            className="h-full w-full object-cover opacity-50"
+            className="hero-ken-burns h-full w-full rounded-2xl object-cover opacity-50"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOEVQUK_ac1XjnzWCFtYM6rF1Nrx1OO42NHIicrrR0fimnV2oXMTn32gcB7hYPedCtJ7XsJA6OjYLKgDCW7lqd6CjTQgonRGv1NyVahonQ69aCbJSpjFE-XSGiOJKei71lYzroq3d93R369QpqsMrOCi-zuSDyTDi0YreFyBUqLzQabUVEAJShj1BZFaSHgPoK5a3gSojiIPR4EP45YWjF7MIVzZegMDi914xA3gqOduhO_NHUz9Ex8Zhpa7ELMkL2mRU3WcsF1YQ2"
             alt="Massive 3D abstract glass sculpture glowing with cyan and purple light"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
+          <div className="noise-grain absolute inset-0 opacity-40" />
         </div>
-        <div className="relative z-10 max-w-5xl text-center">
+        <RevealOnScroll as="div" className="relative z-10 max-w-5xl text-center">
           <div className="mb-5 inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 backdrop-blur-md">
             <span className="font-label text-[10px] uppercase tracking-[0.2em] text-primary">
               Intelligence Formed in the Void
             </span>
           </div>
-          <h1 className="text-glow-primary font-headline text-3xl font-black leading-[0.95] tracking-tighter sm:text-4xl md:text-7xl lg:text-8xl">
+          <h1 className="text-glow-primary hero-headline-glow font-headline text-3xl font-black leading-[0.95] tracking-tighter sm:text-4xl md:text-7xl lg:text-8xl">
             FORGING THE <br />{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               SYNTHETIC ETHER
@@ -155,7 +158,7 @@ export default function HomePage() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-6">
             <a
               href="#contact"
-              className="w-full rounded-lg bg-gradient-to-br from-primary to-primary-container px-10 py-5 text-center font-headline text-sm font-bold tracking-widest text-on-primary-container hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(143,245,255,0.4)] sm:w-auto"
+              className="primary-cta w-full rounded-lg bg-gradient-to-br from-primary to-primary-container px-10 py-5 text-center font-headline text-sm font-bold tracking-widest text-on-primary-container hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(143,245,255,0.4)] sm:w-auto"
             >
               INITIALIZE STREAM
             </a>
@@ -166,27 +169,28 @@ export default function HomePage() {
               VIEW ARCHIVE
             </a>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-14 sm:px-6 md:px-8 md:py-24">
-        <div className="mb-10 md:mb-14">
-          <h2 className="text-glow-primary font-headline text-2xl font-bold tracking-tight sm:text-3xl">
+        <RevealOnScroll as="div" className="mb-10 md:mb-14">
+          <h2 className="section-heading text-glow-primary font-headline text-2xl font-bold tracking-tight sm:text-3xl">
             SOLUTIONS MATRIX
           </h2>
           <div className="mt-3 h-0.5 w-20 bg-gradient-to-r from-primary to-transparent" />
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+        </RevealOnScroll>
+        <RevealOnScroll as="div" className="grid grid-cols-1 gap-6 md:grid-cols-12">
           {solutionCards.map((card) => (
             <div
               key={card.title}
-              className={`${card.span} group relative overflow-hidden rounded-xl bg-surface-container-high p-1 inner-bevel-light`}
+              className={`${card.span} premium-card group relative overflow-hidden rounded-2xl bg-surface-container-high p-1 inner-bevel-light`}
             >
-              <div className="relative h-[320px] overflow-hidden rounded-lg sm:h-[350px]">
+              <div className="card-image-vignette relative h-[320px] overflow-hidden rounded-2xl sm:h-[350px]">
                 <img
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105"
                   src={card.image}
                   alt={card.title}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                 <div className={`absolute bottom-0 left-0 p-6 sm:${card.pad}`}>
@@ -203,14 +207,14 @@ export default function HomePage() {
               </div>
             </div>
           ))}
-        </div>
+        </RevealOnScroll>
       </section>
 
       <section id="process" className="relative py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
-          <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <RevealOnScroll as="div" className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
-              <h2 className="mb-4 font-headline text-3xl font-bold uppercase tracking-tight md:mb-6 md:text-4xl">
+              <h2 className="section-heading mb-4 font-headline text-3xl font-bold uppercase tracking-tight md:mb-6 md:text-4xl">
                 The Extraction Process
               </h2>
               <p className="font-body text-on-surface-variant">
@@ -221,12 +225,16 @@ export default function HomePage() {
             <div className="border-b border-slate-800 pb-2 font-label text-[10px] tracking-[0.5em] text-slate-600">
               SEQ 001 TO SEQ 004
             </div>
-          </div>
+          </RevealOnScroll>
           <div className="space-y-14 md:space-y-20">
             {processSteps.map((step, index) => {
               const imageFirst = index % 2 === 1;
               return (
-                <div key={step.title} className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-14">
+                <RevealOnScroll
+                  key={step.title}
+                  as="div"
+                  className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-14"
+                >
                   <div className={imageFirst ? "md:order-2" : ""}>
                     <div className={`mb-3 font-headline text-5xl font-black ${step.accent} md:text-6xl`}>
                       {step.number}
@@ -246,10 +254,15 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <div className={`${imageFirst ? "md:order-1" : ""} overflow-hidden rounded-2xl shadow-2xl ${step.shadow}`}>
-                    <img className="aspect-[4/3] w-full object-cover" src={step.image} alt={step.title} />
+                  <div className={`${imageFirst ? "md:order-1" : ""} premium-card card-image-vignette overflow-hidden rounded-2xl shadow-2xl ${step.shadow}`}>
+                    <img
+                      className="aspect-[4/3] w-full rounded-2xl object-cover"
+                      src={step.image}
+                      alt={step.title}
+                      loading="lazy"
+                    />
                   </div>
-                </div>
+                </RevealOnScroll>
               );
             })}
           </div>
@@ -258,17 +271,19 @@ export default function HomePage() {
 
       <section className="bg-surface-container-low/50 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
-          <div className="mb-12 text-center md:mb-20">
-            <h2 className="mb-4 font-headline text-3xl font-bold md:text-4xl">VALIDATION FEEDBACK</h2>
+          <RevealOnScroll as="div" className="mb-12 text-center md:mb-20">
+            <h2 className="section-heading mb-4 font-headline text-3xl font-bold md:text-4xl">
+              VALIDATION FEEDBACK
+            </h2>
             <p className="font-body text-on-surface-variant">
               Verified signal from our global network of collaborators.
             </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          </RevealOnScroll>
+          <RevealOnScroll as="div" className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {testimonials.map((item) => (
               <div
                 key={item.name}
-                className={`glass-card inner-bevel-light rounded-2xl border p-6 hover:-translate-y-2 md:p-10 ${
+                className={`glass-card premium-card inner-bevel-light rounded-2xl border p-6 md:p-10 ${
                   item.accent === "primary"
                     ? "border-primary/5 hover:border-primary/20"
                     : item.accent === "secondary"
@@ -286,7 +301,12 @@ export default function HomePage() {
                           : "border-tertiary/20"
                     }`}
                   >
-                    <img className="h-full w-full object-cover" src={item.image} alt={item.name} />
+                    <img
+                      className="h-full w-full rounded-2xl object-cover"
+                      src={item.image}
+                      alt={item.name}
+                      loading="lazy"
+                    />
                   </div>
                   <div>
                     <div className="font-headline text-sm font-bold">{item.name}</div>
@@ -306,20 +326,20 @@ export default function HomePage() {
                 <p className="font-body italic leading-relaxed text-on-surface/80">{item.quote}</p>
               </div>
             ))}
-          </div>
+          </RevealOnScroll>
         </div>
       </section>
 
       <section id="contact" className="relative overflow-hidden px-5 py-20 sm:px-6 md:px-8 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <h2 className="mb-8 font-headline text-3xl font-black uppercase tracking-tighter sm:text-4xl md:mb-12 md:text-7xl">
+        <RevealOnScroll as="div" className="relative z-10 mx-auto max-w-4xl text-center">
+          <h2 className="section-heading mb-8 font-headline text-3xl font-black uppercase tracking-tighter sm:text-4xl md:mb-12 md:text-7xl">
             Ready to Initialize?
           </h2>
           <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">
             <a
               href="#"
-              className="w-full rounded-lg bg-primary px-12 py-6 text-center font-headline text-sm font-black tracking-[0.2em] text-on-primary-container hover:scale-105 hover:shadow-[0_0_20px_rgba(0,238,252,0.25)] md:w-auto"
+              className="primary-cta w-full rounded-lg bg-primary px-12 py-6 text-center font-headline text-sm font-black tracking-[0.2em] text-on-primary-container hover:scale-105 hover:shadow-[0_0_20px_rgba(0,238,252,0.25)] md:w-auto"
             >
               BEGIN PROTOCOLS
             </a>
@@ -330,7 +350,7 @@ export default function HomePage() {
               REQUEST TECHNICAL DEEP DIVE -&gt;
             </a>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
     </PageFrame>
   );
