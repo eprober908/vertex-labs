@@ -1,157 +1,205 @@
+import { RevealOnScroll } from "@/components/reveal-on-scroll";
 import { PageFrame } from "@/components/site-chrome";
 
-const metrics = [
-  ["hub", "942+", "NEURAL NODES DEPLOYED", "Scalable architecture across distributed quantum networks.", "bg-primary", "text-primary", "text-on-primary-container", "shadow-[0_0_20px_rgba(0,238,252,0.4)]"],
-  ["psychology", "12.8ms", "LATENCY THRESHOLD", "Near-instantaneous cognitive bridge synchronization.", "bg-secondary", "text-secondary", "text-white", "shadow-[0_0_20px_rgba(214,116,255,0.4)]"],
-  ["memory", "∞", "DATA FLOW LIMIT", "Unrestricted throughput via holographic substrate.", "bg-tertiary", "text-tertiary", "text-white", "shadow-[0_0_20px_rgba(172,137,255,0.4)]"],
+const sideNavItems = [
+  { icon: "language", label: "Neural Nodes" },
+  { icon: "diamond", label: "Latency" },
+  { icon: "stream", label: "Data Flow" },
+  { icon: "group", label: "Architects", active: true },
+  { icon: "bolt", label: "Upgrade" },
+];
+
+const stats = [
+  {
+    icon: "language",
+    value: "942+",
+    label: "Neural Nodes",
+    iconColor: "text-primary",
+    badgeClass: "bg-primary/10",
+    glowClass: "group-hover:shadow-[0_0_40px_rgba(143,245,255,0.3)]",
+    labelClass: "text-primary",
+  },
+  {
+    icon: "diamond",
+    value: "12.8ms",
+    label: "Latency",
+    iconColor: "text-secondary",
+    badgeClass: "bg-secondary/10",
+    glowClass: "group-hover:shadow-[0_0_40px_rgba(214,116,255,0.3)]",
+    labelClass: "text-secondary",
+  },
+  {
+    icon: "stream",
+    value: "Infinite",
+    label: "Data Flow",
+    iconColor: "text-tertiary",
+    badgeClass: "bg-tertiary/10",
+    glowClass: "group-hover:shadow-[0_0_40px_rgba(172,137,255,0.3)]",
+    labelClass: "text-tertiary",
+  },
 ];
 
 const team = [
   {
-    role: "FOUNDING ARCHITECT",
-    name: "ELARA SYNTH",
+    name: "Kaelen Voss",
+    role: "Core Systems Lead",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCcpc8RjMxdOJFcTY50ijsSRApbdYkAuLoSZUbCZYdAi1JjZlJwfsxFe9kM4Y-7DMbdD-sOzoIu8qc4IIZqWnoZ0uOVjH-DpIJSx7zZ14umGsqxdimKA-eaPM-Of-thO9lr4opLeMxwAjQR1Je7UsPJKK1sL44uGg1m2TMctS8A_m8C2wB1cxW6eqd1ZYzIiEFiDQa3GGEqAdL_Q589SnCi-5I5u3SvYSaAksc0PI6wNJH7EN37gY8b__s5cKesH8Xhb70cnFy1xjFN",
-    accent: "text-primary",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBva2zEZz6eyM_s4qt2Z72QM9PoKgunrXsMdufbzyKsx-a_lcX277QkR0vkNjf_yVGIL6sN67ps_HNGyLokgtylbOkVxQEsn_RQVeWe3cBicIqxQI3hVfB814ovisYwXHhSzQk2MaUWlw9xrligsBG2timHVuYMIhqrEfgP1vOqR8uRinI-ZR8TKKGhx49p_Nd7cFqQ88joXcp6laRBMTCLLuSb1oAIW29ZTnCGOqWQUTW-WDr9oHuVUMvItZRsBO_SNvbkbvI8CtsN",
+    borderClass: "border-primary/20",
+    roleClass: "text-primary",
   },
   {
-    role: "NEURAL DESIGNER",
-    name: "KAI VOID",
+    name: "Lyra Thorne",
+    role: "Neural Architect",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDc0xDj8FYwJ-rInDh6V88vYnCTFI4VWHDZaJA0rf96JZwTqEsTx_atI3iFRruWRnH1mdP9FSmdUQrfapJnc8uagpj-fOFeJe325loUtKaf0bvNr72wryLtLIfGTB06YCEj61WK8cdTmonqR9Nfz1r_Z-zMLSZ25h4aFf4p8pQI7AVSS-zMNyTf7HYyg0tmLkn63zZGlg8scYFsIXSSx8m2qzC9o3jhdIPqMHYDRn5bhYYttRNqGGaI9FoTaXVQrRwFGDSXura-_dKA",
-    accent: "text-secondary",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBTqeJvpP2ngXBkC0rjW0ICFQ6DMDf8yZZVjePnN5KHHVkS_1rwbCXhJ_yvW3l_T-wdTQvhSCobGPZchhu9sQP12X8iaMRfrpaMOQGZCkSkfu957aRzpGeLUT-T-QKcjRq1r97nnNtxOrCUX7emaIsbQdtbNpvGQNmaNXfB5V2NFHdY7fHZH0mYNNuHtxKAExVZeZMnMeogv9_KD4ywuhc4irnKKVb5vgh2o5gxYM6attZ49GDdkzrPKz7LrmXtRLGVo9pKwznNQyrm",
+    borderClass: "border-secondary/20",
+    roleClass: "text-secondary",
   },
   {
-    role: "BIO SYSTEMS LEAD",
-    name: "SARA MORPH",
+    name: "Cyrus Malek",
+    role: "Protocol Designer",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBq3ss0nxGrn1R19nFWyZ9jsYf2iJKdxQUHh9IbZBnPdKjAKWVJAb7zZbENPKrJvI1v5S8oHG4DGyzfOQ4RjAUZ1RjdyAyXwY6enEr9n06E6Y9k1rvTheZuubYUwrcYr1cFf28SMFP1iQnlfvF9MTB-ttIl26rMghSYr3JPEQ1DTViy1TPVcpMHXUe9TuPKia0eCAuii1v1jePlGaYqyrCzaT470G1vYie-RUJDWmZXfIynX-Kqaco0EjNNGsduHf50Zzo9iv6XR4jQ",
-    accent: "text-tertiary",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuABCLZcgcRNE2YHL5Qb_ov8LXjXOGrn8U470kOObWeWgV_q-xSXe36e-qFL8oBIUocDaFXkiCTCK43TlOZVFWe4bCG0CjgSE_vI_rITzaAilfqhtVqoST6KN4x7JcdSDDaJhYQLD38wTiZW2pUrZgQyGMuHna59sLOBlHElctQHm2m-fjByQXfWyL7Ie-tw5Kmtl1n-lPcUgstSuGUyjJcovr87IoFQ05tB1G4dyZXZse0avZrTURLi3nY9kcpr0jSW05kzB1EYT0O2",
+    borderClass: "border-tertiary/20",
+    roleClass: "text-tertiary",
   },
   {
-    role: "QUANTUM STREAMS",
-    name: "JAX ETHER",
+    name: "Elara Quinn",
+    role: "Interface Strategist",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB9N2smFG_DsVsmvTdNGNfsshlpcNywlVxyyQsoF0wW3MhUn1G-HYRAMkftpRrZjM0GvYyNE5h5BKd_Ljw9akID9K_jfx3M42SZtMIXo4rlMXmSATTABdTlmtVV8lJC5lz2xYzRQoeLgl93oTQMAwmoDnp9BmZ9M_IHaAYiMbYk_Xz39bdFxZU6WKNj38AoLRaiX2B8fS6B3uQlEhS_IdIZc2Xt15z_nMMOsC3zR7TOU0d4BCEHbPwtWpHzpM2XEoT8pbVmGuEbfeXG",
-    accent: "text-primary-dim",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCqDWRccMe94xwYF6Kz0UGgYHjkVbvkpb1fxHMFXXlOPkCgbpaZwLwgIkAxuCv64CBML6Ti6bpqc8APIUQCo4Xm5pC1CMjuXVTRH_FwAGmGIAhubasdtwGPJZepzBMxU9-RiMYO8ssZMTXIPPKI-kfl5HiZzMM0mTJ-cMlNwDq399eTg0mcElr8uWSqOTzY3mP0RYSXjteLqMzRwk0L9WabeZr-1PJu0nwQ71GQK_PEc0GhQNyECAr7NNQstb5UHI6noEjt9IAX5-4V",
+    borderClass: "border-primary-dim/20",
+    roleClass: "text-primary-dim",
   },
 ];
 
 export default function NeuralNetworkPage() {
   return (
-    <PageFrame activeNav="none" footerVariant="neural" sideNavItems={[
-      { icon: "psychology", label: "Generative AI" },
-      { icon: "hub", label: "Web3 Systems" },
-      { icon: "layers", label: "Spatial UI" },
-      { icon: "memory", label: "Neural Architectures", active: true },
-      { icon: "biotech", label: "Bio-Digital" },
-    ]}>
-      <section className="relative flex min-h-[819px] items-center overflow-hidden px-6 md:px-20">
+    <PageFrame activeNav="none" footerVariant="neural" sideNavItems={sideNavItems}>
+      <section className="relative flex min-h-[800px] items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-transparent to-background/20" />
           <img
-            className="h-full w-full scale-110 object-cover opacity-40"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5paWuuK1p0_x8JCpFHcH-0CgpFbmK3vluHomVR-sBtdCKJaDPg1LiH_AaYPD99X3L1Q0R2YuGQl7NqG_rJHCuW7J3l8BOR2CNOj967p2EAeXsbFDN79x1dqmsCuDapB3SGVfmBElaAl-VyQKH_Vk1dmB0BuA5QHqlxEiDLQxBT1FjgCqOrYxRPOHEkSSmuE-8I45YdlIpiaI7stswjPJIDrNKKQlD3P_mQH_4-rySIYc_Yl6JfyODxnSnlIk91-iTWvCWCGziDBM"
-            alt="Futuristic digital network of light and floating data particles"
+            className="hero-ken-burns h-full w-full object-cover opacity-60 rounded-2xl"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2AMk9Angzf72kGFjoIKZWPbZ6SU92s0UCLTxiSIp9y8mWFlMcoRy4rB4nrUAZxPcwnbFwiQLvf4l47x-AxAU5bID_JtwCMlFPSiKaVDj7SpjxN1Kp4ewJQuEQFE_LnJKYX80POMpg13JxExjJ4zqBo6bzs1j6Waw7yecYo0LqtkLXh8Zfv8gm2B1MATpmCc3yYB2Yeue7Y7a_1aA8d_peVvrFEAaWwWg6GkC7BsQQDVJbHYO5DE0O_KWqGzc_O52me5EmHmjhmmWK"
+            alt="Luminous neural network nodes connected by electric blue light trails"
+            loading="lazy"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background" />
         </div>
-        <div className="relative z-20 max-w-4xl">
-          <div className="mb-6 flex items-center space-x-3">
-            <span className="h-px w-12 bg-primary" />
-            <span className="font-headline text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              The Visionary Core
-            </span>
-          </div>
-          <h1 className="mb-8 font-headline text-7xl font-black leading-[0.9] tracking-tighter md:text-9xl">
+
+        <RevealOnScroll as="div" className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+          <h1 className="hero-headline-glow mb-6 font-headline text-6xl font-bold leading-none tracking-tighter text-on-background sm:text-7xl md:text-8xl lg:text-9xl">
             SYNTHESIZING{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               REALITY
             </span>
           </h1>
-          <p className="max-w-2xl font-body text-xl font-light leading-relaxed text-on-surface-variant md:text-2xl">
-            We architect neural conduits between human intuition and machine
-            intelligence, manifesting the next era of digital existence.
+          <p className="mx-auto max-w-2xl font-body text-xl font-light leading-relaxed tracking-wide text-on-surface-variant md:text-2xl">
+            The human-machine collective defining the future of digital architecture.
           </p>
-        </div>
+          <div className="mt-12 flex justify-center gap-6">
+            <div className="h-24 w-1 bg-gradient-to-b from-primary to-transparent opacity-50" />
+          </div>
+        </RevealOnScroll>
       </section>
 
-      <section className="bg-surface-container-low px-6 py-32 md:px-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-3">
-          {metrics.map(([icon, value, label, copy, bg, text, iconColor, shadow]) => (
-            <div key={label} className="glass-card inner-bevel-light group relative rounded-xl p-12">
-              <div className={`absolute -top-6 left-12 flex h-12 w-12 items-center justify-center rounded-lg ${bg} ${shadow}`}>
-                <span className={`material-symbols-outlined ${iconColor}`}>{icon}</span>
+      <section className="px-6 py-24">
+        <RevealOnScroll
+          as="div"
+          className="mx-auto grid max-w-screen-xl grid-cols-1 gap-8 md:grid-cols-3"
+        >
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="glass-panel premium-card inner-bevel group flex flex-col items-center rounded-2xl p-10 text-center"
+            >
+              <div
+                className={`mb-8 flex h-20 w-20 items-center justify-center rounded-full ${stat.badgeClass} ${stat.glowClass} transition-all`}
+              >
+                <span
+                  className={`material-symbols-outlined text-4xl ${stat.iconColor}`}
+                  style={{ fontVariationSettings: '"FILL" 1' }}
+                >
+                  {stat.icon}
+                </span>
               </div>
-              <div className={`mb-2 font-headline text-6xl font-black ${text}`}>{value}</div>
-              <div className="mb-4 font-headline text-xs uppercase tracking-widest text-on-surface-variant">
-                {label}
+              <div className="mb-2 font-headline text-4xl font-bold text-on-background">
+                {stat.value}
               </div>
-              <p className="text-sm leading-relaxed text-on-surface-variant">{copy}</p>
+              <div
+                className={`font-label text-xs font-semibold uppercase tracking-[0.2em] ${stat.labelClass}`}
+              >
+                {stat.label}
+              </div>
             </div>
           ))}
-        </div>
+        </RevealOnScroll>
       </section>
 
-      <section className="bg-background px-6 py-32 md:px-20">
-        <div className="mx-auto mb-20 max-w-7xl">
-          <h2 className="mb-4 font-headline text-5xl font-bold tracking-tighter text-on-surface">
-            ARCHITECTS OF THE VOID
+      <section className="px-6 py-32">
+        <RevealOnScroll as="div" className="mx-auto mb-24 max-w-screen-2xl text-center">
+          <h2 className="section-heading mb-4 font-headline text-4xl font-black uppercase tracking-widest text-on-background md:text-5xl">
+            Architects of the Void
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-primary to-transparent" />
-        </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto h-1 w-24 bg-primary opacity-50" />
+        </RevealOnScroll>
+
+        <RevealOnScroll
+          as="div"
+          className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+        >
           {team.map((member) => (
             <div
               key={member.name}
-              className="group relative cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light"
+              className="premium-card group relative overflow-hidden rounded-2xl bg-surface-container-high"
             >
-              <div className="relative aspect-[4/5]">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  className="h-full w-full object-cover mix-blend-luminosity transition-all duration-700 group-hover:scale-110 group-hover:mix-blend-normal"
+                  className="h-full w-full rounded-2xl object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                   src={member.image}
                   alt={member.name}
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-90" />
               </div>
-              <div className="absolute bottom-0 left-0 w-full translate-y-4 p-8 transition-transform duration-500 group-hover:translate-y-0">
-                <div className={`mb-1 font-headline text-[10px] uppercase tracking-widest ${member.accent}`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+              <div
+                className={`glass-panel absolute bottom-0 left-0 w-full translate-y-4 rounded-none border-t ${member.borderClass} p-8 transition-transform group-hover:translate-y-0`}
+              >
+                <h3 className="font-headline text-xl font-bold text-on-background">{member.name}</h3>
+                <p className={`font-label text-[10px] uppercase tracking-widest ${member.roleClass}`}>
                   {member.role}
-                </div>
-                <div className="font-headline text-2xl font-black text-on-surface">
-                  {member.name}
-                </div>
+                </p>
               </div>
             </div>
           ))}
-        </div>
+        </RevealOnScroll>
       </section>
 
-      <section className="border-y border-outline-variant/10 bg-surface-container-low px-6 py-32 md:px-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between space-y-12 md:flex-row md:space-y-0">
-          <div className="max-w-xl text-center md:text-left">
-            <h3 className="mb-6 font-headline text-4xl font-black text-on-surface">
-              READY FOR UPGRADE?
-            </h3>
-            <p className="mb-8 font-body text-lg font-light text-on-surface-variant">
-              Connect your interface to our neural backbone and begin the synthesis of
-              your next architectural masterpiece.
-            </p>
-          </div>
-          <div className="flex flex-col gap-4 sm:flex-row">
+      <section className="relative overflow-hidden bg-surface-container-lowest px-6 py-40">
+        <div className="absolute left-1/2 top-0 h-px w-full max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        <div className="absolute -bottom-48 -right-48 h-96 w-96 rounded-full bg-secondary/10 blur-[120px]" />
+        <div className="absolute -left-48 -top-48 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+
+        <RevealOnScroll as="div" className="relative z-10 mx-auto max-w-4xl text-center">
+          <h2 className="section-heading mb-12 font-headline text-5xl font-bold tracking-tight text-on-background md:text-7xl">
+            READY FOR <span className="italic text-primary">UPGRADE</span>
+          </h2>
+          <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
             <a
               href="#"
-              className="rounded-lg bg-gradient-to-r from-primary to-primary-container px-10 py-5 font-headline font-bold uppercase tracking-widest text-on-primary-container shadow-[0_0_30px_rgba(0,238,252,0.2)] hover:scale-105"
+              className="primary-cta w-full rounded-lg bg-gradient-to-r from-primary to-primary-container px-10 py-5 text-center font-label text-sm font-bold uppercase tracking-widest text-on-primary md:w-auto"
             >
-              LAUNCH_TERMINAL
+              Initiate Protocol
             </a>
             <a
-              href="/artifacts"
-              className="glass-card inner-bevel-light rounded-lg px-10 py-5 font-headline font-bold uppercase tracking-widest text-on-surface hover:bg-surface-container-highest"
+              href="#"
+              className="glass-panel w-full rounded-lg border border-outline-variant px-10 py-5 text-center font-label text-sm font-bold uppercase tracking-widest text-on-background md:w-auto"
             >
-              VIEW_RECORDS
+              Consult the Architects
             </a>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
     </PageFrame>
   );
