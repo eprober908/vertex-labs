@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#8400b3",
+              "on-background": "#e2e8fb",
+              "on-secondary-fixed": "#580079",
+              "inverse-primary": "#006a71",
+              "outline-variant": "#414857",
+              "on-primary-fixed": "#003f43",
+              "on-error-container": "#ffa8a3",
+              "on-tertiary-fixed": "#1f0052",
+              "outline": "#6f7586",
+              "primary-container": "#00eefc",
+              "tertiary-dim": "#874cff",
+              "primary": "#8ff5ff",
+              "on-primary-fixed-variant": "#005e64",
+              "surface-container-high": "#172031",
+              "surface-container": "#11192a",
+              "surface": "#070e1b",
+              "surface-variant": "#1c2639",
+              "on-error": "#490006",
+              "on-secondary-container": "#fff5fc",
+              "on-surface": "#e2e8fb",
+              "error-container": "#9f0519",
+              "primary-dim": "#00deec",
+              "on-surface-variant": "#a5abbd",
+              "secondary-fixed": "#f1c1ff",
+              "surface-container-highest": "#1c2639",
+              "surface-bright": "#222c41",
+              "surface-dim": "#070e1b",
+              "on-tertiary": "#290067",
+              "background": "#070e1b",
+              "on-primary-container": "#005359",
+              "secondary-fixed-dim": "#eaaeff",
+              "error": "#ff716c",
+              "on-primary": "#005d63",
+              "secondary": "#d674ff",
+              "secondary-dim": "#bb00fc",
+              "surface-tint": "#8ff5ff",
+              "surface-container-low": "#0c1322",
+              "inverse-on-surface": "#4e5565",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-lowest": "#000000",
+              "error-dim": "#d7383b",
+              "tertiary-container": "#7000ff",
+              "on-secondary": "#390050",
+              "primary-fixed-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "secondary-container": "#9900cf",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "tertiary-fixed-dim": "#b190ff",
+              "tertiary-fixed": "#bda1ff",
+              "tertiary": "#ac89ff",
+              "inverse-surface": "#f9f9ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-sm:hover {
+            box-shadow: 0 0 15px rgba(0, 238, 252, 0.4);
+        }
+        .text-glow-primary {
+            text-shadow: 0 0 12px rgba(143, 245, 255, 0.5);
+        }
+        .neomorph-bevel {
+            box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .glass-panel {
+            background: rgba(28, 38, 57, 0.4);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-900/40 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,240,255,0.1)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 italic font-headline">
+                ETHER LABS
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-cyan-400 border-b-2 border-cyan-400 pb-1 Active: scale-95 duration-200 hover:glow-sm" href="#">Neural Network</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-white transition-colors hover:bg-white/5 transition-all duration-300" href="#">Architects</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-white transition-colors hover:bg-white/5 transition-all duration-300" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-white transition-colors hover:bg-white/5 transition-all duration-300" href="#">Lab</a>
+</div>
+<button class="bg-primary text-on-primary font-label uppercase tracking-widest text-[10px] px-6 py-2 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all active:scale-95">
+                Connect
+            </button>
+</div>
+</nav>
+<main>
+<!-- HERO SECTION -->
+<section class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="Luminous neural network nodes connected by electric blue light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2AMk9Angzf72kGFjoIKZWPbZ6SU92s0UCLTxiSIp9y8mWFlMcoRy4rB4nrUAZxPcwnbFwiQLvf4l47x-AxAU5bID_JtwCMlFPSiKaVDj7SpjxN1Kp4ewJQuEQFE_LnJKYX80POMpg13JxExjJ4zqBo6bzs1j6Waw7yecYo0LqtkLXh8Zfv8gm2B1MATpmCc3yYB2Yeue7Y7a_1aA8d_peVvrFEAaWwWg6GkC7BsQQDVJbHYO5DE0O_KWqGzc_O52me5EmHmjhmmWK"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-5xl px-6">
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-on-background mb-6 leading-none">
+                    SYNTHESIZING <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">REALITY</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
+                    The human-machine collective defining the future of digital architecture.
+                </p>
+<div class="mt-12 flex justify-center gap-6">
+<div class="w-1 h-24 bg-gradient-to-b from-primary to-transparent opacity-50"></div>
+</div>
+</div>
+</section>
+<!-- STATS SECTION -->
+<section class="py-24 px-6 max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-panel neomorph-bevel rounded-xl p-10 flex flex-col items-center text-center group hover:scale-[1.02] transition-transform duration-500">
+<div class="w-20 h-20 mb-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:shadow-[0_0_40px_rgba(143,245,255,0.3)] transition-all">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">
+                            language
+                        </span>
+</div>
+<div class="font-headline text-4xl font-bold text-on-background mb-2">942+</div>
+<div class="font-label uppercase tracking-[0.2em] text-xs text-primary font-semibold">Neural Nodes</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel neomorph-bevel rounded-xl p-10 flex flex-col items-center text-center group hover:scale-[1.02] transition-transform duration-500">
+<div class="w-20 h-20 mb-8 rounded-full bg-secondary/10 flex items-center justify-center group-hover:shadow-[0_0_40px_rgba(214,116,255,0.3)] transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">
+                            diamond
+                        </span>
+</div>
+<div class="font-headline text-4xl font-bold text-on-background mb-2">12.8ms</div>
+<div class="font-label uppercase tracking-[0.2em] text-xs text-secondary font-semibold">Latency</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel neomorph-bevel rounded-xl p-10 flex flex-col items-center text-center group hover:scale-[1.02] transition-transform duration-500">
+<div class="w-20 h-20 mb-8 rounded-full bg-tertiary/10 flex items-center justify-center group-hover:shadow-[0_0_40px_rgba(172,137,255,0.3)] transition-all">
+<span class="material-symbols-outlined text-4xl text-tertiary" style="font-variation-settings: 'FILL' 1;">
+                            stream
+                        </span>
+</div>
+<div class="font-headline text-4xl font-bold text-on-background mb-2">Infinite</div>
+<div class="font-label uppercase tracking-[0.2em] text-xs text-tertiary font-semibold">Data Flow</div>
+</div>
+</div>
+</section>
+<!-- TEAM SECTION -->
+<section class="py-32 px-6 max-w-screen-2xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-headline text-4xl md:text-5xl font-black uppercase tracking-widest text-on-background mb-4">
+                    ARCHITECTS OF THE VOID
+                </h2>
+<div class="h-1 w-24 bg-primary mx-auto opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Member 1 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody AI-generated male portrait with blue neon accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBva2zEZz6eyM_s4qt2Z72QM9PoKgunrXsMdufbzyKsx-a_lcX277QkR0vkNjf_yVGIL6sN67ps_HNGyLokgtylbOkVxQEsn_RQVeWe3cBicIqxQI3hVfB814ovisYwXHhSzQk2MaUWlw9xrligsBG2timHVuYMIhqrEfgP1vOqR8uRinI-ZR8TKKGhx49p_Nd7cFqQ88joXcp6laRBMTCLLuSb1oAIW29ZTnCGOqWQUTW-WDr9oHuVUMvItZRsBO_SNvbkbvI8CtsN"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-panel border-t border-primary/20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<h3 class="font-headline text-xl font-bold text-on-background">Kaelen Voss</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-primary">Core Systems Lead</p>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody AI-generated female portrait with purple cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTqeJvpP2ngXBkC0rjW0ICFQ6DMDf8yZZVjePnN5KHHVkS_1rwbCXhJ_yvW3l_T-wdTQvhSCobGPZchhu9sQP12X8iaMRfrpaMOQGZCkSkfu957aRzpGeLUT-T-QKcjRq1r97nnNtxOrCUX7emaIsbQdtbNpvGQNmaNXfB5V2NFHdY7fHZH0mYNNuHtxKAExVZeZMnMeogv9_KD4ywuhc4irnKKVb5vgh2o5gxYM6attZ49GDdkzrPKz7LrmXtRLGVo9pKwznNQyrm"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-panel border-t border-secondary/20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<h3 class="font-headline text-xl font-bold text-on-background">Lyra Thorne</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary">Neural Architect</p>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody AI-generated male portrait with lavender studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABCLZcgcRNE2YHL5Qb_ov8LXjXOGrn8U470kOObWeWgV_q-xSXe36e-qFL8oBIUocDaFXkiCTCK43TlOZVFWe4bCG0CjgSE_vI_rITzaAilfqhtVqoST6KN4x7JcdSDDaJhYQLD38wTiZW2pUrZgQyGMuHna59sLOBlHElctQHm2m-fjByQXfWyL7Ie-tw5Kmtl1n-lPcUgstSuGUyjJcovr87IoFQ05tB1G4dyZXZse0avZrTURLi3nY9kcpr0jSW05kzB1EYT0O2"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-panel border-t border-tertiary/20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<h3 class="font-headline text-xl font-bold text-on-background">Cyrus Malek</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-tertiary">Protocol Designer</p>
+</div>
+</div>
+<!-- Member 4 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody AI-generated female portrait with cyan glow accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqDWRccMe94xwYF6Kz0UGgYHjkVbvkpb1fxHMFXXlOPkCgbpaZwLwgIkAxuCv64CBML6Ti6bpqc8APIUQCo4Xm5pC1CMjuXVTRH_FwAGmGIAhubasdtwGPJZepzBMxU9-RiMYO8ssZMTXIPPKI-kfl5HiZzMM0mTJ-cMlNwDq399eTg0mcElr8uWSqOTzY3mP0RYSXjteLqMzRwk0L9WabeZr-1PJu0nwQ71GQK_PEc0GhQNyECAr7NNQstb5UHI6noEjt9IAX5-4V"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-panel border-t border-primary-dim/20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<h3 class="font-headline text-xl font-bold text-on-background">Elara Quinn</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-primary-dim">Interface Strategist</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA SECTION -->
+<section class="py-40 px-6 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-background mb-12">
+                    READY FOR <span class="italic text-primary">UPGRADE</span>
+</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto px-10 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-sm font-bold rounded-lg shadow-[0_0_30px_rgba(0,238,252,0.3)] hover:shadow-[0_0_50px_rgba(0,238,252,0.5)] transition-all active:scale-95">
+                        INITIATE PROTOCOL
+                    </button>
+<button class="w-full md:w-auto px-10 py-5 border border-outline-variant bg-surface-variant/20 backdrop-blur-md text-on-background font-label uppercase tracking-widest text-sm font-bold rounded-lg hover:bg-surface-variant/40 transition-all active:scale-95">
+                        CONSULT THE ARCHITECTS
+                    </button>
+</div>
+</div>
+<!-- Background element -->
+<div class="absolute -bottom-48 -right-48 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
+<div class="absolute -top-48 -left-48 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-slate-200 font-headline tracking-tight">
+                ETHER LABS
+            </div>
+<div class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-600">
+                © 2024 ETHER LABS. ARCHITECTS OF THE VOID.
+            </div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-600 hover:text-cyan-300 transition-colors hover:tracking-[0.2em] transition-all" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-600 hover:text-cyan-300 transition-colors hover:tracking-[0.2em] transition-all" href="#">Terms</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[10px] text-slate-600 hover:text-cyan-300 transition-colors hover:tracking-[0.2em] transition-all" href="#">Protocol</a>
+</div>
+</div>
+</footer>
+</body></html>
