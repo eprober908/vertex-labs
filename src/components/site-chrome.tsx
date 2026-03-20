@@ -13,6 +13,7 @@ type SideNavItem = {
 };
 
 const topNavItems = [
+  { label: "Home", href: "/", key: "none" as const },
   { label: "Solutions", href: "/solutions", key: "solutions" as const },
   { label: "Artifacts", href: "/artifacts", key: "artifacts" as const },
   { label: "Process", href: "/#process", key: "none" as const },
@@ -48,12 +49,50 @@ export function TopNav({ active }: { active: TopNavKey }) {
             );
           })}
         </div>
-        <Link
-          href="#contact"
-          className="rounded-lg bg-gradient-to-r from-primary to-primary-container px-4 py-2.5 font-label text-[10px] font-bold uppercase tracking-widest text-on-primary-container shadow-[0_0_20px_rgba(0,238,252,0.3)] hover:scale-105 active:scale-95 md:px-6"
-        >
-          INITIATE PROJECT
-        </Link>
+        <div className="hidden md:block">
+          <Link
+            href="#contact"
+            className="rounded-lg bg-gradient-to-r from-primary to-primary-container px-4 py-2.5 font-label text-[10px] font-bold uppercase tracking-widest text-on-primary-container shadow-[0_0_20px_rgba(0,238,252,0.3)] hover:scale-105 active:scale-95 md:px-6"
+          >
+            INITIATE PROJECT
+          </Link>
+        </div>
+        <details className="group relative md:hidden">
+          <summary className="flex h-11 w-11 list-none items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 marker:content-none">
+            <span className="material-symbols-outlined group-open:hidden">menu</span>
+            <span className="material-symbols-outlined hidden group-open:block">close</span>
+          </summary>
+          <div className="absolute right-0 top-14 w-[min(18rem,calc(100vw-2rem))] rounded-2xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl shadow-cyan-900/20 backdrop-blur-3xl">
+            <div className="mb-3 font-label text-[10px] uppercase tracking-[0.25em] text-slate-500">
+              Navigation
+            </div>
+            <div className="flex flex-col gap-2">
+              {topNavItems.map((item) => {
+                const isActive = active === item.key && item.key !== "none";
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={cn(
+                      "rounded-xl px-4 py-3 font-label text-[11px] uppercase tracking-[0.18em]",
+                      isActive
+                        ? "bg-cyan-500/10 text-cyan-300"
+                        : "bg-white/[0.03] text-slate-300",
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+              <Link
+                href="#contact"
+                className="mt-2 rounded-xl bg-gradient-to-r from-primary to-primary-container px-4 py-3 text-center font-label text-[11px] font-bold uppercase tracking-[0.18em] text-on-primary-container"
+              >
+                Initiate Project
+              </Link>
+            </div>
+          </div>
+        </details>
       </div>
     </nav>
   );
@@ -105,22 +144,29 @@ export function SideNav({ items }: { items: SideNavItem[] }) {
   );
 }
 
-export function MobileDock() {
+export function MobileDock({
+  active,
+}: {
+  active: "home" | "solutions" | "artifacts" | "neural";
+}) {
   const items = [
-    { icon: "grid_view", label: "GALLERY", active: false },
-    { icon: "category", label: "ARTIFACTS", active: true },
-    { icon: "stream", label: "PROCESS", active: false },
-    { icon: "account_tree", label: "NODES", active: false },
+    { icon: "home", label: "Home", href: "/", active: active === "home" },
+    { icon: "wb_iridescent", label: "Solutions", href: "/solutions", active: active === "solutions" },
+    { icon: "layers", label: "Artifacts", href: "/artifacts", active: active === "artifacts" },
+    { icon: "neurology", label: "Neural", href: "/neural-network", active: active === "neural" },
   ];
 
   return (
-    <div className="glass-panel fixed bottom-0 z-50 flex w-full items-center justify-around border-t border-outline-variant/10 px-4 py-3 md:hidden">
+    <div className="glass-panel fixed bottom-0 z-50 flex w-full items-center justify-around border-t border-outline-variant/10 px-4 pb-6 pt-3 md:hidden">
       {items.map((item) => (
-        <button
+        <Link
           key={item.label}
+          href={item.href}
           className={cn(
-            "flex flex-col items-center space-y-1",
-            item.active ? "text-cyan-400" : "text-slate-500",
+            "flex min-w-[4.5rem] flex-col items-center gap-1 rounded-2xl px-3 py-2",
+            item.active
+              ? "bg-cyan-500/10 text-cyan-300 shadow-[0_0_20px_rgba(0,240,255,0.15)]"
+              : "text-slate-500",
           )}
         >
           <span
@@ -130,7 +176,7 @@ export function MobileDock() {
             {item.icon}
           </span>
           <span className="font-label text-[8px] uppercase tracking-widest">{item.label}</span>
-        </button>
+        </Link>
       ))}
     </div>
   );
@@ -235,8 +281,8 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
           <div className="md:col-span-2">
             <div className="mb-6 font-headline text-4xl font-black text-slate-800/20">ETHER LABS</div>
             <p className="max-w-xs font-label text-[10px] uppercase leading-relaxed tracking-[0.2em] text-slate-500">
-              ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED.
-              ENGINEERED_IN_THE_VOID_OF_NEURAL_PROCESSING.
+              ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED. ENGINEERED IN THE VOID OF
+              NEURAL PROCESSING.
             </p>
           </div>
           <div>
@@ -339,13 +385,24 @@ export function PageFrame({
   mobileDock?: boolean;
   children: ReactNode;
 }) {
+  const dockActive =
+    footerVariant === "home"
+      ? "home"
+      : footerVariant === "solutions"
+        ? "solutions"
+        : footerVariant === "artifacts"
+          ? "artifacts"
+          : "neural";
+
   return (
     <div className="selection-primary min-h-screen bg-background text-on-surface">
       <TopNav active={activeNav} />
       {sideNavItems ? <SideNav items={sideNavItems} /> : null}
-      <main className={cn(sideNavItems ? "pt-24 lg:ml-64" : "pt-24")}>{children}</main>
+      <main className={cn(sideNavItems ? "pb-28 pt-24 lg:ml-64 lg:pb-0" : "pb-28 pt-24 lg:pb-0")}>
+        {children}
+      </main>
       <SiteFooter variant={footerVariant} />
-      {mobileDock ? <MobileDock /> : null}
+      {mobileDock === false ? null : <MobileDock active={dockActive} />}
     </div>
   );
 }

@@ -127,7 +127,7 @@ const testimonials = [
 export default function HomePage() {
   return (
     <PageFrame activeNav="solutions" footerVariant="home" sideNavItems={sideNavItems}>
-      <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 md:px-8">
+      <section className="relative flex min-h-[540px] items-center justify-center overflow-hidden px-5 pt-8 sm:px-6 md:min-h-screen md:px-8 md:pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             className="h-full w-full object-cover opacity-50"
@@ -137,31 +137,31 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
         <div className="relative z-10 max-w-5xl text-center">
-          <div className="mb-6 inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 backdrop-blur-md">
+          <div className="mb-5 inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 backdrop-blur-md">
             <span className="font-label text-[10px] uppercase tracking-[0.2em] text-primary">
               Intelligence Formed in the Void
             </span>
           </div>
-          <h1 className="text-glow-primary font-headline text-5xl font-black leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl">
+          <h1 className="text-glow-primary font-headline text-3xl font-black leading-[0.95] tracking-tighter sm:text-4xl md:text-7xl lg:text-8xl">
             FORGING THE <br />{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               SYNTHETIC ETHER
             </span>
           </h1>
-          <p className="mx-auto mb-10 mt-8 max-w-2xl font-body text-lg leading-relaxed text-on-surface-variant md:text-xl">
+          <p className="mx-auto mb-8 mt-6 max-w-2xl font-body text-base leading-relaxed text-on-surface-variant sm:text-lg md:mb-10 md:mt-8 md:text-xl">
             We engineer high-fidelity digital artifacts using neural architectures and
             bio-digital logic. Your vision, rendered in impossible dimensions.
           </p>
-          <div className="flex flex-col justify-center gap-6 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-6">
             <a
               href="#contact"
-              className="rounded-lg bg-gradient-to-br from-primary to-primary-container px-10 py-5 font-headline text-sm font-bold tracking-widest text-on-primary-container hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(143,245,255,0.4)]"
+              className="w-full rounded-lg bg-gradient-to-br from-primary to-primary-container px-10 py-5 text-center font-headline text-sm font-bold tracking-widest text-on-primary-container hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(143,245,255,0.4)] sm:w-auto"
             >
               INITIALIZE STREAM
             </a>
             <a
               href="/artifacts"
-              className="rounded-lg border border-outline-variant bg-surface-variant/20 px-10 py-5 font-headline text-sm font-bold tracking-widest text-on-surface backdrop-blur-lg hover:bg-surface-variant/40"
+              className="w-full rounded-lg border border-outline-variant bg-surface-variant/20 px-10 py-5 text-center font-headline text-sm font-bold tracking-widest text-on-surface backdrop-blur-lg hover:bg-surface-variant/40 sm:w-auto"
             >
               VIEW ARCHIVE
             </a>
@@ -169,9 +169,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24 md:px-8">
-        <div className="mb-14">
-          <h2 className="text-glow-primary font-headline text-3xl font-bold tracking-tight">
+      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-6 md:px-8 md:py-24">
+        <div className="mb-10 md:mb-14">
+          <h2 className="text-glow-primary font-headline text-2xl font-bold tracking-tight sm:text-3xl">
             SOLUTIONS MATRIX
           </h2>
           <div className="mt-3 h-0.5 w-20 bg-gradient-to-r from-primary to-transparent" />
@@ -182,18 +182,20 @@ export default function HomePage() {
               key={card.title}
               className={`${card.span} group relative overflow-hidden rounded-xl bg-surface-container-high p-1 inner-bevel-light`}
             >
-              <div className="relative h-[350px] overflow-hidden rounded-lg">
+              <div className="relative h-[320px] overflow-hidden rounded-lg sm:h-[350px]">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   src={card.image}
                   alt={card.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-                <div className={`absolute bottom-0 left-0 ${card.pad}`}>
+                <div className={`absolute bottom-0 left-0 p-6 sm:${card.pad}`}>
                   <span className={`mb-2 block font-label text-[10px] tracking-[0.2em] ${card.accent}`}>
                     {card.label}
                   </span>
-                  <h3 className={`mb-4 font-headline font-bold ${card.titleClass}`}>{card.title}</h3>
+                  <h3 className={`mb-3 font-headline text-2xl font-bold sm:${card.titleClass}`}>
+                    {card.title}
+                  </h3>
                   <p className="max-w-md font-body text-sm text-on-surface-variant md:text-base">
                     {card.copy}
                   </p>
@@ -204,11 +206,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="process" className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+      <section id="process" className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
+          <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
-              <h2 className="mb-6 font-headline text-4xl font-bold uppercase tracking-tight">
+              <h2 className="mb-4 font-headline text-3xl font-bold uppercase tracking-tight md:mb-6 md:text-4xl">
                 The Extraction Process
               </h2>
               <p className="font-body text-on-surface-variant">
@@ -220,13 +222,13 @@ export default function HomePage() {
               SEQ 001 TO SEQ 004
             </div>
           </div>
-          <div className="space-y-20">
+          <div className="space-y-14 md:space-y-20">
             {processSteps.map((step, index) => {
               const imageFirst = index % 2 === 1;
               return (
-                <div key={step.title} className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-14">
+                <div key={step.title} className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-14">
                   <div className={imageFirst ? "md:order-2" : ""}>
-                    <div className={`mb-3 font-headline text-6xl font-black ${step.accent}`}>
+                    <div className={`mb-3 font-headline text-5xl font-black ${step.accent} md:text-6xl`}>
                       {step.number}
                     </div>
                     <h3 className="mb-5 font-headline text-2xl font-bold tracking-wide">
@@ -254,10 +256,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-surface-container-low/50 py-24">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="mb-4 font-headline text-4xl font-bold">VALIDATION FEEDBACK</h2>
+      <section className="bg-surface-container-low/50 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
+          <div className="mb-12 text-center md:mb-20">
+            <h2 className="mb-4 font-headline text-3xl font-bold md:text-4xl">VALIDATION FEEDBACK</h2>
             <p className="font-body text-on-surface-variant">
               Verified signal from our global network of collaborators.
             </p>
@@ -266,7 +268,7 @@ export default function HomePage() {
             {testimonials.map((item) => (
               <div
                 key={item.name}
-                className={`glass-card inner-bevel-light rounded-2xl border p-10 hover:-translate-y-2 ${
+                className={`glass-card inner-bevel-light rounded-2xl border p-6 hover:-translate-y-2 md:p-10 ${
                   item.accent === "primary"
                     ? "border-primary/5 hover:border-primary/20"
                     : item.accent === "secondary"
@@ -308,16 +310,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="relative overflow-hidden px-6 py-28 md:px-8">
+      <section id="contact" className="relative overflow-hidden px-5 py-20 sm:px-6 md:px-8 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <h2 className="mb-12 font-headline text-5xl font-black uppercase tracking-tighter md:text-7xl">
+          <h2 className="mb-8 font-headline text-3xl font-black uppercase tracking-tighter sm:text-4xl md:mb-12 md:text-7xl">
             Ready to Initialize?
           </h2>
-          <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">
             <a
               href="#"
-              className="w-full rounded-lg bg-primary px-12 py-6 font-headline text-sm font-black tracking-[0.2em] text-on-primary-container hover:scale-105 hover:shadow-[0_0_20px_rgba(0,238,252,0.25)] md:w-auto"
+              className="w-full rounded-lg bg-primary px-12 py-6 text-center font-headline text-sm font-black tracking-[0.2em] text-on-primary-container hover:scale-105 hover:shadow-[0_0_20px_rgba(0,238,252,0.25)] md:w-auto"
             >
               BEGIN PROTOCOLS
             </a>

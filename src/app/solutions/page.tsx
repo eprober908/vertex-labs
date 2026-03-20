@@ -11,36 +11,36 @@ const sideNavItems = [
 export default function SolutionsPage() {
   return (
     <PageFrame activeNav="solutions" footerVariant="solutions" sideNavItems={sideNavItems}>
-      <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-[500px] items-center justify-center overflow-hidden px-5 pt-6 sm:px-6 md:min-h-screen md:px-0 md:pt-20">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-low via-background to-background" />
         <div className="hero-glow absolute inset-0 opacity-50" />
-        <div className="relative z-10 max-w-5xl px-6 text-center">
-          <span className="mb-6 block font-label text-xs uppercase tracking-[0.4em] text-primary">
+        <div className="relative z-10 max-w-5xl text-center md:px-6">
+          <span className="mb-4 block font-label text-[10px] uppercase tracking-[0.3em] text-primary md:mb-6 md:text-xs md:tracking-[0.4em]">
             Technological Ecosystem V2
           </span>
-          <h1 className="text-glow-primary mb-8 font-headline text-4xl font-black leading-tight tracking-tighter md:text-6xl lg:text-8xl">
+          <h1 className="text-glow-primary mb-6 font-headline text-3xl font-black leading-[1.05] tracking-tighter sm:text-4xl md:mb-8 md:text-6xl lg:text-8xl">
             DIMENSIONAL
             <br />
             <span className="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">
               SOLUTIONS
             </span>
           </h1>
-          <p className="mx-auto mb-12 max-w-2xl font-body text-xl leading-relaxed text-on-surface-variant">
+          <p className="mx-auto mb-8 max-w-md font-body text-base leading-relaxed text-on-surface-variant sm:max-w-xl sm:text-lg md:mb-12 md:max-w-2xl md:text-xl">
             We synthesize intelligence, decentralized trust, and immersive spatial
             computing into a cohesive digital monolith for the future of industry.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-6">
             <a
               href="#contact"
-              className="rounded-lg bg-gradient-to-r from-primary to-primary-container px-8 py-4 font-label text-xs font-bold uppercase tracking-widest text-on-primary-container shadow-xl shadow-primary/10 hover:shadow-primary/30"
+              className="w-full rounded-lg bg-gradient-to-r from-primary to-primary-container px-8 py-4 text-center font-label text-xs font-bold uppercase tracking-widest text-on-primary-container shadow-xl shadow-primary/10 hover:shadow-primary/30 sm:w-auto"
             >
-              DEPLOY_NODE
+              Deploy Node
             </a>
             <a
               href="#gen-ai"
-              className="glass-panel rounded-lg border border-outline-variant/30 px-8 py-4 font-label text-xs uppercase tracking-widest text-on-surface hover:bg-surface-variant/40"
+              className="glass-panel w-full rounded-lg border border-outline-variant/30 px-8 py-4 text-center font-label text-xs uppercase tracking-widest text-on-surface hover:bg-surface-variant/40 sm:w-auto"
             >
-              VIEW_SPECS
+              View Specs
             </a>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section id="gen-ai" className="relative overflow-hidden py-32">
+      <section id="gen-ai" className="relative overflow-hidden py-16 md:py-32">
         <div
           className="parallax-bg absolute inset-0 z-0 opacity-10"
           style={{
@@ -68,8 +68,8 @@ export default function SolutionsPage() {
               "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgxH6irolv4SLwaKbgzM6Y_wCcsMN3OSJ7QIyTc5bDyIuyh9LTxuKgeF0JMN833jW3Z7l6ruj1c59NQdn8URwFm2RvY7VkoVfRDeYihn17XoiK2-kEpBwMVbWoE-i7umaHyA1Mz1xgoN246Vk76YFfHkPy0we5fQPH46KZIURNOSA6ig7Hrm1NRBju1fpfkYqSILozaaYXkvMOoFPLZhsYnqN5wZiHbKrVYBJFWUvqJTZYIambyK8gLXbwf0hssVhCMEc8F3dbj7sA')",
           }}
         />
-        <div className="container relative z-10 mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+        <div className="container relative z-10 mx-auto px-5 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1">
               <div className="mb-6 flex items-center gap-4">
                 <div className="glass-panel inner-bevel flex h-12 w-12 items-center justify-center rounded-xl">
@@ -78,21 +78,21 @@ export default function SolutionsPage() {
                   </span>
                 </div>
                 <span className="font-label text-sm uppercase tracking-widest text-secondary">
-                  STRATUM_01 / COGNITION
+                  STRATUM 01 / COGNITION
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
-                GENERATIVE AIRES
+              <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:mb-8 md:text-5xl">
+                Generative AI
               </h2>
-              <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
+              <p className="mb-8 font-body text-base leading-relaxed text-on-surface-variant md:mb-10 md:text-lg">
                 Beyond simple prompts. We build custom LLM pipelines, specialized
                 agentic workflows, and proprietary synthetic data generators that
                 transform raw information into strategic intelligence.
               </p>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
                 <div className="glass-panel inner-bevel rounded-xl p-6">
                   <h4 className="mb-3 font-label text-xs tracking-widest text-primary">
-                    NEURAL_SYNTHESIS
+                    Neural Synthesis
                   </h4>
                   <p className="text-xs text-on-surface-variant">
                     Custom training on enterprise datasets with zero-leakage security.
@@ -100,7 +100,7 @@ export default function SolutionsPage() {
                 </div>
                 <div className="glass-panel inner-bevel rounded-xl p-6">
                   <h4 className="mb-3 font-label text-xs tracking-widest text-primary">
-                    AGENTIC_SWARMS
+                    Agentic Swarms
                   </h4>
                   <p className="text-xs text-on-surface-variant">
                     Autonomous multi-agent systems for complex task orchestration.
@@ -109,10 +109,10 @@ export default function SolutionsPage() {
               </div>
             </div>
             <div className="order-1 flex justify-center lg:order-2">
-              <div className="relative aspect-square w-full max-w-lg">
+              <div className="relative aspect-square w-full max-w-[320px] sm:max-w-md lg:max-w-lg">
                 <div className="absolute inset-0 rounded-full bg-secondary/10 blur-3xl" />
                 <img
-                  className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(214,116,255,0.3)]"
+                  className="relative z-10 h-full w-full object-cover drop-shadow-[0_0_50px_rgba(214,116,255,0.3)]"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwBUCc6LKSk-TZqs_34r5xrQqnYP6gj2kQuRD-izrmj88NRrrtzpxZIBeB8bj5S03NwenQNBvhTBgmqXrBt4YypqigTJBkkSXs5yoN3BtagP6ML_oJsi1lbahcE2_BrPnLMcXN2_eG5359W__shl4GwAYU1E3uvOnvTaWewcMCmwSfFJrQ61W5AkgR2WP83Z8AUdWUSnsP4g0GhOlbaZnc7xeDO1MaUeQWM7NPG9fydNtrbqsFyOLIbkmTwrm6PzedYwhJx58pQnDC"
                   alt="Intricate 3D render of a glowing human brain made of glass and fibers"
                 />
@@ -122,7 +122,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section id="web3" className="relative overflow-hidden bg-surface-container-low py-32">
+      <section id="web3" className="relative overflow-hidden bg-surface-container-low py-16 md:py-32">
         <div
           className="absolute inset-0 z-0 opacity-5"
           style={{
@@ -130,13 +130,13 @@ export default function SolutionsPage() {
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="container relative z-10 mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+        <div className="container relative z-10 mx-auto px-5 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
             <div className="flex justify-center">
-              <div className="relative aspect-square w-full max-w-lg">
+              <div className="relative aspect-square w-full max-w-[320px] sm:max-w-md lg:max-w-lg">
                 <div className="absolute inset-0 rounded-full bg-primary/10 blur-3xl" />
                 <img
-                  className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(143,245,255,0.2)]"
+                  className="relative z-10 h-full w-full object-cover drop-shadow-[0_0_50px_rgba(143,245,255,0.2)]"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtlAbIMo_12wNdfBSCyAM9CQI0IDcb_6-QmRG-zNVjKuCfYMWMAsgoxnbyiChdYwsJFkzpS3MmZPKzEhYAPtM8oHSzhhK4tBiqTzIlPgyO82oFo50H9gEyHZrGr5oU3aVIrMniVFkHo8c3nvnJQziBiuUY1KTmEtpbxFy7cxKDiYRnEZhttZesYD5w6cAp_mmpA9wV0qNxcQG82gWS9FvwgNJrpapYUh_dXVLDbPSERO5X8bXIu4vrB3xEQZudI_L_gvXrW3kX03a0"
                   alt="High-detail 3D golden and silver block link representing blockchain"
                 />
@@ -150,13 +150,13 @@ export default function SolutionsPage() {
                   </span>
                 </div>
                 <span className="font-label text-sm uppercase tracking-widest text-primary">
-                  STRATUM_02 / PROTOCOL
+                  STRATUM 02 / PROTOCOL
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
+              <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:mb-8 md:text-5xl">
                 DECENTRALIZED TRUST SYSTEMS
               </h2>
-              <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
+              <p className="mb-8 font-body text-base leading-relaxed text-on-surface-variant md:mb-10 md:text-lg">
                 Engineering secure, scalable Web3 ecosystems. From smart contract
                 auditing to custom L2 chain deployment, we build the rails for the next
                 economy of value.
@@ -182,7 +182,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section id="spatial" className="relative overflow-hidden py-32">
+      <section id="spatial" className="relative overflow-hidden py-16 md:py-32">
         <div
           className="absolute inset-0 z-0 opacity-10"
           style={{
@@ -191,8 +191,8 @@ export default function SolutionsPage() {
             backgroundSize: "100px 100px",
           }}
         />
-        <div className="container relative z-10 mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 items-center gap-20 lg:grid-cols-2">
+        <div className="container relative z-10 mx-auto px-5 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1">
               <div className="mb-6 flex items-center gap-4">
                 <div className="glass-panel inner-bevel flex h-12 w-12 items-center justify-center rounded-xl">
@@ -201,18 +201,18 @@ export default function SolutionsPage() {
                   </span>
                 </div>
                 <span className="font-label text-sm uppercase tracking-widest text-tertiary">
-                  STRATUM_03 / INTERFACE
+                  STRATUM 03 / INTERFACE
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
-                SPATIAL_COMPUTING_UX
+              <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:mb-8 md:text-5xl">
+                Spatial Computing UX
               </h2>
-              <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
+              <p className="mb-8 font-body text-base leading-relaxed text-on-surface-variant md:mb-10 md:text-lg">
                 The screen is no longer a boundary. We design immersive interfaces for
                 AR/VR environments, utilizing gaze-tracking, gesture-recognition, and
                 spatial audio to redefine user interaction.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {["Volumetric Design", "Haptic Feedback", "Mixed Reality"].map((item) => (
                   <span
                     key={item}
@@ -224,10 +224,10 @@ export default function SolutionsPage() {
               </div>
             </div>
             <div className="order-1 flex justify-center lg:order-2">
-              <div className="relative aspect-square w-full max-w-lg">
+              <div className="relative aspect-square w-full max-w-[320px] sm:max-w-md lg:max-w-lg">
                 <div className="absolute inset-0 rounded-full bg-tertiary/10 blur-3xl" />
                 <img
-                  className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(172,137,255,0.3)]"
+                  className="relative z-10 h-full w-full object-cover drop-shadow-[0_0_50px_rgba(172,137,255,0.3)]"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtNUAILFNl8GSDyrw27zI0ip8xXXpmxScIzLc8FpZWs-SB8DtRELpvVkUojggSJUHlqd9sY5FRM2coHOFRm3f5-Qb8LYW5IDn1l_9QTJutcmDYz-CBHc1yPAMWCXSucOKucpb0B6iT0JpP6LuRKlrAx2_jomLo0_U6TmCFJ5_YCjSyyeHaekYbUZOScAmYOEEwLPFjfAcIwEfCvh9uPPWv2EmmYybgFrYEK_Giny7IiiA2qCygZOLoeBi9DymFlzFNC7LTR1JkS4Qa"
                   alt="Floating transparent glass cubes with digital UI elements inside"
                 />
@@ -237,22 +237,22 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section id="contact" className="relative overflow-hidden px-6 py-32 md:px-8">
-        <div className="glass-panel relative z-10 mx-auto max-w-4xl rounded-[2rem] border border-outline-variant/10 p-8 text-center shadow-2xl md:p-16">
-          <h3 className="mb-6 font-headline text-4xl font-bold text-on-surface">
-            READY_TO_INITIALIZE?
+      <section id="contact" className="relative overflow-hidden px-5 py-20 sm:px-6 md:px-8 md:py-32">
+        <div className="glass-panel relative z-10 mx-auto max-w-4xl rounded-[2rem] border border-outline-variant/10 p-6 text-center shadow-2xl md:p-16">
+          <h3 className="mb-4 font-headline text-3xl font-bold text-on-surface md:mb-6 md:text-4xl">
+            Ready to Initialize?
           </h3>
-          <p className="mb-12 font-body text-lg text-on-surface-variant">
+          <p className="mb-8 font-body text-base text-on-surface-variant md:mb-12 md:text-lg">
             Connect with our neural network to discuss your project requirements.
           </p>
-          <div className="flex flex-col justify-center gap-6 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-6">
             <input
               type="email"
               placeholder="your@email.com"
-              className="min-w-0 rounded-lg bg-black px-8 py-4 font-label text-xs tracking-widest outline-none focus:ring-2 focus:ring-primary sm:min-w-[300px]"
+              className="min-w-0 rounded-lg bg-black px-6 py-4 font-label text-xs tracking-widest outline-none focus:ring-2 focus:ring-primary sm:min-w-[300px] sm:px-8"
             />
-            <button className="rounded-lg bg-gradient-to-r from-secondary to-tertiary px-10 py-4 font-label text-xs font-bold uppercase tracking-widest text-white shadow-lg shadow-secondary/20 hover:scale-105">
-              OPEN_COMM_CHANNEL
+            <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-tertiary px-10 py-4 font-label text-xs font-bold uppercase tracking-widest text-white shadow-lg shadow-secondary/20 hover:scale-105 sm:w-auto">
+              Open Comm Channel
             </button>
           </div>
         </div>

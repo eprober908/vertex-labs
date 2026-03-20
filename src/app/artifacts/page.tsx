@@ -71,18 +71,17 @@ export default function ArtifactsPage() {
       activeNav="artifacts"
       footerVariant="artifacts"
       sideNavItems={sideNavItems}
-      mobileDock
     >
-      <header className="relative mb-16 overflow-hidden px-6 md:px-8">
-        <div className="mx-auto max-w-7xl py-12">
-          <h1 className="mb-4 font-headline text-6xl font-black tracking-tighter md:text-8xl">
-            ARTIFACT_GALLERY
+      <header className="relative mb-10 overflow-hidden px-5 sm:px-6 md:mb-16 md:px-8">
+        <div className="mx-auto max-w-7xl py-6 md:py-12">
+          <h1 className="mb-4 font-headline text-3xl font-black tracking-tighter sm:text-4xl md:text-8xl">
+            Artifact Gallery
           </h1>
-          <p className="max-w-2xl font-body text-lg leading-relaxed text-on-surface-variant">
+          <p className="max-w-2xl font-body text-base leading-relaxed text-on-surface-variant md:text-lg">
             A curated dimension of high-fidelity neural outputs, decentralized
             protocols, and spatial interfaces engineered within the Ether framework.
           </p>
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4 md:mt-12">
             {[
               ["ALL UNITS", "bg-primary/10 border-primary/20 text-primary shadow-[0_0_15px_rgba(143,245,255,0.1)]"],
               ["CORE NEURAL", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
@@ -91,7 +90,7 @@ export default function ArtifactsPage() {
             ].map(([label, classes]) => (
               <button
                 key={label}
-                className={`rounded-full border px-6 py-2 font-label text-[10px] uppercase tracking-widest transition-all ${classes}`}
+                className={`w-full rounded-full border px-6 py-3 font-label text-[10px] uppercase tracking-widest transition-all sm:w-auto sm:py-2 ${classes}`}
               >
                 {label}
               </button>
@@ -101,8 +100,8 @@ export default function ArtifactsPage() {
         <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
       </header>
 
-      <section className="px-6 pb-32 md:px-8">
-        <div className="mx-auto grid max-w-[1600px] auto-rows-[200px] grid-cols-1 gap-6 md:grid-cols-[repeat(auto-fill,minmax(350px,1fr))]">
+      <section className="px-5 pb-16 sm:px-6 md:px-8 md:pb-32">
+        <div className="mx-auto grid max-w-[1600px] auto-rows-[260px] grid-cols-1 gap-5 sm:gap-6 md:grid-cols-[repeat(auto-fill,minmax(350px,1fr))] md:auto-rows-[200px]">
           {artifactCards.map((card) => (
             <div
               key={card.title}
@@ -114,14 +113,14 @@ export default function ArtifactsPage() {
                 alt={card.title}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-80 transition-opacity group-hover:opacity-40" />
-              <div className="absolute bottom-0 left-0 w-full translate-y-4 p-8 transition-transform duration-500 group-hover:translate-y-0">
+              <div className="absolute bottom-0 left-0 w-full translate-y-0 p-6 transition-transform duration-500 md:translate-y-4 group-hover:translate-y-0 md:p-8">
                 <span className={`mb-2 block font-label text-[8px] uppercase tracking-[0.3em] ${card.accent}`}>
                   {card.label}
                 </span>
-                <h3 className="font-headline text-2xl font-bold uppercase leading-tight">
+                <h3 className="font-headline text-xl font-bold uppercase leading-tight sm:text-2xl">
                   {card.title}
                 </h3>
-                <div className="mt-4 flex opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="mt-3 flex opacity-100 transition-opacity duration-500 md:mt-4 md:opacity-0 group-hover:opacity-100">
                   <span className="font-body text-xs text-on-surface-variant">{card.meta}</span>
                 </div>
               </div>
@@ -130,26 +129,26 @@ export default function ArtifactsPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-cyan-900/30 bg-slate-950 py-40">
+      <section className="relative overflow-hidden border-t border-cyan-900/30 bg-slate-950 py-20 md:py-40">
         <div className="pointer-events-none absolute inset-0 opacity-20">
           <div className="absolute left-1/4 top-1/2 h-[600px] w-[600px] rounded-full bg-primary blur-[180px]" />
           <div className="absolute right-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-secondary blur-[150px]" />
         </div>
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center md:px-8">
-          <h2 className="mb-8 bg-gradient-to-b from-white to-slate-500 bg-clip-text font-headline text-5xl font-black uppercase tracking-tighter text-transparent md:text-7xl">
-            READY_TO_BUILD_THE_VOID?
+        <div className="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6 md:px-8">
+          <h2 className="mb-6 bg-gradient-to-b from-white to-slate-500 bg-clip-text font-headline text-3xl font-black uppercase tracking-tighter text-transparent sm:text-4xl md:mb-8 md:text-7xl">
+            Ready to Build the Void?
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl font-body text-xl text-on-surface-variant">
-            Collaborate with ETHER_LABS to synthesize your digital footprint into a
+          <p className="mx-auto mb-8 max-w-2xl font-body text-base text-on-surface-variant md:mb-12 md:text-xl">
+            Collaborate with ETHER LABS to synthesize your digital footprint into a
             high-fidelity artifact. Our neural architecture is primed for expansion.
           </p>
           <a
             href="#"
-            className="group relative inline-block rounded-2xl bg-gradient-to-br from-primary via-secondary to-tertiary p-1 shadow-[0_20px_60px_-15px_rgba(143,245,255,0.4)] hover:scale-105 active:scale-95"
+            className="group relative inline-block w-full rounded-2xl bg-gradient-to-br from-primary via-secondary to-tertiary p-1 shadow-[0_20px_60px_-15px_rgba(143,245,255,0.4)] hover:scale-105 active:scale-95 sm:w-auto"
           >
-            <div className="flex items-center space-x-4 rounded-[14px] bg-slate-950 px-12 py-6">
-              <span className="font-headline text-2xl font-black uppercase tracking-widest text-on-surface">
-                START_MISSION
+            <div className="flex items-center justify-center space-x-4 rounded-[14px] bg-slate-950 px-8 py-5 sm:px-12 sm:py-6">
+              <span className="font-headline text-lg font-black uppercase tracking-widest text-on-surface sm:text-2xl">
+                Start Mission
               </span>
               <span className="material-symbols-outlined text-primary transition-transform group-hover:translate-x-2">
                 arrow_forward
