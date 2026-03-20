@@ -1,38 +1,38 @@
 import { PageFrame } from "@/components/site-chrome";
 
 const metrics = [
-  ["hub", "942+", "NEURAL_NODES_DEPLOYED", "Scalable architecture across distributed quantum networks.", "bg-primary", "text-primary", "text-on-primary-container", "shadow-[0_0_20px_rgba(0,238,252,0.4)]"],
-  ["psychology", "12.8ms", "LATENCY_THRESHOLD", "Near-instantaneous cognitive bridge synchronization.", "bg-secondary", "text-secondary", "text-white", "shadow-[0_0_20px_rgba(214,116,255,0.4)]"],
-  ["memory", "∞", "DATA_FLOW_LIMIT", "Unrestricted throughput via holographic substrate.", "bg-tertiary", "text-tertiary", "text-white", "shadow-[0_0_20px_rgba(172,137,255,0.4)]"],
+  ["hub", "942+", "NEURAL NODES DEPLOYED", "Scalable architecture across distributed quantum networks.", "bg-primary", "text-primary", "text-on-primary-container", "shadow-[0_0_20px_rgba(0,238,252,0.4)]"],
+  ["psychology", "12.8ms", "LATENCY THRESHOLD", "Near-instantaneous cognitive bridge synchronization.", "bg-secondary", "text-secondary", "text-white", "shadow-[0_0_20px_rgba(214,116,255,0.4)]"],
+  ["memory", "∞", "DATA FLOW LIMIT", "Unrestricted throughput via holographic substrate.", "bg-tertiary", "text-tertiary", "text-white", "shadow-[0_0_20px_rgba(172,137,255,0.4)]"],
 ];
 
 const team = [
   {
-    role: "FOUNDING_ARCHITECT",
-    name: "ELARA_SYNTH",
+    role: "FOUNDING ARCHITECT",
+    name: "ELARA SYNTH",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBfPHY0PKMCHIRUOHO6uTgS4CuaO5moDJtNzGSmEr5W8uzgcI2qrF9uaQD6dLd_Im7fnWX_CdD3h6hS9McpBBS6nKcJ7xQo1zIfvKp7-i6rscQyMh6c1KnQgI2q8W2XDINZh2mFiiqGPJw7bK2U23GHQT9aVx3sIJaA3ceWcmw4y5jfLB7pUxuGUh8vVVo1LPhMxb_wlBVtUt1ByQ0s_YwdWf-BT_HOVvgTU3CFZW3G4VIRbrVsy5RFad8mq10C9MJAH-K4Krp6nRNp",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCcpc8RjMxdOJFcTY50ijsSRApbdYkAuLoSZUbCZYdAi1JjZlJwfsxFe9kM4Y-7DMbdD-sOzoIu8qc4IIZqWnoZ0uOVjH-DpIJSx7zZ14umGsqxdimKA-eaPM-Of-thO9lr4opLeMxwAjQR1Je7UsPJKK1sL44uGg1m2TMctS8A_m8C2wB1cxW6eqd1ZYzIiEFiDQa3GGEqAdL_Q589SnCi-5I5u3SvYSaAksc0PI6wNJH7EN37gY8b__s5cKesH8Xhb70cnFy1xjFN",
     accent: "text-primary",
   },
   {
-    role: "NEURAL_DESIGNER",
-    name: "KAI_V0ID",
+    role: "NEURAL DESIGNER",
+    name: "KAI VOID",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDqaUOGMyHVK-WpRR6_RyWj3wxsqXkQYQQ8MrfhB00rQ0SFPk5qRElHsYbeHg8sxpmi03JDkX-e-OKy5swsg_m2EjUMfccnwmK7ZC2bB625UrwUBfHXHEYDB8CS8yqc_DRmsL45BcyA0ZaoBVHU4nDwgVbkMRvlf4VaUrkWWQwwE5pldUSu7LxGYm_VAG63-ZmLN36uJfXjfiZptb6C5rZ4oJ8LC-QDD6AZKMcgMEhdGqdhH3arlPfmidIHaM55nDLien5tjkXK8A4F",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDc0xDj8FYwJ-rInDh6V88vYnCTFI4VWHDZaJA0rf96JZwTqEsTx_atI3iFRruWRnH1mdP9FSmdUQrfapJnc8uagpj-fOFeJe325loUtKaf0bvNr72wryLtLIfGTB06YCEj61WK8cdTmonqR9Nfz1r_Z-zMLSZ25h4aFf4p8pQI7AVSS-zMNyTf7HYyg0tmLkn63zZGlg8scYFsIXSSx8m2qzC9o3jhdIPqMHYDRn5bhYYttRNqGGaI9FoTaXVQrRwFGDSXura-_dKA",
     accent: "text-secondary",
   },
   {
-    role: "BIO_SYSTEMS_LEAD",
-    name: "SARA_MORPH",
+    role: "BIO SYSTEMS LEAD",
+    name: "SARA MORPH",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuADn4k2LKM5xVcZDWzpTbtGWrdkKjKaMp_D4ULHgnUIW3qRh-2L7jvo7OkEdco8inwBubtcUJJPSsx-DkTADvpmdNZB5Kr_L1ksA6RLHXtlrtNrhFji06_Mv1XBL4VzV5nkThSKmF3aO7vrkacQfk994w-Hl58mvSVj1VsVDYVVB_SawpTfOzw0O7t2K8Yy-1DQ7cjYCnE9ZVD3wwTk0aJ_4CuGxZWPQmsLvd7PG5NmGhVhPFbPpIvQs1gAwe9wQrozxZPdufAoKV1T",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBq3ss0nxGrn1R19nFWyZ9jsYf2iJKdxQUHh9IbZBnPdKjAKWVJAb7zZbENPKrJvI1v5S8oHG4DGyzfOQ4RjAUZ1RjdyAyXwY6enEr9n06E6Y9k1rvTheZuubYUwrcYr1cFf28SMFP1iQnlfvF9MTB-ttIl26rMghSYr3JPEQ1DTViy1TPVcpMHXUe9TuPKia0eCAuii1v1jePlGaYqyrCzaT470G1vYie-RUJDWmZXfIynX-Kqaco0EjNNGsduHf50Zzo9iv6XR4jQ",
     accent: "text-tertiary",
   },
   {
-    role: "QUANTUM_STREAMS",
-    name: "JAX_ETHER",
+    role: "QUANTUM STREAMS",
+    name: "JAX ETHER",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAn83qn1R-MEI29YeMmQ1xmyR_XFpPL30FyZ904YjTZd8iNsHP4BsO2qF_uaVJJOVxfYDTPepltJlTPHIEy7XkLj7vB_oz-3dYyKHJ1V2tOIBUlIADLl9DitVzzL944AQBlpeFeQ0Nld5NG-d3nnEZS-r4g0zHOQIcJyNfTw2QUySjFtaeS2QafU_mgDP66czdPZBISAdBt3NhZAO2imNUC1Ytkmxoyyrclw9KbSRgMWr5ek2Ps6iRa-hYEgRkJPv2XU5Z81FbSojNr",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuB9N2smFG_DsVsmvTdNGNfsshlpcNywlVxyyQsoF0wW3MhUn1G-HYRAMkftpRrZjM0GvYyNE5h5BKd_Ljw9akID9K_jfx3M42SZtMIXo4rlMXmSATTABdTlmtVV8lJC5lz2xYzRQoeLgl93oTQMAwmoDnp9BmZ9M_IHaAYiMbYk_Xz39bdFxZU6WKNj38AoLRaiX2B8fS6B3uQlEhS_IdIZc2Xt15z_nMMOsC3zR7TOU0d4BCEHbPwtWpHzpM2XEoT8pbVmGuEbfeXG",
     accent: "text-primary-dim",
   },
 ];
@@ -51,7 +51,7 @@ export default function NeuralNetworkPage() {
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-transparent to-background/20" />
           <img
             className="h-full w-full scale-110 object-cover opacity-40"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnxlM22DxhtWNskB60v_3Hg_tCt20dCXoyiPc23v5pRxqBVhs-k_lRiHx4Wr9P48_r3GSiwKQrzI3YzP9JOM542xF7vnyTxxYR-4EQEEkDe0Jyzl6qIMKoxWab2FYXZvoejV9gugMhmxmTFCQDu_evOqt2Q4zDkjd4q3oj9BwWKiB-NJfz51CJdUgyeg63n1foHrQmzbg3RUT004KMU-IKWvWAmjzwTFXdIl5x--AB7zpIYgpIHJRPAYt-gtwRMvhCtwVjZwLwYYun"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5paWuuK1p0_x8JCpFHcH-0CgpFbmK3vluHomVR-sBtdCKJaDPg1LiH_AaYPD99X3L1Q0R2YuGQl7NqG_rJHCuW7J3l8BOR2CNOj967p2EAeXsbFDN79x1dqmsCuDapB3SGVfmBElaAl-VyQKH_Vk1dmB0BuA5QHqlxEiDLQxBT1FjgCqOrYxRPOHEkSSmuE-8I45YdlIpiaI7stswjPJIDrNKKQlD3P_mQH_4-rySIYc_Yl6JfyODxnSnlIk91-iTWvCWCGziDBM"
             alt="Futuristic digital network of light and floating data particles"
           />
         </div>
@@ -95,7 +95,7 @@ export default function NeuralNetworkPage() {
       <section className="bg-background px-6 py-32 md:px-20">
         <div className="mx-auto mb-20 max-w-7xl">
           <h2 className="mb-4 font-headline text-5xl font-bold tracking-tighter text-on-surface">
-            ARCHITECTS_OF_THE_VOID
+            ARCHITECTS OF THE VOID
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-primary to-transparent" />
         </div>
@@ -130,7 +130,7 @@ export default function NeuralNetworkPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between space-y-12 md:flex-row md:space-y-0">
           <div className="max-w-xl text-center md:text-left">
             <h3 className="mb-6 font-headline text-4xl font-black text-on-surface">
-              READY_FOR_UPGRADE?
+              READY FOR UPGRADE?
             </h3>
             <p className="mb-8 font-body text-lg font-light text-on-surface-variant">
               Connect your interface to our neural backbone and begin the synthesis of

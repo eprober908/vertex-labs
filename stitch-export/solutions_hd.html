@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eefc",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #070e1b; color: #e2e8fb; margin: 0; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(40px); background: rgba(28, 38, 57, 0.4); }
+        .hero-glow { background: radial-gradient(circle at 50% 50%, rgba(143, 245, 255, 0.15) 0%, transparent 70%); }
+        .inner-bevel { box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5); }
+        .text-glow-primary { text-shadow: 0 0 12px rgba(143, 245, 255, 0.4); }
+        .parallax-bg { background-attachment: fixed; background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-['Space_Grotesk']">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Artifacts</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Process</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs" href="#">Neural_Network</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-label uppercase tracking-widest text-[10px] font-bold px-6 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all scale-100 active:scale-95">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-slate-950/60 backdrop-blur-3xl flex flex-col pt-24 pb-8 px-6 space-y-6 hidden lg:flex">
+<div class="mb-4">
+<h3 class="text-lg font-bold text-white font-label">STRATA_CATEGORIES</h3>
+<p class="text-purple-400 font-label tracking-widest uppercase text-[10px]">V0.1_BETA</p>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-purple-400 bg-purple-500/10 rounded-r-full border-r-4 border-purple-500 group transition-all duration-300" href="#gen-ai">
+<span class="material-symbols-outlined text-xl" data-icon="psychology">psychology</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Generative AI</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#web3">
+<span class="material-symbols-outlined text-xl" data-icon="hub">hub</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Web3 Systems</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#spatial">
+<span class="material-symbols-outlined text-xl" data-icon="layers">layers</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Spatial UI</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="memory">memory</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Neural Architectures</span>
+</a>
+<a class="flex items-center space-y-0 space-x-4 py-3 px-4 text-slate-500 hover:text-slate-200 hover:translate-x-2 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="biotech">biotech</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Bio-Digital</span>
+</a>
+</nav>
+</aside>
+<main class="lg:pl-64">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-low via-background to-background"></div>
+<div class="absolute inset-0 hero-glow opacity-50"></div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-6 block">Technological_Ecosystem_V2</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black text-on-surface leading-tight tracking-tighter mb-8 text-glow-primary">
+                    DIMENSIONAL<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">SOLUTIONS</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
+                    We synthesize intelligence, decentralized trust, and immersive spatial computing into a cohesive digital monolith for the future of industry.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed rounded-lg font-label font-bold tracking-widest uppercase text-xs shadow-xl shadow-primary/10 hover:shadow-primary/30 transition-all">
+                        DEPLOY_NODE
+                    </button>
+<button class="px-8 py-4 glass-panel border border-outline-variant/30 rounded-lg font-label text-on-surface tracking-widest uppercase text-xs hover:bg-surface-variant/40 transition-all">
+                        VIEW_SPECS
+                    </button>
+</div>
+</div>
+<!-- Floating 3D Element Placeholder -->
+<div class="absolute top-1/4 right-10 w-80 h-80 opacity-60 mix-blend-screen pointer-events-none">
+<img alt="Stunning high-contrast 3D monolith geometric structure with sharp edges and dramatic lighting on #070e1b" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlxoMfWroTVPAQK9svidL3_L8eSa3_Lh0YXvvkt1AtnxzXN_LCzU-2wR_z1v1v5dlMg_kAqmuYPpXMg9Ggzukm4ElfrP9qUZolsMRuf8jfjrXCJUcgQ_2YHJO6DOAU7Z3WyWv5QKuezSAxHT2Pan9nzQGYvwjZ7sqke5HMZgd1tYkiMmveZ78wPGT3RFQRj0SGgXw2Eh12822jy1DCIdxGnygn-3n94Kz8IJRBygVZ6Lidz2Qd85KykHXtCkOkrTa_0uMpxbA5favS"/>
+</div>
+<div class="absolute bottom-1/4 left-10 w-64 h-64 opacity-40 pointer-events-none">
+<img alt="Complex 3D geometric crystal structure with hyper-realistic sharp lighting on #070e1b" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgy7Abb5g2YG5TNRw8cOgtTNh7lqqvrcB-fPzpa-0KqYBA5SgQCRSJYCAHofnyZfKzLSL11rsfZ6tz9OzcxWgYdsFAa9riv2Lxhdh-ifpvWQTwP9vegyH-cvXAj-g7DJm8n_iqE2A-zFvfgfdZTX2EW4muQNd864K-ZmGDfm82HGwJETHZf9bZM6o8hJFmX_4AdqH4Ao805oc0O9fM6Wu0tRVkNhbJGLrTJhR8XR1vnT8wNnuCL0hGxyYFnxsrli72u9Lp8P6RiAE8"/>
+</div>
+</section>
+<!-- Service Category: Generative AI -->
+<section class="relative py-32 overflow-hidden" id="gen-ai">
+<div class="absolute inset-0 z-0 opacity-10 parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgxH6irolv4SLwaKbgzM6Y_wCcsMN3OSJ7QIyTc5bDyIuyh9LTxuKgeF0JMN833jW3Z7l6ruj1c59NQdn8URwFm2RvY7VkoVfRDeYihn17XoiK2-kEpBwMVbWoE-i7umaHyA1Mz1xgoN246Vk76YFfHkPy0we5fQPH46KZIURNOSA6ig7Hrm1NRBju1fpfkYqSILozaaYXkvMOoFPLZhsYnqN5wZiHbKrVYBJFWUvqJTZYIambyK8gLXbwf0hssVhCMEc8F3dbj7sA');"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<span class="font-label text-secondary tracking-widest uppercase text-sm">STRATUM_01 / COGNITION</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">GENERATIVE_AI_ARCHITECTURES</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            Beyond simple prompts. We build custom LLM pipelines, specialized agentic workflows, and proprietary synthetic data generators that transform raw information into strategic intelligence.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 glass-panel inner-bevel rounded-xl">
+<h4 class="font-label text-primary text-xs tracking-widest mb-3">NEURAL_SYNTHESIS</h4>
+<p class="text-xs text-on-surface-variant">Custom training on enterprise datasets with zero-leakage security.</p>
+</div>
+<div class="p-6 glass-panel inner-bevel rounded-xl">
+<h4 class="font-label text-primary text-xs tracking-widest mb-3">AGENTIC_SWARMS</h4>
+<p class="text-xs text-on-surface-variant">Autonomous multi-agent systems for complex task orchestration.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-secondary/10 blur-3xl rounded-full"></div>
+<img alt="Ultra-HD 4K photorealistic glowing human brain neural network with extremely detailed fibers and dramatic lighting on #070e1b" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwBUCc6LKSk-TZqs_34r5xrQqnYP6gj2kQuRD-izrmj88NRrrtzpxZIBeB8bj5S03NwenQNBvhTBgmqXrBt4YypqigTJBkkSXs5yoN3BtagP6ML_oJsi1lbahcE2_BrPnLMcXN2_eG5359W__shl4GwAYU1E3uvOnvTaWewcMCmwSfFJrQ61W5AkgR2WP83Z8AUdWUSnsP4g0GhOlbaZnc7xeDO1MaUeQWM7NPG9fydNtrbqsFyOLIbkmTwrm6PzedYwhJx58pQnDC"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Category: Web3 Systems -->
+<section class="relative py-32 overflow-hidden bg-surface-container-low" id="web3">
+<div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #00eefc 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full"></div>
+<img alt="Hyper-realistic 4K interlocking metallic gold and silver chains representing blockchain with dramatic shadows on #070e1b" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtlAbIMo_12wNdfBSCyAM9CQI0IDcb_6-QmRG-zNVjKuCfYMWMAsgoxnbyiChdYwsJFkzpS3MmZPKzEhYAPtM8oHSzhhK4tBiqTzIlPgyO82oFo50H9gEyHZrGr5oU3aVIrMniVFkHo8c3nvnJQziBiuUY1KTmEtpbxFy7cxKDiYRnEZhttZesYD5w6cAp_mmpA9wV0qNxcQG82gWS9FvwgNJrpapYUh_dXVLDbPSERO5X8bXIu4vrB3xEQZudI_L_gvXrW3kX03a0"/>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="hub" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<span class="font-label text-primary tracking-widest uppercase text-sm">STRATUM_02 / PROTOCOL</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">DECENTRALIZED_TRUST_SYSTEMS</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            Engineering secure, scalable Web3 ecosystems. From smart contract auditing to custom L2 chain deployment, we build the rails for the next economy of value.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-6 p-4 bg-surface-container-highest/40 rounded-xl inner-bevel">
+<span class="material-symbols-outlined text-secondary" data-icon="security">security</span>
+<div>
+<h5 class="font-label text-on-surface text-[10px] tracking-widest">CRYPTOGRAPHIC_AUDITS</h5>
+<p class="text-[10px] text-on-surface-variant">Zero-vulnerability assurance for smart protocol layers.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 bg-surface-container-highest/40 rounded-xl inner-bevel">
+<span class="material-symbols-outlined text-secondary" data-icon="token">token</span>
+<div>
+<h5 class="font-label text-on-surface text-[10px] tracking-widest">TOKENOMIC_MODELING</h5>
+<p class="text-[10px] text-on-surface-variant">Mathematical frameworks for sustainable digital economies.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Category: Spatial UI -->
+<section class="relative py-32 overflow-hidden" id="spatial">
+<div class="absolute inset-0 z-0 opacity-10" style="background: linear-gradient(90deg, transparent 49.5%, #414857 50%, transparent 50.5%), linear-gradient(0deg, transparent 49.5%, #414857 50%, transparent 50.5%); background-size: 100px 100px;"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 glass-panel inner-bevel rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
+</div>
+<span class="font-label text-tertiary tracking-widest uppercase text-sm">STRATUM_03 / INTERFACE</span>
+</div>
+<h2 class="font-headline text-5xl font-bold mb-8 text-on-surface">SPATIAL_COMPUTING_UX</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10">
+                            The screen is no longer a boundary. We design immersive interfaces for AR/VR environments, utilizing gaze-tracking, gesture-recognition, and spatial audio to redefine user interaction.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Volumetric_Design</span>
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Haptic_Feedback</span>
+<span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 text-tertiary font-label text-[10px] uppercase tracking-widest rounded-full">Mixed_Reality</span>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-tertiary/10 blur-3xl rounded-full"></div>
+<img alt="Ultra-HD 4K photorealistic hyper-realistic glass cube with floating digital UI elements inside, crisp edges and cinematic lighting on #070e1b" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtNUAILFNl8GSDyrw27zI0ip8xXXpmxScIzLc8FpZWs-SB8DtRELpvVkUojggSJUHlqd9sY5FRM2coHOFRm3f5-Qb8LYW5IDn1l_9QTJutcmDYz-CBHc1yPAMWCXSucOKucpb0B6iT0JpP6LuRKlrAx2_jomLo0_U6TmCFJ5_YCjSyyeHaekYbUZOScAmYOEEwLPFjfAcIwEfCvh9uPPWv2EmmYybgFrYEK_Giny7IiiA2qCygZOLoeBi9DymFlzFNC7LTR1JkS4Qa"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 relative overflow-hidden">
+<div class="max-w-4xl mx-auto glass-panel p-16 rounded-[2rem] text-center relative z-10 border border-outline-variant/10 shadow-2xl">
+<h3 class="font-headline text-4xl font-bold text-on-surface mb-6">READY_TO_INITIALIZE?</h3>
+<p class="font-body text-on-surface-variant mb-12 text-lg">Connect with our neural network to discuss your project requirements.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<input class="bg-surface-container-lowest border-none px-8 py-4 rounded-lg font-label text-xs tracking-widest focus:ring-2 focus:ring-primary outline-none min-w-[300px]" placeholder="ENCRYPTED_EMAIL_ADDRESS" type="email"/>
+<button class="bg-gradient-to-r from-secondary to-tertiary text-white px-10 py-4 rounded-lg font-label font-bold tracking-widest uppercase text-xs hover:scale-105 transition-transform shadow-lg shadow-secondary/20">
+                        OPEN_COMM_CHANNEL
+                    </button>
+</div>
+</div>
+<!-- Texture behind CTA -->
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto relative z-10">
+<div class="col-span-1 md:col-span-1">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-label mb-4">ETHER_LABS</div>
+<p class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-500">©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<h6 class="font-label text-cyan-500 text-[10px] tracking-widest mb-2">DIRECTORY</h6>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">ENCRYPTION_POLICY</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h6 class="font-label text-cyan-500 text-[10px] tracking-widest mb-2">DATA_STREAMS</h6>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">NEURAL_ACCESS</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300" href="#">DATA_STREAM</a>
+</div>
+<div class="text-right">
+<div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center ml-auto mb-4 border border-cyan-500/20">
+<span class="material-symbols-outlined text-cyan-400" data-icon="arrow_upward">arrow_upward</span>
+</div>
+<span class="font-label text-slate-500 text-[8px] tracking-[0.3em]">TOP_OF_STACK</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
+</footer>
+</main>
+</body></html>

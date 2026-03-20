@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETHER_LABS // PORTFOLIO_STRATA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eeef",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #070e1b;
+        color: #e2e8fb;
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(28, 38, 57, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .glow-primary {
+        box-shadow: 0 0 20px rgba(143, 245, 255, 0.15);
+      }
+      .inner-bevel {
+        box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .masonry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 1.5rem;
+      }
+      .span-v-2 { grid-row: span 2; }
+      .span-v-3 { grid-row: span 3; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-headline">
+            ETHER_LABS
+        </div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Solutions</a>
+<a class="text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1 font-label uppercase tracking-[0.1em] text-xs" href="#">Artifacts</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Process</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-label uppercase tracking-[0.1em] text-xs" href="#">Neural_Network</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-headline font-bold uppercase tracking-widest text-[10px] px-6 py-2.5 rounded-lg hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all scale-95 active:scale-90">
+            INITIATE_PROJECT
+        </button>
+</div>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex h-screen w-64 fixed left-0 top-0 z-40 bg-slate-950/60 backdrop-blur-3xl flex-col pt-24 pb-8 px-6 space-y-6 shadow-2xl shadow-cyan-900/20">
+<div class="mb-8">
+<h3 class="font-headline tracking-widest uppercase text-[10px] text-white font-bold">STRATA_CATEGORIES</h3>
+<p class="text-[8px] text-primary/50 font-label tracking-widest mt-1">V0.1_BETA</p>
+</div>
+<nav class="flex flex-col space-y-4">
+<button class="flex items-center space-x-4 text-purple-400 bg-purple-500/10 rounded-r-full border-r-4 border-purple-500 p-3 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Generative AI</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Web3 Systems</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Spatial UI</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Neural Architectures</span>
+</button>
+<button class="flex items-center space-x-4 text-slate-500 hover:text-slate-200 p-3 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-label tracking-widest uppercase text-[10px]">Bio-Digital</span>
+</button>
+</nav>
+</aside>
+<main class="lg:ml-64 pt-24 min-h-screen">
+<!-- Hero / Filter Section -->
+<header class="px-8 mb-16 relative overflow-hidden">
+<div class="max-w-7xl mx-auto py-12">
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface mb-4">ARTIFACT_GALLERY</h1>
+<p class="font-body text-on-surface-variant max-w-2xl text-lg leading-relaxed">
+                A curated dimension of high-fidelity neural outputs, decentralized protocols, and spatial interfaces engineered within the Ether framework.
+            </p>
+<div class="mt-12 flex flex-wrap gap-4">
+<button class="px-6 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary font-label text-[10px] tracking-widest uppercase shadow-[0_0_15px_rgba(143,245,255,0.1)] transition-all hover:bg-primary/20">ALL_UNITS</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">CORE_NEURAL</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">DECENTRALIZED</button>
+<button class="px-6 py-2 bg-surface-container-highest border border-outline-variant/30 rounded-full text-on-surface-variant font-label text-[10px] tracking-widest uppercase hover:text-on-surface transition-all">SPATIAL_V01</button>
+</div>
+</div>
+<!-- Decorative Glow Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+</header>
+<!-- Project Grid (Masonry) -->
+<section class="px-8 pb-32">
+<div class="masonry-grid max-w-[1600px] mx-auto">
+<!-- Card 1: SYST_CRYSTAL -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of a sharp geometric glass crystal, studio lighting, deep blue highlights, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmL63ykzumZT47-UeJuvvp1oI9wmiHo8qIqTxp-Rfm5h8ECXF8ANyh7_wolEal0lCclTwxoqjdjnr7ob-wgRQLDPHnngPsBVi5X4Jq6Zu0J9MPwC08tZYQQ67RG8cKd3lRtHoxskVZrSHdAvAKYUWRDzPzhacu_RfsEmblWO0YfVbtL8n3tLah7cDdm01L2nGAetnEf_7aVZT4b3AUDzdijKzrmKRY_ppci1v45spQuS6Uh8wIQzt83IKotKALh-4cSpCS6xuc6aNy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-primary tracking-[0.3em] uppercase mb-2 block">NEURAL_NET_V4</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">SYST_CRYSTAL</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">View Deployment // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 2: TERRA_01_GEN -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-3 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of a matte black topographical earth globe, high contrast details, cinematic studio lighting, deep shadows, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Nbh630u35es7XTsCTFLshRa4GDvXx7IE_Qvc_QKWUxUgPrWbLX3ri_iSTAy3arHSFHXZvXMw_XNn8VmsUEBTOhEjld-ZmuhmYNCbElZgp1_oTDmxEfXRjXk9GqI5XWqgYET3imYh4df_YYjeP2OJ-cGZpp2bEgACx9bwjjzsp2ZkQIFJvpJa50bGuVtbTqD5sWJBhxFL1n5m-i85bpt4FQgE_N1MwoK6W7sLl03QBzDqsd0vKwgV5L6UaWbezo87A-fsskzlb9kK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-secondary tracking-[0.3em] uppercase mb-2 block">SPATIAL_INFRA</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">TERRA_01_GEN</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Access Matrix // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 3: PULSE_ENCRYPT -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of viscous liquid chrome waves, purple neon reflections, high contrast, studio lighting, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5TYPJfv1l9c1i0g7_hRjxU5RdKqo6657d1wW0mCHPCYat7mDv8jfDBLNrKk9-0Z9yS74rsEg56Iq_jO5K7MAvZ7htOTEIhHpQ7p1eq3Bd8um7RZclANMkq7r-21AtWxLZPPCucQ9xrKbYuVSv5sUn5uXjrtxKgX7bFa5TV0D2zKMPoORWRo6z27IsJr70qQ_EHSNEiCZzUYVK5NLt789uQflaUIB8kg6xlzNQEoulNRf7HKpD1a7IdIqmN_bOPNyOgMbydcV28tLR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-tertiary tracking-[0.3em] uppercase mb-2 block">BIO_ENCRYPTION</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">PULSE_ENCRYPT</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Stream Data // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 4: VOID_ORB_CORE -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-3 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of a brushed titanium metallic orbital sphere with intricate mechanical detail, high contrast lighting, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB40ZNHis9uWlhUNNo9mmztT-NIAAv_A0T7AzUzi3bNoTFtvRXvbr7h_eIFRUOVnF3lRHcgJANJXXBikgITyU6OAkCsgoiIHK68JW9DZkTr4rAm8odBLzHuCxv3YrLQN-as1H7Tql7TpHTysd5MU298UEuLcG-S9Bak66OWHBNEDtMfKlMRS_vL0wuA9_FZ2qb2vU29nTrauPO2LHwa1SFSq7Y_An2hycnkNnyIJDnDrj3vDXYIs8BAO0l9vy3EUax01eWu5w5GxjtE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-primary tracking-[0.3em] uppercase mb-2 block">PROTO_V02</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">VOID_ORB_CORE</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Initialize // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 5: STRATA_DEFI -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of a glowing cyan neural data grid, sharp wireframe detail, high contrast, studio lighting, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbGqlJevP-GBq7hRGrzsh6DjWtAQsTRKs8wlY1uLETIYPxt22twuufwLCZI8wGZYwXtGwm9FKMs8lonyLj7lxN2_N6JS0Fuu7WGvluSNEjr6f706KRaaH6STO_C2X_LqiO2qcUIMDskxfz5zjEcP9J9wnc38aojdD4aY2cGXgi_wgAiqRBaejjscpnFZOrw1zvD5RBnD-QavM3X4PVLsJ9Vei1dxUiXCfwMlAw63mTR85Z5kUEUTb-8TxcPgd5XsP_9Dlt-ctDFf8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-secondary tracking-[0.3em] uppercase mb-2 block">WEB3_NODES</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">STRATA_DEFI</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Verify Hash // 2024</span>
+</div>
+</div>
+</div>
+<!-- Card 6: GEN_SEQUENCE -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-highest span-v-2 cursor-pointer shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ultra-HD 4K photorealistic 3D render of a translucent glass double helix structure, caustic light refractions, studio lighting, pitch black #070e1b background" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDLnUngFeHObAb_Sfb_3rAAvKPUHploHouAgTaMEvL_Zq4wnlaAmWsnrS_PB0wwXDj0-AheGIYSp_n2zABhXk7yLNzyACBaDtO5DakyFmVEKld75qwtuXCA-Uwj-bUsaV8-lPziVV44J2BhUMrSMb-02HAGRBKIVvdKEdWfMxswlxFn5izFSoqErIwZ87JYePpUuap9bctFg49pJpBzusFAfxV0BhmCJyNjGqA6Waw0upaah6gQalgZekNl5uroUeL_7TyMnPJTZR-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-label text-[8px] text-tertiary tracking-[0.3em] uppercase mb-2 block">NEURAL_DNA</span>
+<h3 class="font-headline text-2xl font-bold leading-tight uppercase">GEN_SEQUENCE</h3>
+<div class="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="text-xs font-body text-on-surface-variant">Analyze // 2024</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section: Start a Project -->
+<section class="relative py-40 overflow-hidden bg-slate-950 border-t border-cyan-900/30">
+<!-- Background Abstract Renders/Shapes -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-primary rounded-full blur-[180px]"></div>
+<div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary rounded-full blur-[150px]"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">
+                READY_TO_BUILD_THE_VOID?
+            </h2>
+<p class="font-body text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto">
+                Collaborate with ETHER_LABS to synthesize your digital footprint into a high-fidelity artifact. Our neural architecture is primed for expansion.
+            </p>
+<!-- Massive 3D Styled Button -->
+<button class="group relative inline-block p-1 rounded-2xl bg-gradient-to-br from-primary via-secondary to-tertiary shadow-[0_20px_60px_-15px_rgba(143,245,255,0.4)] transition-transform hover:scale-105 active:scale-95">
+<div class="px-12 py-6 bg-slate-950 rounded-[14px] flex items-center space-x-4">
+<span class="font-headline text-2xl font-black text-on-surface tracking-widest uppercase">START_MISSION</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30 shadow-[0_-20px_50px_rgba(0,240,255,0.05)]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto relative z-10">
+<div class="col-span-1 md:col-span-2">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-headline mb-6">ETHER_LABS</div>
+<p class="font-label tracking-[0.2em] text-[10px] text-slate-500 uppercase leading-relaxed max-w-xs">
+                    ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED. ENGINEERED_IN_THE_VOID_OF_NEURAL_PROCESSING.
+                </p>
+</div>
+<div>
+<h4 class="font-headline text-[10px] tracking-widest uppercase text-cyan-500 mb-6">DIRECTORIES</h4>
+<ul class="space-y-4">
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">TERMINAL</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">ENCRYPTION_POLICY</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">NEURAL_ACCESS</a></li>
+<li><a class="font-label tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors uppercase" href="#">DATA_STREAM</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-end space-y-6">
+<div class="flex space-x-6">
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-slate-600 hover:text-cyan-400 cursor-pointer transition-colors" data-icon="code">code</span>
+</div>
+<div class="flex items-center space-x-2 text-[8px] font-label text-slate-700 tracking-[0.5em] uppercase">
+<span>SYSTEM_STATUS</span>
+<div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+<span class="text-green-500/50">STABLE</span>
+</div>
+</div>
+</div>
+<!-- Background Glow -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-cyan-900/10 to-transparent pointer-events-none"></div>
+</footer>
+</main>
+<!-- Mobile Navigation Shell -->
+<div class="md:hidden fixed bottom-0 w-full z-50 glass-panel border-t border-outline-variant/10 px-4 py-3 flex justify-around items-center">
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[8px] font-label uppercase tracking-widest">GALLERY</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-cyan-400">
+<span class="material-symbols-outlined" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="text-[8px] font-label uppercase tracking-widest">ARTIFACTS</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="stream">stream</span>
+<span class="text-[8px] font-label uppercase tracking-widest">PROCESS</span>
+</button>
+<button class="flex flex-col items-center space-y-1 text-slate-500">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="text-[8px] font-label uppercase tracking-widest">NODES</span>
+</button>
+</div>
+</body></html>

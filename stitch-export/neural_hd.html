@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#1f0052",
+              "on-primary-container": "#005359",
+              "on-secondary-fixed-variant": "#8400b3",
+              "primary-fixed-dim": "#00deec",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#580079",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-dim": "#bb00fc",
+              "on-primary": "#005d63",
+              "surface-container-highest": "#1c2639",
+              "background": "#070e1b",
+              "tertiary-container": "#7000ff",
+              "surface-dim": "#070e1b",
+              "primary-container": "#00eefc",
+              "on-secondary-container": "#fff5fc",
+              "error-dim": "#d7383b",
+              "on-error-container": "#ffa8a3",
+              "inverse-surface": "#f9f9ff",
+              "primary": "#8ff5ff",
+              "secondary-fixed-dim": "#eaaeff",
+              "tertiary-fixed": "#bda1ff",
+              "surface-container-low": "#0c1322",
+              "error-container": "#9f0519",
+              "on-tertiary-container": "#f8f1ff",
+              "surface-container-high": "#172031",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-primary": "#006a71",
+              "surface-container-lowest": "#000000",
+              "on-surface-variant": "#a5abbd",
+              "surface-container": "#11192a",
+              "tertiary": "#ac89ff",
+              "on-surface": "#e2e8fb",
+              "inverse-on-surface": "#4e5565",
+              "surface-variant": "#1c2639",
+              "on-primary-fixed": "#003f43",
+              "secondary-fixed": "#f1c1ff",
+              "on-secondary": "#390050",
+              "on-tertiary": "#290067",
+              "primary-dim": "#00deec",
+              "primary-fixed": "#00eefc",
+              "on-background": "#e2e8fb",
+              "outline-variant": "#414857",
+              "surface": "#070e1b",
+              "secondary-container": "#9900cf",
+              "surface-tint": "#8ff5ff",
+              "tertiary-dim": "#874cff",
+              "outline": "#6f7586",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "on-error": "#490006",
+              "secondary": "#d674ff",
+              "surface-bright": "#222c41"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 38, 57, 0.4);
+        backdrop-filter: blur(20px);
+      }
+      .inner-bevel-light {
+        box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .glow-cyan {
+        box-shadow: 0 0 20px rgba(0, 238, 252, 0.3);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<nav class="fixed top-0 w-full z-50 bg-[#070e1b]/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)] font-headline">
+                ETHER_LABS
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Solutions</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Artifacts</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Process</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-slate-400 hover:text-cyan-200 transition-colors" href="#">Neural_Network</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-headline font-bold text-xs uppercase tracking-widest scale-95 active:scale-90 transition-all duration-300 hover:glow-cyan">
+                INITIATE_PROJECT
+            </button>
+</div>
+</nav>
+<main class="relative pt-24">
+<section class="relative min-h-[819px] flex items-center px-8 md:px-20 overflow-hidden bg-[#070e1b]">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-[#070e1b] via-transparent to-[#070e1b]/20 z-10"></div>
+<img alt="Ultra-HD sharp luminous 3D light-field digital network" class="w-full h-full object-cover opacity-60 scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcpc8RjMxdOJFcTY50ijsSRApbdYkAuLoSZUbCZYdAi1JjZlJwfsxFe9kM4Y-7DMbdD-sOzoIu8qc4IIZqWnoZ0uOVjH-DpIJSx7zZ14umGsqxdimKA-eaPM-Of-thO9lr4opLeMxwAjQR1Je7UsPJKK1sL44uGg1m2TMctS8A_m8C2wB1cxW6eqd1ZYzIiEFiDQa3GGEqAdL_Q589SnCi-5I5u3SvYSaAksc0PI6wNJH7EN37gY8b__s5cKesH8Xhb70cnFy1xjFN"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="mb-6 flex items-center space-x-3">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-headline text-primary uppercase tracking-[0.2em] text-xs font-bold">The Visionary Core</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-headline font-black text-on-surface tracking-tighter leading-[0.9] mb-8">
+                    SYNTHESIZING <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">REALITY</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-2xl">
+                    We architect neural conduits between human intuition and machine intelligence, manifesting the next era of digital existence.
+                </p>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-[#070e1b]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(0,238,252,0.4)] overflow-hidden">
+<img alt="Neural Node Icon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc0xDj8FYwJ-rInDh6V88vYnCTFI4VWHDZaJA0rf96JZwTqEsTx_atI3iFRruWRnH1mdP9FSmdUQrfapJnc8uagpj-fOFeJe325loUtKaf0bvNr72wryLtLIfGTB06YCEj61WK8cdTmonqR9Nfz1r_Z-zMLSZ25h4aFf4p8pQI7AVSS-zMNyTf7HYyg0tmLkn63zZGlg8scYFsIXSSx8m2qzC9o3jhdIPqMHYDRn5bhYYttRNqGGaI9FoTaXVQrRwFGDSXura-_dKA"/>
+</div>
+<div class="text-6xl font-headline font-black text-primary mb-2">942+</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">NEURAL_NODES_DEPLOYED</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Scalable architecture across distributed quantum networks.</p>
+</div>
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(214,116,255,0.4)] overflow-hidden">
+<img alt="Latency Icon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq3ss0nxGrn1R19nFWyZ9jsYf2iJKdxQUHh9IbZBnPdKjAKWVJAb7zZbENPKrJvI1v5S8oHG4DGyzfOQ4RjAUZ1RjdyAyXwY6enEr9n06E6Y9k1rvTheZuubYUwrcYr1cFf28SMFP1iQnlfvF9MTB-ttIl26rMghSYr3JPEQ1DTViy1TPVcpMHXUe9TuPKia0eCAuii1v1jePlGaYqyrCzaT470G1vYie-RUJDWmZXfIynX-Kqaco0EjNNGsduHf50Zzo9iv6XR4jQ"/>
+</div>
+<div class="text-6xl font-headline font-black text-secondary mb-2">12.8ms</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">LATENCY_THRESHOLD</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Near-instantaneous cognitive bridge synchronization.</p>
+</div>
+<div class="p-12 glass-card rounded-xl inner-bevel-light relative group">
+<div class="absolute -top-6 left-12 w-12 h-12 bg-tertiary rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(172,137,255,0.4)] overflow-hidden">
+<img alt="Data Flow Icon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9N2smFG_DsVsmvTdNGNfsshlpcNywlVxyyQsoF0wW3MhUn1G-HYRAMkftpRrZjM0GvYyNE5h5BKd_Ljw9akID9K_jfx3M42SZtMIXo4rlMXmSATTABdTlmtVV8lJC5lz2xYzRQoeLgl93oTQMAwmoDnp9BmZ9M_IHaAYiMbYk_Xz39bdFxZU6WKNj38AoLRaiX2B8fS6B3uQlEhS_IdIZc2Xt15z_nMMOsC3zR7TOU0d4BCEHbPwtWpHzpM2XEoT8pbVmGuEbfeXG"/>
+</div>
+<div class="text-6xl font-headline font-black text-tertiary mb-2">∞</div>
+<div class="font-headline text-on-surface-variant uppercase tracking-widest text-xs mb-4">DATA_FLOW_LIMIT</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Unrestricted throughput via holographic substrate.</p>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-[#070e1b]">
+<div class="max-w-7xl mx-auto mb-20">
+<h2 class="text-5xl font-headline font-bold text-on-surface tracking-tighter mb-4">ARCHITECTS_OF_THE_VOID</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Elara Synth - Hyper-realistic 3D portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5paWuuK1p0_x8JCpFHcH-0CgpFbmK3vluHomVR-sBtdCKJaDPg1LiH_AaYPD99X3L1Q0R2YuGQl7NqG_rJHCuW7J3l8BOR2CNOj967p2EAeXsbFDN79x1dqmsCuDapB3SGVfmBElaAl-VyQKH_Vk1dmB0BuA5QHqlxEiDLQxBT1FjgCqOrYxRPOHEkSSmuE-8I45YdlIpiaI7stswjPJIDrNKKQlD3P_mQH_4-rySIYc_Yl6JfyODxnSnlIk91-iTWvCWCGziDBM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#070e1b] to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-primary uppercase tracking-widest text-[10px] mb-1">FOUNDING_ARCHITECT</div>
+<div class="text-2xl font-headline font-black text-on-surface">ELARA_SYNTH</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Kai Void - Hyper-realistic 3D portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU4lL10txSeg3M4MX50YdbVA0bcqFQ7fQsHQ5hrW1lfODCvU_dgzYUuqpmx3Nnz0B9OTPjQfahB3VFMwqPiIa4_ysjbgGenniCTxNtWdcSLBe4xbHFqg7G7LlDIUP9NJIdvkdhyoGlanBp1XnksS8oi925e13hZ5Wm4b5HADrqRTdmFbDLE077LcM8L5qhb_UwV8BIydZa4vTsyC6hik3x7vkVbXtD0_sXx5hlZT2fJQ3rnlqboPPSfKy3dze7kOts66UDBHblTS8a"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#070e1b] to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-secondary uppercase tracking-widest text-[10px] mb-1">NEURAL_DESIGNER</div>
+<div class="text-2xl font-headline font-black text-on-surface">KAI_V0ID</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Sara Morph - Hyper-realistic 3D portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFYcms8VIXR8JVY2jZCpIPGlnNktoC0BcvjcO0SmrOUPfzPGp6L-Rj7J6aL3qXkCVHrHndzpp0icUr_akBd1K9O86jcovmuvkYFaZtV5e2dOydZ-S982KLDAJwW762ofBKnAMwk00U0ob4qacwy5hsb4kBJ-kItQOiAdcB4w9tQZa7IjWJlPK8ZLUjJyg9vpVbJ0KVTrQEsL3DHCHJlVbgnlJatW8_pyDQUDtu8xkNwFXvJdyR3Qy5TGfZU4vQ3XRQY1O2hgVb3mtT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#070e1b] to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-tertiary uppercase tracking-widest text-[10px] mb-1">BIO_SYSTEMS_LEAD</div>
+<div class="text-2xl font-headline font-black text-on-surface">SARA_MORPH</div>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-high inner-bevel-light">
+<div class="aspect-[4/5] relative">
+<img alt="Jax Ether - Hyper-realistic 3D portrait" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5MRggma2-uAyHi4MaJhmIsAxKINiPx8fh5viMxwuTPf0MegZemj1YuelqPhjfI9ulEg-XP86Eh-OchJ8eqnpcSST_M7k50w_XfEIeE3fQtXK-ter-QJeDm7wsktNlVlwa2wdb00AL1bmLwBcW1bSLag8w3l-CJS0zlHaYp6Im7gixnxR7tZQmNPqoXULDCTjHHMZvdGsEYMEEUfs3GlQZVupPmxLsReQJk0VtthExUkKaMcuNZ1v_0hLIsTwX7pB5mytZWOhN0dfP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#070e1b] to-transparent opacity-90"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="font-headline text-primary-dim uppercase tracking-widest text-[10px] mb-1">QUANTUM_STREAMS</div>
+<div class="text-2xl font-headline font-black text-on-surface">JAX_ETHER</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 md:px-20 bg-[#070e1b] border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
+<div class="max-w-xl text-center md:text-left">
+<h3 class="text-4xl font-headline font-black text-on-surface mb-6">READY_FOR_UPGRADE?</h3>
+<p class="text-on-surface-variant mb-8 font-light text-lg">Connect your interface to our neural backbone and begin the synthesis of your next architectural masterpiece.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-10 py-5 bg-gradient-to-r from-primary to-primary-container rounded-lg text-on-primary-container font-headline font-bold uppercase tracking-widest shadow-[0_0_30px_rgba(0,238,252,0.2)] hover:scale-105 transition-transform duration-300">
+                        LAUNCH_TERMINAL
+                    </button>
+<button class="px-10 py-5 glass-card rounded-lg text-on-surface font-headline font-bold uppercase tracking-widest inner-bevel-light hover:bg-surface-container-highest transition-colors duration-300">
+                        VIEW_RECORDS
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 relative overflow-hidden w-full py-20 px-12 border-t border-cyan-900/30">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-30 shadow-[0_0_20px_rgba(0,240,255,0.5)]"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-end max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-4xl font-black text-slate-800 opacity-20 font-headline mb-6">ETHER_LABS</div>
+<div class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-500">©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.</div>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-headline text-cyan-500 uppercase tracking-widest text-xs mb-2">DIRECTORY</div>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">ENCRYPTION_POLICY</a>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="font-headline text-cyan-500 uppercase tracking-widest text-xs mb-2">CHANNELS</div>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">NEURAL_ACCESS</a>
+<a class="font-['Space_Grotesk'] tracking-[0.2em] text-[10px] text-slate-600 hover:text-slate-300 transition-colors" href="#">DATA_STREAM</a>
+</div>
+<div class="flex justify-end space-x-6">
+<div class="w-10 h-10 rounded-full border border-cyan-900/50 flex items-center justify-center hover:bg-cyan-500/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-slate-400 text-lg" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-cyan-900/50 flex items-center justify-center hover:bg-cyan-500/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-slate-400 text-lg" data-icon="language">language</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

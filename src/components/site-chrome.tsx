@@ -16,7 +16,7 @@ const topNavItems = [
   { label: "Solutions", href: "/solutions", key: "solutions" as const },
   { label: "Artifacts", href: "/artifacts", key: "artifacts" as const },
   { label: "Process", href: "/#process", key: "none" as const },
-  { label: "Neural_Network", href: "/neural-network", key: "none" as const },
+  { label: "Neural Network", href: "/neural-network", key: "none" as const },
 ];
 
 export function TopNav({ active }: { active: TopNavKey }) {
@@ -27,7 +27,7 @@ export function TopNav({ active }: { active: TopNavKey }) {
           href="/"
           className="font-headline text-2xl font-black tracking-tighter text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]"
         >
-          ETHER_LABS
+          ETHER LABS
         </Link>
         <div className="hidden items-center gap-10 md:flex">
           {topNavItems.map((item) => {
@@ -52,7 +52,7 @@ export function TopNav({ active }: { active: TopNavKey }) {
           href="#contact"
           className="rounded-lg bg-gradient-to-r from-primary to-primary-container px-4 py-2.5 font-label text-[10px] font-bold uppercase tracking-widest text-on-primary-container shadow-[0_0_20px_rgba(0,238,252,0.3)] hover:scale-105 active:scale-95 md:px-6"
         >
-          INITIATE_PROJECT
+          INITIATE PROJECT
         </Link>
       </div>
     </nav>
@@ -64,9 +64,9 @@ export function SideNav({ items }: { items: SideNavItem[] }) {
     <aside className="fixed left-0 top-0 z-40 hidden h-screen w-64 flex-col space-y-6 bg-slate-950/60 px-6 pb-8 pt-24 shadow-2xl shadow-cyan-900/20 backdrop-blur-3xl lg:flex">
       <div className="mb-4">
         <div className="font-label text-[10px] uppercase tracking-widest text-purple-400">
-          STRATA_CATEGORIES
+          STRATA CATEGORIES
         </div>
-        <div className="mt-1 text-[8px] text-slate-500">V0.1_BETA</div>
+        <div className="mt-1 text-[8px] text-slate-500">V0.1 BETA</div>
       </div>
       <nav className="space-y-4">
         {items.map((item) => {
@@ -143,7 +143,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-end gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="mb-4 font-headline text-4xl font-black uppercase text-slate-800/20">
-              SYNTHETIC_ETHER
+              SYNTHETIC ETHER
             </div>
             <p className="max-w-sm font-body text-sm text-slate-500">
               Forging the next generation of digital infrastructure through neural
@@ -152,10 +152,10 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
           </div>
           <div className="space-y-4">
             <div className="font-label text-[10px] uppercase tracking-[0.2em] text-cyan-500">
-              ACCESS_POINTS
+              ACCESS POINTS
             </div>
             <ul className="space-y-2">
-              {["TERMINAL", "ENCRYPTION_POLICY", "NEURAL_ACCESS", "DATA_STREAM"].map((item) => (
+              {["TERMINAL", "ENCRYPTION POLICY", "NEURAL ACCESS", "DATA STREAM"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -169,7 +169,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
           </div>
           <div className="text-right">
             <div className="font-label text-[10px] tracking-[0.2em] text-slate-500">
-              ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.
+              ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED.
             </div>
           </div>
         </div>
@@ -186,10 +186,10 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-end gap-12 md:grid-cols-4">
           <div>
             <div className="mb-4 font-headline text-4xl font-black text-slate-800/20">
-              ETHER_LABS
+              ETHER LABS
             </div>
             <p className="font-label text-[10px] tracking-[0.2em] text-slate-500">
-              ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.
+              ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED.
             </p>
           </div>
           <div className="flex flex-col space-y-3">
@@ -200,18 +200,18 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
               TERMINAL
             </a>
             <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-              ENCRYPTION_POLICY
+              ENCRYPTION POLICY
             </a>
           </div>
           <div className="flex flex-col space-y-3">
             <h6 className="font-label text-[10px] tracking-widest text-cyan-500">
-              DATA_STREAMS
+              DATA STREAMS
             </h6>
             <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-              NEURAL_ACCESS
+              NEURAL ACCESS
             </a>
             <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-              DATA_STREAM
+              DATA STREAM
             </a>
           </div>
           <div className="text-right">
@@ -219,7 +219,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
               <span className="material-symbols-outlined text-cyan-400">arrow_upward</span>
             </div>
             <span className="font-label text-[8px] tracking-[0.3em] text-slate-500">
-              TOP_OF_STACK
+              TOP OF STACK
             </span>
           </div>
         </div>
@@ -233,9 +233,9 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
       <footer className="relative overflow-hidden border-t border-cyan-900/30 bg-slate-950 px-12 py-20 shadow-[0_-20px_50px_rgba(0,240,255,0.05)]">
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-end gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="mb-6 font-headline text-4xl font-black text-slate-800/20">ETHER_LABS</div>
+            <div className="mb-6 font-headline text-4xl font-black text-slate-800/20">ETHER LABS</div>
             <p className="max-w-xs font-label text-[10px] uppercase leading-relaxed tracking-[0.2em] text-slate-500">
-              ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.
+              ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED.
               ENGINEERED_IN_THE_VOID_OF_NEURAL_PROCESSING.
             </p>
           </div>
@@ -244,7 +244,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
               DIRECTORIES
             </h4>
             <ul className="space-y-4">
-              {["TERMINAL", "ENCRYPTION_POLICY", "NEURAL_ACCESS", "DATA_STREAM"].map((item) => (
+              {["TERMINAL", "ENCRYPTION POLICY", "NEURAL ACCESS", "DATA STREAM"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -268,7 +268,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
               ))}
             </div>
             <div className="flex items-center space-x-2 font-label text-[8px] uppercase tracking-[0.5em] text-slate-700">
-              <span>SYSTEM_STATUS</span>
+              <span>SYSTEM STATUS</span>
               <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
               <span className="text-green-500/50">STABLE</span>
             </div>
@@ -284,9 +284,9 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
       <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-30 shadow-[0_0_20px_rgba(0,240,255,0.5)]" />
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-end gap-12 md:grid-cols-4">
         <div>
-          <div className="mb-6 font-headline text-4xl font-black text-slate-800/20">ETHER_LABS</div>
+          <div className="mb-6 font-headline text-4xl font-black text-slate-800/20">ETHER LABS</div>
           <div className="font-label text-[10px] tracking-[0.2em] text-slate-500">
-            ©2024 SYNTHETIC_ETHER. ALL_RIGHTS_RESERVED.
+            ©2024 SYNTHETIC ETHER. ALL RIGHTS RESERVED.
           </div>
         </div>
         <div className="flex flex-col space-y-4">
@@ -297,7 +297,7 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
             TERMINAL
           </a>
           <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-            ENCRYPTION_POLICY
+            ENCRYPTION POLICY
           </a>
         </div>
         <div className="flex flex-col space-y-4">
@@ -305,10 +305,10 @@ export function SiteFooter({ variant }: { variant: FooterVariant }) {
             CHANNELS
           </div>
           <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-            NEURAL_ACCESS
+            NEURAL ACCESS
           </a>
           <a href="#" className="font-label text-[10px] tracking-[0.2em] text-slate-600 hover:text-slate-300">
-            DATA_STREAM
+            DATA STREAM
           </a>
         </div>
         <div className="flex justify-end space-x-6">

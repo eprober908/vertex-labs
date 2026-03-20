@@ -10,56 +10,56 @@ const sideNavItems = [
 
 const artifactCards = [
   {
-    title: "SYST_CRYSTAL",
-    label: "NEURAL_NET_V4",
+    title: "SYST CRYSTAL",
+    label: "NEURAL NET V4",
     meta: "View Deployment // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD4VTw9GIA_oQNrkjC83Bq4X-evfO4tGjj-yzjgD3csDHxO9ddrE5JWRma7oEMuecCuXvj2KTtR8V3F2_d2pmWzvODvdxVWTx5IKSsUyuu03IrN5RwqlA6IVlxcWMYzgaj19xLC8lnHOa_tzmIPVya7EM9E2otO_sfKwWhz2Lyw5UGZvRgDv6-5tMM1UIAZGL8OSXQN_6CBnBIIJ4zQzaKz0bspuNyyXk8WAqdjXOEcfQXFDp2YEIZ-HafpdY38Ubc_9gyqbiSz_f54",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCmL63ykzumZT47-UeJuvvp1oI9wmiHo8qIqTxp-Rfm5h8ECXF8ANyh7_wolEal0lCclTwxoqjdjnr7ob-wgRQLDPHnngPsBVi5X4Jq6Zu0J9MPwC08tZYQQ67RG8cKd3lRtHoxskVZrSHdAvAKYUWRDzPzhacu_RfsEmblWO0YfVbtL8n3tLah7cDdm01L2nGAetnEf_7aVZT4b3AUDzdijKzrmKRY_ppci1v45spQuS6Uh8wIQzt83IKotKALh-4cSpCS6xuc6aNy",
     accent: "text-primary",
     span: "md:row-span-2",
   },
   {
-    title: "TERRA_01_GEN",
-    label: "SPATIAL_INFRA",
+    title: "TERRA 01 GEN",
+    label: "SPATIAL INFRA",
     meta: "Access Matrix // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCa_rnzeELWn5iDHxctfbr5wROvc4R6klHZQ2_GUO7Zr4iWqshBdcDX2RbmK2EsQQ9v370VnvfDA2T523KAzXzjU40CcuFyS_togSs2QOMcbR_mZLbA2pdBtn_810Xz8grIc_p80u1LSUjnAO7467MwAehonJpWgFi-UU7Mri5ddM9fu7hy5IapexNqxHuxCxCT8hAENmbOc-mgpa5dnmQrIr4nuw5AwA6ux6p96vbdaNtpxiWW-L15zZxL3DUCMW5bX94givtIrIow",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA4Nbh630u35es7XTsCTFLshRa4GDvXx7IE_Qvc_QKWUxUgPrWbLX3ri_iSTAy3arHSFHXZvXMw_XNn8VmsUEBTOhEjld-ZmuhmYNCbElZgp1_oTDmxEfXRjXk9GqI5XWqgYET3imYh4df_YYjeP2OJ-cGZpp2bEgACx9bwjjzsp2ZkQIFJvpJa50bGuVtbTqD5sWJBhxFL1n5m-i85bpt4FQgE_N1MwoK6W7sLl03QBzDqsd0vKwgV5L6UaWbezo87A-fsskzlb9kK",
     accent: "text-secondary",
     span: "md:row-span-3",
   },
   {
-    title: "PULSE_ENCRYPT",
-    label: "BIO_ENCRYPTION",
+    title: "PULSE ENCRYPT",
+    label: "BIO ENCRYPTION",
     meta: "Stream Data // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCuPoSgy5uzjgwVYbiF2LdU6xcwQRcHWxkc1uRdwW3IsKjhFpnAtWSvrSqmsxpUgicTRKcNIUgxgrrN8dU-eSx2PuJUSdN8AW33SX5py3HXpuG9zugL3K50LdztAYOE5RHb3GsNZhYyYYSGn-CbV-N1oeurunkjLVzVpxvHxeds8qYT8UmzSywgRhPm6eKgiJib5qWMsXeW5OMKpKDxm2LtXT55aBoSt803hnWUmeuho3q9D34eXLfqoz9XvO4C7OSCRTV7XKfJneG0",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA5TYPJfv1l9c1i0g7_hRjxU5RdKqo6657d1wW0mCHPCYat7mDv8jfDBLNrKk9-0Z9yS74rsEg56Iq_jO5K7MAvZ7htOTEIhHpQ7p1eq3Bd8um7RZclANMkq7r-21AtWxLZPPCucQ9xrKbYuVSv5sUn5uXjrtxKgX7bFa5TV0D2zKMPoORWRo6z27IsJr70qQ_EHSNEiCZzUYVK5NLt789uQflaUIB8kg6xlzNQEoulNRf7HKpD1a7IdIqmN_bOPNyOgMbydcV28tLR",
     accent: "text-tertiary",
     span: "md:row-span-2",
   },
   {
-    title: "VOID_ORB_CORE",
-    label: "PROTO_V02",
+    title: "VOID ORB CORE",
+    label: "PROTO V02",
     meta: "Initialize // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCzy7JtaSM4peSTPuv5XTdD1y8siZjeSA7d4R1Lb6YZaBqWXdwX9IuY3tvRPOahlmczetlPlSCZ4StzGJzlXJ4CfBqthrYug8uB7feT8Cm0jD1IVJ2e_eDJN1Oao4zkh_rPi6ts3JWK9aKm4JWREh1SvCkDmuxIdJ2vPp_uB_UuYBaUyUuOqjYNhWTVj1GXPcvqUDO0769DrdLyZMDFTUXYgMS8XM_pV2M6nmSu0c8NTG8c6XaTpc8iI7NtUQIC67-epOM12ZPQG56E",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuB40ZNHis9uWlhUNNo9mmztT-NIAAv_A0T7AzUzi3bNoTFtvRXvbr7h_eIFRUOVnF3lRHcgJANJXXBikgITyU6OAkCsgoiIHK68JW9DZkTr4rAm8odBLzHuCxv3YrLQN-as1H7Tql7TpHTysd5MU298UEuLcG-S9Bak66OWHBNEDtMfKlMRS_vL0wuA9_FZ2qb2vU29nTrauPO2LHwa1SFSq7Y_An2hycnkNnyIJDnDrj3vDXYIs8BAO0l9vy3EUax01eWu5w5GxjtE",
     accent: "text-primary",
     span: "md:row-span-3",
   },
   {
-    title: "STRATA_DEFI",
-    label: "WEB3_NODES",
+    title: "STRATA DEFI",
+    label: "WEB3 NODES",
     meta: "Verify Hash // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBPZ2J1oNZD7Ytm0Z_3bcHDhJNYDrmi7idC_k19TOZn8L60bs1yCPl9mIBzbbzpiQxAUKdeKTs2MWmfDOQTB5L9dodpikWfaXe0RtXCjlikxkbDRHhE5H22_hiq7G3Yc926PLuFIOLnakphULTgFjYdgw4Ts7-2JZ_OXWoXDZPRRbW4EHo9eglwOBgSA66OQn302Kz9FgUMR98VlFjIs_oTNjcY7bCVwpSCKlkbessczFMN1SDzOAMI3mGyvJnOAlt5VtTWjY1X-gAx",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAKbGqlJevP-GBq7hRGrzsh6DjWtAQsTRKs8wlY1uLETIYPxt22twuufwLCZI8wGZYwXtGwm9FKMs8lonyLj7lxN2_N6JS0Fuu7WGvluSNEjr6f706KRaaH6STO_C2X_LqiO2qcUIMDskxfz5zjEcP9J9wnc38aojdD4aY2cGXgi_wgAiqRBaejjscpnFZOrw1zvD5RBnD-QavM3X4PVLsJ9Vei1dxUiXCfwMlAw63mTR85Z5kUEUTb-8TxcPgd5XsP_9Dlt-ctDFf8",
     accent: "text-secondary",
     span: "md:row-span-2",
   },
   {
-    title: "GEN_SEQUENCE",
-    label: "NEURAL_DNA",
+    title: "GEN SEQUENCE",
+    label: "NEURAL DNA",
     meta: "Analyze // 2024",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAISERMWM3PuEYUmxzZGGRGByjSylwY5t9ZLxMUfcStz58iQF3GeJlv1LYsaGe2OuICdu2dvyyuqgGfP_y0peMlnRb3zwITaNO_Y0H-tdGOe1I9JVa_BDmDe4GXVZJHVDPjppLdAkTjsrFMb5-R3tmj6HXv0X1t-wIKcieRibHqhJ4LrJMd85glWYCcaORyb1y1qjlDNAYn-qYwpcEfv6tLA3x7Jo9C5sP3xdobaUGNH8t8qE67fSztrb5POF2rSCTgPqsjv5FWqROj",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDDLnUngFeHObAb_Sfb_3rAAvKPUHploHouAgTaMEvL_Zq4wnlaAmWsnrS_PB0wwXDj0-AheGIYSp_n2zABhXk7yLNzyACBaDtO5DakyFmVEKld75qwtuXCA-Uwj-bUsaV8-lPziVV44J2BhUMrSMb-02HAGRBKIVvdKEdWfMxswlxFn5izFSoqErIwZ87JYePpUuap9bctFg49pJpBzusFAfxV0BhmCJyNjGqA6Waw0upaah6gQalgZekNl5uroUeL_7TyMnPJTZR-",
     accent: "text-tertiary",
     span: "md:row-span-2",
   },
@@ -84,10 +84,10 @@ export default function ArtifactsPage() {
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             {[
-              ["ALL_UNITS", "bg-primary/10 border-primary/20 text-primary shadow-[0_0_15px_rgba(143,245,255,0.1)]"],
-              ["CORE_NEURAL", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
+              ["ALL UNITS", "bg-primary/10 border-primary/20 text-primary shadow-[0_0_15px_rgba(143,245,255,0.1)]"],
+              ["CORE NEURAL", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
               ["DECENTRALIZED", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
-              ["SPATIAL_V01", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
+              ["SPATIAL V01", "bg-surface-container-highest border-outline-variant/30 text-on-surface-variant hover:text-on-surface"],
             ].map(([label, classes]) => (
               <button
                 key={label}

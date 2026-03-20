@@ -16,9 +16,9 @@ export default function SolutionsPage() {
         <div className="hero-glow absolute inset-0 opacity-50" />
         <div className="relative z-10 max-w-5xl px-6 text-center">
           <span className="mb-6 block font-label text-xs uppercase tracking-[0.4em] text-primary">
-            Technological_Ecosystem_V2
+            Technological Ecosystem V2
           </span>
-          <h1 className="text-glow-primary mb-8 font-headline text-6xl font-black leading-tight tracking-tighter md:text-8xl">
+          <h1 className="text-glow-primary mb-8 font-headline text-4xl font-black leading-tight tracking-tighter md:text-6xl lg:text-8xl">
             DIMENSIONAL
             <br />
             <span className="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">
@@ -47,14 +47,14 @@ export default function SolutionsPage() {
         <div className="absolute right-10 top-1/4 hidden h-64 w-64 opacity-40 mix-blend-screen blur-sm lg:block">
           <img
             className="h-full w-full object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQpKvFwANtZdTHYWYsGkoL35DL5InWOrNldL7ylbIDx6yRe8GJxRvPsWSU4yBMw0CoRQhSapnzIL3k59oImXn_5G2HMnF9pPSUZPaXGV9AwO5kJSkqBq4b3ZqBReYLjxLEUzQgxWJ5gw2expuETqrtig5TrJmpzwUR0emsP-lKmvOn5gOKk6joFVD2LJ8c3vi9D16MIeXqQK2_Vqu8ApfSSUfZohprS0OX0FBED9jJJKPqLQVvv50l5JgqsAzytwoQy0QvJlfbbIt8"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlxoMfWroTVPAQK9svidL3_L8eSa3_Lh0YXvvkt1AtnxzXN_LCzU-2wR_z1v1v5dlMg_kAqmuYPpXMg9Ggzukm4ElfrP9qUZolsMRuf8jfjrXCJUcgQ_2YHJO6DOAU7Z3WyWv5QKuezSAxHT2Pan9nzQGYvwjZ7sqke5HMZgd1tYkiMmveZ78wPGT3RFQRj0SGgXw2Eh12822jy1DCIdxGnygn-3n94Kz8IJRBygVZ6Lidz2Qd85KykHXtCkOkrTa_0uMpxbA5favS"
             alt="Floating abstract 3D crystalline structure glowing blue"
           />
         </div>
         <div className="absolute bottom-1/4 left-10 hidden h-48 w-48 opacity-30 blur-md lg:block">
           <img
             className="h-full w-full object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDbJt9cgE3foDRbBYtcgaQFyG26DziuR_5kLa1cLWbkKF_7oBHB6-yC__6T7iFocN4A66ot0Kih4-3WOk1zg2ZmHlUQD_mtIRQK2nEmXMiZkTLy9AQl5NdmmsVhnKIc1Qvyq-V2foJXHzzoVUmhoSYpVnuozqhqNw373KeeGqfPPnLMl1sghH-BxlcwZ1tjBbT1OG2gUkqxyPZgk7X01YZ85wHBrGFB8ubALPS96fwtytV8SGhy2Cr_HK5qyvfpQIiO4dbWmPs7Wso"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgy7Abb5g2YG5TNRw8cOgtTNh7lqqvrcB-fPzpa-0KqYBA5SgQCRSJYCAHofnyZfKzLSL11rsfZ6tz9OzcxWgYdsFAa9riv2Lxhdh-ifpvWQTwP9vegyH-cvXAj-g7DJm8n_iqE2A-zFvfgfdZTX2EW4muQNd864K-ZmGDfm82HGwJETHZf9bZM6o8hJFmX_4AdqH4Ao805oc0O9fM6Wu0tRVkNhbJGLrTJhR8XR1vnT8wNnuCL0hGxyYFnxsrli72u9Lp8P6RiAE8"
             alt="Floating abstract 3D torus shape with purple neon light"
           />
         </div>
@@ -65,7 +65,7 @@ export default function SolutionsPage() {
           className="parallax-bg absolute inset-0 z-0 opacity-10"
           style={{
             backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQuFaWUaFrqi0tQnYPy0pDaKmh2o9kIiAUuTJSYBjXbpe2bZTuwlJ4Q9Hi0o0n5gzfR9Zt6MQzJujOET8NfsbRmcUo7BhFCkwHMkRJP1EKbA7_CnFKvAPGRgCLeseHUhjE6KB1A8zfbUJsRT46GJK9WJxawOQGWfB7oRuvfIMb1CDqo4P0xCK_XkTIF0s5_WBN4sLDaq4OEf8Be0r-ZM242hmvHhv5QSRpoq23BchpdWlQl_zJALPHKgxeSQgyltnt8odhrnj6oyxR')",
+              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgxH6irolv4SLwaKbgzM6Y_wCcsMN3OSJ7QIyTc5bDyIuyh9LTxuKgeF0JMN833jW3Z7l6ruj1c59NQdn8URwFm2RvY7VkoVfRDeYihn17XoiK2-kEpBwMVbWoE-i7umaHyA1Mz1xgoN246Vk76YFfHkPy0we5fQPH46KZIURNOSA6ig7Hrm1NRBju1fpfkYqSILozaaYXkvMOoFPLZhsYnqN5wZiHbKrVYBJFWUvqJTZYIambyK8gLXbwf0hssVhCMEc8F3dbj7sA')",
           }}
         />
         <div className="container relative z-10 mx-auto px-6 md:px-8">
@@ -81,8 +81,8 @@ export default function SolutionsPage() {
                   STRATUM_01 / COGNITION
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-5xl font-bold text-on-surface">
-                GENERATIVE_AI_ARCHITECTURES
+              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
+                GENERATIVE AIRES
               </h2>
               <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
                 Beyond simple prompts. We build custom LLM pipelines, specialized
@@ -113,7 +113,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 rounded-full bg-secondary/10 blur-3xl" />
                 <img
                   className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(214,116,255,0.3)]"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPoVBIwgl34RROF7LLLJeaIudl2o97vwUI9EFx9Hngi2QWTvywLKvERKkyjb3O8jRc3LRI13fbbcCQhc4eAk9yy48c1OR4qzFJJ3Ok9PgV3gE6rAGNuLOCdwwBynkv1q4m1izNETkAuyPjkSqPPcCwQo2YISUJ-_0df9_6HrHUN_fl1sSidT4BjNVS-vyGcycmFwpMpqWY5VEui4aIOr0e7t69Oga1CiCaNmQIPj7K4pGdq53-7iaeJ_YXppDaqRdoum3IzRZ2TSB2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwBUCc6LKSk-TZqs_34r5xrQqnYP6gj2kQuRD-izrmj88NRrrtzpxZIBeB8bj5S03NwenQNBvhTBgmqXrBt4YypqigTJBkkSXs5yoN3BtagP6ML_oJsi1lbahcE2_BrPnLMcXN2_eG5359W__shl4GwAYU1E3uvOnvTaWewcMCmwSfFJrQ61W5AkgR2WP83Z8AUdWUSnsP4g0GhOlbaZnc7xeDO1MaUeQWM7NPG9fydNtrbqsFyOLIbkmTwrm6PzedYwhJx58pQnDC"
                   alt="Intricate 3D render of a glowing human brain made of glass and fibers"
                 />
               </div>
@@ -137,7 +137,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 rounded-full bg-primary/10 blur-3xl" />
                 <img
                   className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(143,245,255,0.2)]"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrh0VFuIRFX8qxk_6wUiG63B7VD-FhxiNdFXl4jtrB3KchHBGgtRwMpywpSuCCGPV4GdgXoDJ_LpU9sbTqBdat9_f2Wg4s_7l9yepNFXEc5fs9c2hBtXurI9mtBXRXqvWLzeCMo1_ZJOwFZR0a3bKuU2dHtnKxhOwsInE_D-kOcspl2VS5F6o_y9UUo7hGHO-24aTHccPcpqGWrVAoH651x8Q6NWmbU9N7ygC5ruNWS3oc3X7A_QnQHr4oJJR6UYwOord5M4rwjzs"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtlAbIMo_12wNdfBSCyAM9CQI0IDcb_6-QmRG-zNVjKuCfYMWMAsgoxnbyiChdYwsJFkzpS3MmZPKzEhYAPtM8oHSzhhK4tBiqTzIlPgyO82oFo50H9gEyHZrGr5oU3aVIrMniVFkHo8c3nvnJQziBiuUY1KTmEtpbxFy7cxKDiYRnEZhttZesYD5w6cAp_mmpA9wV0qNxcQG82gWS9FvwgNJrpapYUh_dXVLDbPSERO5X8bXIu4vrB3xEQZudI_L_gvXrW3kX03a0"
                   alt="High-detail 3D golden and silver block link representing blockchain"
                 />
               </div>
@@ -153,8 +153,8 @@ export default function SolutionsPage() {
                   STRATUM_02 / PROTOCOL
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-5xl font-bold text-on-surface">
-                DECENTRALIZED_TRUST_SYSTEMS
+              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
+                DECENTRALIZED TRUST SYSTEMS
               </h2>
               <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
                 Engineering secure, scalable Web3 ecosystems. From smart contract
@@ -163,8 +163,8 @@ export default function SolutionsPage() {
               </p>
               <div className="space-y-4">
                 {[
-                  ["security", "CRYPTOGRAPHIC_AUDITS", "Zero-vulnerability assurance for smart protocol layers."],
-                  ["token", "TOKENOMIC_MODELING", "Mathematical frameworks for sustainable digital economies."],
+                  ["security", "CRYPTOGRAPHIC AUDITS", "Zero-vulnerability assurance for smart protocol layers."],
+                  ["token", "TOKENOMIC MODELING", "Mathematical frameworks for sustainable digital economies."],
                 ].map(([icon, title, copy]) => (
                   <div key={title} className="inner-bevel flex items-center gap-6 rounded-xl bg-surface-container-highest/40 p-4">
                     <span className="material-symbols-outlined text-secondary">{icon}</span>
@@ -204,7 +204,7 @@ export default function SolutionsPage() {
                   STRATUM_03 / INTERFACE
                 </span>
               </div>
-              <h2 className="mb-8 font-headline text-5xl font-bold text-on-surface">
+              <h2 className="mb-8 font-headline text-3xl md:text-5xl font-bold text-on-surface">
                 SPATIAL_COMPUTING_UX
               </h2>
               <p className="mb-10 font-body text-lg leading-relaxed text-on-surface-variant">
@@ -213,7 +213,7 @@ export default function SolutionsPage() {
                 spatial audio to redefine user interaction.
               </p>
               <div className="flex flex-wrap gap-4">
-                {["Volumetric_Design", "Haptic_Feedback", "Mixed_Reality"].map((item) => (
+                {["Volumetric Design", "Haptic Feedback", "Mixed Reality"].map((item) => (
                   <span
                     key={item}
                     className="rounded-full border border-tertiary/20 bg-tertiary/10 px-4 py-2 font-label text-[10px] uppercase tracking-widest text-tertiary"
@@ -228,7 +228,7 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 rounded-full bg-tertiary/10 blur-3xl" />
                 <img
                   className="relative z-10 h-full w-full object-contain drop-shadow-[0_0_50px_rgba(172,137,255,0.3)]"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2H_t5iu3NIXEpvPaL2xjGQ-vmBDEU9nqI4NmIly4LGqFVqO5nbsPMcf7QqnisMXnO7b-SYsTUr5mZLBJ5pJV1AASYujQhxCiNeoDRLarhjnhVetaGRqrRWSPvu_ul_BOS9RHUbviTFKuAD_1xOU97zt-Xw12yaZs9OCVTB-mKYf4L6ZHtbkSZWKFDNMdMZWcB14AvCQems7Ckalf0DPd8BP7--XS_5PrN553nIQv53yzVHzGJcTNwBgZf2ybX_sTiOV6Bo1uv9vXu"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtNUAILFNl8GSDyrw27zI0ip8xXXpmxScIzLc8FpZWs-SB8DtRELpvVkUojggSJUHlqd9sY5FRM2coHOFRm3f5-Qb8LYW5IDn1l_9QTJutcmDYz-CBHc1yPAMWCXSucOKucpb0B6iT0JpP6LuRKlrAx2_jomLo0_U6TmCFJ5_YCjSyyeHaekYbUZOScAmYOEEwLPFjfAcIwEfCvh9uPPWv2EmmYybgFrYEK_Giny7IiiA2qCygZOLoeBi9DymFlzFNC7LTR1JkS4Qa"
                   alt="Floating transparent glass cubes with digital UI elements inside"
                 />
               </div>
@@ -248,7 +248,7 @@ export default function SolutionsPage() {
           <div className="flex flex-col justify-center gap-6 sm:flex-row">
             <input
               type="email"
-              placeholder="ENCRYPTED_EMAIL_ADDRESS"
+              placeholder="your@email.com"
               className="min-w-0 rounded-lg bg-black px-8 py-4 font-label text-xs tracking-widest outline-none focus:ring-2 focus:ring-primary sm:min-w-[300px]"
             />
             <button className="rounded-lg bg-gradient-to-r from-secondary to-tertiary px-10 py-4 font-label text-xs font-bold uppercase tracking-widest text-white shadow-lg shadow-secondary/20 hover:scale-105">
