@@ -169,12 +169,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-32 md:px-8">
-        <div className="mb-20">
-          <h2 className="text-glow-primary font-headline text-4xl font-bold tracking-tight">
+      <section className="mx-auto max-w-7xl px-6 py-24 md:px-8">
+        <div className="mb-14">
+          <h2 className="text-glow-primary font-headline text-3xl font-bold tracking-tight">
             SOLUTIONS_MATRIX
           </h2>
-          <div className="mt-4 h-1 w-24 bg-gradient-to-r from-primary to-transparent" />
+          <div className="mt-3 h-0.5 w-20 bg-gradient-to-r from-primary to-transparent" />
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
           {solutionCards.map((card) => (
@@ -204,54 +204,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="process" className="relative py-32">
+      <section id="process" className="relative py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
-          <div className="mb-24 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
               <h2 className="mb-6 font-headline text-4xl font-bold uppercase tracking-tight">
                 The_Extraction_Process
               </h2>
               <p className="font-body text-on-surface-variant">
                 Moving from raw data to refined experience through our proprietary
-                four-stage methodology.
+                three-phase methodology.
               </p>
             </div>
             <div className="border-b border-slate-800 pb-2 font-label text-[10px] tracking-[0.5em] text-slate-600">
               SEQ_001_TO_SEQ_004
             </div>
           </div>
-          <div className="space-y-32">
-            {processSteps.map((step, index) => (
-              <div key={step.title} className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-20">
-                <div className={`${index !== 1 ? `order-2 ${step.order}` : ""}`}>
-                  <div className={`mb-4 font-headline text-6xl font-black ${step.accent}`}>
-                    {step.number}
+          <div className="space-y-20">
+            {processSteps.map((step, index) => {
+              const imageFirst = index % 2 === 1;
+              return (
+                <div key={step.title} className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-14">
+                  <div className={imageFirst ? "md:order-2" : ""}>
+                    <div className={`mb-3 font-headline text-6xl font-black ${step.accent}`}>
+                      {step.number}
+                    </div>
+                    <h3 className="mb-5 font-headline text-2xl font-bold tracking-wide">
+                      {step.title}
+                    </h3>
+                    <p className="mb-6 font-body text-base leading-relaxed text-on-surface-variant">
+                      {step.copy}
+                    </p>
+                    <div className="flex gap-3">
+                      {[0, 1, 2].map((dot) => (
+                        <span
+                          key={dot}
+                          className={`h-1 rounded-full ${dot === index ? `w-10 ${step.progress}` : "w-2 bg-outline"}`}
+                        />
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="mb-6 font-headline text-3xl font-bold tracking-wide">
-                    {step.title}
-                  </h3>
-                  <p className="mb-8 font-body text-lg leading-relaxed text-on-surface-variant">
-                    {step.copy}
-                  </p>
-                  <div className="flex gap-4">
-                    {[0, 1, 2, 3].map((dot) => (
-                      <span
-                        key={dot}
-                        className={`h-1 rounded-full ${dot === index ? `w-12 ${step.progress}` : "w-2 bg-outline"}`}
-                      />
-                    ))}
+                  <div className={`${imageFirst ? "md:order-1" : ""} overflow-hidden rounded-2xl shadow-2xl ${step.shadow}`}>
+                    <img className="aspect-[4/3] w-full object-cover" src={step.image} alt={step.title} />
                   </div>
                 </div>
-                <div className={`${index !== 1 ? `order-1 ${step.imageOrder}` : ""} overflow-hidden rounded-2xl shadow-2xl ${step.shadow}`}>
-                  <img className="aspect-square w-full object-cover" src={step.image} alt={step.title} />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="bg-surface-container-low/50 py-32">
+      <section className="bg-surface-container-low/50 py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <div className="mb-20 text-center">
             <h2 className="mb-4 font-headline text-4xl font-bold">VALIDATION_FEEDBACK</h2>
@@ -305,7 +308,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="relative overflow-hidden px-6 py-40 md:px-8">
+      <section id="contact" className="relative overflow-hidden px-6 py-28 md:px-8">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h2 className="mb-12 font-headline text-5xl font-black uppercase tracking-tighter md:text-7xl">

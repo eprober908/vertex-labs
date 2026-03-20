@@ -10,6 +10,8 @@ body {
   background-color: #070e1b;
   color: #e2e8fb;
   overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 a,

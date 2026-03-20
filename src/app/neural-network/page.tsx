@@ -39,7 +39,13 @@ const team = [
 
 export default function NeuralNetworkPage() {
   return (
-    <PageFrame activeNav="none" footerVariant="neural">
+    <PageFrame activeNav="none" footerVariant="neural" sideNavItems={[
+      { icon: "psychology", label: "Generative AI" },
+      { icon: "hub", label: "Web3 Systems" },
+      { icon: "layers", label: "Spatial UI" },
+      { icon: "memory", label: "Neural Architectures", active: true },
+      { icon: "biotech", label: "Bio-Digital" },
+    ]}>
       <section className="relative flex min-h-[819px] items-center overflow-hidden px-6 md:px-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-transparent to-background/20" />
