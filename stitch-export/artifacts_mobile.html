@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffa8a3",
+              "secondary-container": "#9900cf",
+              "surface": "#070e1b",
+              "outline-variant": "#414857",
+              "on-surface": "#e2e8fb",
+              "on-primary": "#005d63",
+              "tertiary": "#ac89ff",
+              "background": "#070e1b",
+              "on-primary-container": "#005359",
+              "on-tertiary": "#290067",
+              "surface-variant": "#1c2639",
+              "on-secondary-fixed": "#580079",
+              "tertiary-dim": "#874cff",
+              "surface-dim": "#070e1b",
+              "primary": "#8ff5ff",
+              "on-secondary-container": "#fff5fc",
+              "on-primary-fixed": "#003f43",
+              "on-error": "#490006",
+              "on-tertiary-container": "#f8f1ff",
+              "on-background": "#e2e8fb",
+              "surface-tint": "#8ff5ff",
+              "secondary-dim": "#bb00fc",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#00deec",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-on-surface": "#4e5565",
+              "secondary": "#d674ff",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "surface-container-low": "#0c1322",
+              "surface-container-high": "#172031",
+              "primary-container": "#00eefc",
+              "on-tertiary-fixed": "#1f0052",
+              "error-container": "#9f0519",
+              "primary-fixed-dim": "#00deec",
+              "inverse-surface": "#f9f9ff",
+              "surface-container": "#11192a",
+              "on-surface-variant": "#a5abbd",
+              "outline": "#6f7586",
+              "on-secondary": "#390050",
+              "inverse-primary": "#006a71",
+              "on-secondary-fixed-variant": "#8400b3",
+              "tertiary-container": "#7000ff",
+              "error": "#ff716c",
+              "surface-bright": "#222c41",
+              "secondary-fixed-dim": "#eaaeff",
+              "error-dim": "#d7383b",
+              "surface-container-highest": "#1c2639",
+              "primary-fixed": "#00eefc",
+              "tertiary-fixed": "#bda1ff",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-fixed": "#f1c1ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 38, 57, 0.4);
+            backdrop-filter: blur(20px);
+            box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.05) inset, -2px -2px 4px rgba(0, 0, 0, 0.5) inset;
+        }
+        .glow-border {
+            border: 1px solid rgba(143, 245, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 15px rgba(143, 245, 255, 0.2);
+            border-color: rgba(143, 245, 255, 0.3);
+        }
+        body {
+            background-color: #070e1b;
+            color: #e2e8fb;
+            font-family: 'Manrope', sans-serif;
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-xl font-bold tracking-widest text-cyan-400 dark:text-cyan-300 font-headline">SYNTHETIC ETHER</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-full hover:bg-white/5 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined text-slate-400" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Editorial Header -->
+<div class="mb-10">
+<p class="font-label text-primary uppercase tracking-[0.2em] text-[10px] mb-2">ARCHIVE COLLECTION</p>
+<h2 class="font-headline text-4xl font-bold tracking-tight leading-none">Artifacts<span class="text-secondary">.</span></h2>
+<div class="h-[2px] w-12 bg-gradient-to-r from-primary to-transparent mt-4"></div>
+</div>
+<!-- Main Content Grid -->
+<div class="space-y-8">
+<!-- SYST CRYSTAL -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glow-border">
+<div class="relative h-72 w-full overflow-hidden rounded-lg">
+<img alt="SYST CRYSTAL" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intricate golden crystalline gears with glowing internal light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHE_FBKDV7deR-3n-747AXjlqLkPEz8ggFE_aI_ssaALZaDg6tTGbrTu4JL89Vg7shN9IG60BQSawoSI8qnDtv2NS-69ecK2zacXz3iDBp8bmTGKI3gR-DcfTyS7d14kPfep-cCFkPNUtuRSlhqaXnfInMfAfgXxue0iKOP1_gxvFHbxHyOdl0Tjsv8VTSwg-9XsK1UBA_HTGzypfRJH-uXCKdvqbMMV45CuFkn3Ay0Ay4i-JUTtRtmrFqVIxSF2NxrK3ylXvT9REy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-label text-primary uppercase tracking-[0.1em] text-[10px] block mb-1">PROJECT 001</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight text-white truncate">SYST CRYSTAL</h3>
+</div>
+</div>
+<div class="p-4 flex justify-between items-start gap-4">
+<p class="text-on-surface-variant text-sm font-body leading-relaxed flex-1">Synthetic structural core of golden fractal gears.</p>
+<span class="material-symbols-outlined text-secondary shrink-0 pt-0.5" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- TERRA 01 GEN -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glow-border">
+<div class="relative h-48 w-full overflow-hidden rounded-lg">
+<img alt="TERRA 01 GEN" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Monochrome digital terminal with glowing green code lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMDZy88f7wK400Lp2Wk-pyr4v85cPvO-P_ar9Tz9tdYT3_MfCYCCziarsZclsMK7YtNXWM3vn13QwdUKceilGs2Y2-yOt294i6h1KlptGur-MjV6RYyiHmM-ZVo-PzNP_vL24RddU3gq1aoosyTxACiXFN0yZbexKSDPWHwOfKLmb9-HaDhRc5E5duvUfQAXPHennE6mB7__d8wmHsN8HQxCX--ce9MPIP0M3v2kon3cEwAjcU0MhhUjxQODLejSxwBZ5SYBWFFhGO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/95 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<h3 class="font-headline text-sm font-bold tracking-tight text-white truncate">TERRA 01 GEN</h3>
+</div>
+</div>
+</div>
+<!-- PULSE ENCRYPT -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glow-border">
+<div class="relative h-48 w-full overflow-hidden rounded-lg">
+<img alt="PULSE ENCRYPT" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Vibrant neon shield sculpture with geometric light patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVs6OEAq1gu-Kiqq3YVinh8Wh2Umwur7PKRqd27o6Rcb3WqDGNxyK7zkGLMIdkCjEbwnZGG5tc6hZskzdlNAb7zpyu8Ft8d8HoxZ_9gQUNNbeQ-RKUosa0GwfLnQoaSOwfUsnDTuHsfDEOkV5N2kod_0RRs64QYSgJ_iyHJm1qKbqXaH9uw09SIkKR85TadNJvBNTtm1ys2JH4dGY4uCWVpGk2z3k8wPPjhfyXqYmnuQl9yYQVpGy4nsX0rjm0CnyiAJPYt2Msh3y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/95 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<h3 class="font-headline text-sm font-bold tracking-tight text-white truncate">PULSE ENCRYPT</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- VOID ORB CORE -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glow-border">
+<div class="relative h-64 w-full overflow-hidden rounded-lg">
+<img alt="VOID ORB CORE" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Polished metallic dark sphere floating in a void space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN-hDwNY63l5RxWvmCH3-0KLgdzWcyBpGFq4dAXnoPZbregDQ3dOyXnbQLtXsdUE2SMNTLjlsHxQfEcNVrpmKEPtOZV-A1S-UfEcEAeK_Iyrt02z52KXVLI6Z5eaGkZrq6Y84qE5-ZcGTFITpq3FJjx0IF6UeeglKOZuAo9GdSv3cOHUt6k6HlSFsCqhnRuXLMDfWHBN9FSDiHXOPc1VHaQQ2fqH3SLjTD6Is78X5-RH8loM0-mOEPCB5Rnj4NQlHAqJ8CMTda2AuP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 glass-card px-3 py-1 rounded-full">
+<span class="font-label text-primary uppercase tracking-[0.1em] text-[10px]">ULTRA HD</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-label text-primary uppercase tracking-[0.1em] text-[10px] block mb-1">PROJECT 004</span>
+<h3 class="font-headline text-2xl font-bold tracking-tight text-white truncate">VOID ORB CORE</h3>
+</div>
+</div>
+<div class="p-4 flex justify-between items-start gap-4">
+<p class="text-on-surface-variant text-sm font-body leading-relaxed flex-1">Perfect obsidian sphere with refractive light edges.</p>
+<span class="material-symbols-outlined text-secondary shrink-0 pt-0.5" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<!-- Meta Stats Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="surface-container-low p-5 rounded-xl flex flex-col items-center justify-center text-center border border-white/5">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider mb-2">DATA SIZE</span>
+<span class="font-headline text-xl font-bold text-primary">4.2 GB</span>
+</div>
+<div class="surface-container-low p-5 rounded-xl flex flex-col items-center justify-center text-center border border-white/5">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider mb-2">LAST SYNC</span>
+<span class="font-headline text-xl font-bold text-secondary">02:44:01</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-slate-900/60 backdrop-blur-2xl border-t border-white/5">
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500/10 to-purple-500/10 text-cyan-300 rounded-2xl p-4 shadow-[0_0_20px_rgba(0,240,255,0.15)] ring-1 ring-cyan-500/20" href="#">
+<span class="material-symbols-outlined" data-icon="wb_iridescent" style="font-variation-settings: 'FILL' 1;">wb_iridescent</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</a>
+</nav>
+</body></html>

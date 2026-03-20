@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYNTHETIC ETHER - Dimensional Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffa8a3",
+                        "secondary-container": "#9900cf",
+                        "surface": "#070e1b",
+                        "outline-variant": "#414857",
+                        "on-surface": "#e2e8fb",
+                        "on-primary": "#005d63",
+                        "tertiary": "#ac89ff",
+                        "background": "#070e1b",
+                        "on-primary-container": "#005359",
+                        "on-tertiary": "#290067",
+                        "surface-variant": "#1c2639",
+                        "on-secondary-fixed": "#580079",
+                        "tertiary-dim": "#874cff",
+                        "surface-dim": "#070e1b",
+                        "primary": "#8ff5ff",
+                        "on-secondary-container": "#fff5fc",
+                        "on-primary-fixed": "#003f43",
+                        "on-error": "#490006",
+                        "on-tertiary-container": "#f8f1ff",
+                        "on-background": "#e2e8fb",
+                        "surface-tint": "#8ff5ff",
+                        "secondary-dim": "#bb00fc",
+                        "surface-container-lowest": "#000000",
+                        "primary-dim": "#00deec",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "inverse-on-surface": "#4e5565",
+                        "secondary": "#d674ff",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "surface-container-low": "#0c1322",
+                        "surface-container-high": "#172031",
+                        "primary-container": "#00eefc",
+                        "on-tertiary-fixed": "#1f0052",
+                        "error-container": "#9f0519",
+                        "primary-fixed-dim": "#00deec",
+                        "inverse-surface": "#f9f9ff",
+                        "surface-container": "#11192a",
+                        "on-surface-variant": "#a5abbd",
+                        "outline": "#6f7586",
+                        "on-secondary": "#390050",
+                        "inverse-primary": "#006a71",
+                        "on-secondary-fixed-variant": "#8400b3",
+                        "tertiary-container": "#7000ff",
+                        "error": "#ff716c",
+                        "surface-bright": "#222c41",
+                        "secondary-fixed-dim": "#eaaeff",
+                        "error-dim": "#d7383b",
+                        "surface-container-highest": "#1c2639",
+                        "primary-fixed": "#00eefc",
+                        "tertiary-fixed": "#bda1ff",
+                        "on-primary-fixed-variant": "#005e64",
+                        "secondary-fixed": "#f1c1ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #070e1b;
+            color: #e2e8fb;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(28, 38, 57, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .neomorph-inner {
+            box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .rim-light-cyan {
+            box-shadow: 0 0 20px rgba(143, 245, 255, 0.15), inset 0 0 10px rgba(143, 245, 255, 0.05);
+        }
+        .rim-light-purple {
+            box-shadow: 0 0 20px rgba(214, 116, 255, 0.15), inset 0 0 10px rgba(214, 116, 255, 0.05);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(143, 245, 255, 0.4);
+        }
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 min-h-[100dvh]">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/40 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 text-2xl" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-xl font-bold tracking-widest text-cyan-400 dark:text-cyan-300 font-headline uppercase">SYNTHETIC ETHER</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all duration-300" data-icon="search">search</span>
+<span class="material-symbols-outlined text-slate-400 hover:bg-white/5 p-2 rounded-full transition-all duration-300" data-icon="menu">menu</span>
+</div>
+</header>
+<main class="pt-16 pb-32">
+<!-- Hero Section -->
+<section class="relative min-h-[500px] flex flex-col items-center justify-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-[radial-gradient(circle_at_center,rgba(143,245,255,0.1)_0%,transparent_70%)]"></div>
+<img alt="High-definition 4K crystalline 3D structure with cyan light refraction" class="w-full h-full object-cover mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABcrt2nBlGkgOKHKpsXjtgBVBKsa65UkPX8dbw5cbPKeDhwr_uKIUxiBWFWwsWT2kCOnOEEOofEcf2K5f-rS3H3Yc1InRbvwiw1Z2wHnUwUj907LnW_6OIy8_UQ57cxqyeY9WZ5AfemAbYkW19XtAXdtyYegylOV2pqsmiJxWUYYDRMJRYYJEZx_fxb_PbxtE8kEHBetSH7Cce8zEzFRpDS7t5Da_uYXjSh6EpbTbWX0c80rVhjMkg5VsEADV-5SJFbqDziT8mgkAs"/>
+</div>
+<div class="relative z-10 text-center space-y-4">
+<span class="font-headline text-primary uppercase tracking-[0.2em] text-[10px] font-bold">Protocol Alpha 9</span>
+<h2 class="font-headline text-5xl font-bold text-on-surface leading-tight tracking-[-0.04em]">DIMENSIONAL<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">SOLUTIONS</span></h2>
+<p class="font-body text-on-surface-variant text-sm max-w-[280px] mx-auto leading-relaxed opacity-80">Forging the architecture of the next digital epoch through multi-layer intelligence.</p>
+<div class="pt-6 flex gap-3 justify-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-8 py-3 rounded-lg text-sm shadow-[0_0_20px_rgba(143,245,255,0.3)] hover:scale-105 transition-transform active:scale-95">
+                    INITIALIZE
+                </button>
+</div>
+</div>
+</section>
+<!-- Solution Sections -->
+<div class="px-6 space-y-16 mt-12">
+<!-- Generative AI -->
+<div class="group relative space-y-4">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden glass-card rim-light-cyan border border-white/5">
+<img alt="High-definition 4K neural network node 3D visualization" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoiGN9p4SY-KgDdetBbF9ciGYnhynIBL7rW2VV_5-mqu1jzQk4YfET9XdmthjkduwZ_M8QeUfBRDN5aGGcpQDOo6umw9qUANNKFBNzilwnV2Zg_EILqzQghOJ30fnOIvs_HMTZ3zWMB40gJ-tRckQk2ptYOeCn_WvoNPRXXTUc8aeTEpY9MMcYxoRPqMy5Er5oK7W3MN7EwvdWEmxPZxH3UZMETvkPYrCOSSEbmsZ3vcZtBV0-b16R3N9WvGXWQ2mCRha323ruBkqM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-headline text-[10px] text-primary tracking-widest uppercase mb-2 block">Core Logic</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface">Generative AI</h3>
+<p class="font-body text-on-surface-variant text-xs mt-2 leading-relaxed max-w-[240px]">Self-evolving algorithms architecting synthetic realities in real-time.</p>
+</div>
+</div>
+<div class="flex justify-between items-center px-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(143,245,255,0.8)]"></div>
+<span class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest">Active State</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="north_east">north_east</span>
+</div>
+</div>
+<!-- Web3 -->
+<div class="group relative space-y-4">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden glass-card rim-light-purple border border-white/5">
+<img alt="High-definition 4K glowing crystalline chain structure with purple highlights" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6b4HHvlONpP6I44pwROwC3sUl7CkDvlxpXLCq1WGBhzeasYBopA7x46oDyW5Txx1rWnmgxcMa8QY2RwAGB2ZYIW9Kq0EcQikRTFEH-wFs99jJwcl0UlKYSZM1YqHxuwgg4TAgpz1shxAARb6c66TnlqsgrOp8P3L92gedI2qdQeimfoUDsYg00yTLXe5K3DsFRX-POhjEFcVUroaXXEwt5gOp9WMUeAKE5A6mt37x68ResooTanf1qUB0rYtulTQThJUoGXPMnTd5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-headline text-[10px] text-secondary tracking-widest uppercase mb-2 block">Trust Layer</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface">Web3</h3>
+<p class="font-body text-on-surface-variant text-xs mt-2 leading-relaxed max-w-[240px]">Decentralized immutable foundations for the sovereign internet.</p>
+</div>
+</div>
+<div class="flex justify-between items-center px-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(214,116,255,0.8)]"></div>
+<span class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest">Encrypted</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="north_east">north_east</span>
+</div>
+</div>
+<!-- Spatial Computing -->
+<div class="group relative space-y-4">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden glass-card rim-light-cyan border border-white/5">
+<img alt="High-definition 4K floating geometric glass shards in digital space" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh3RT7OkaSCK49eke_U62ve_fMetzY966JfpbXFjbkUvbZj9Ghd__tkSHrc_EnCl4zz8GFBvkMFp4Qtqf3hGG6sX481HhiC78bfjPWPQQEz3rb5CE5Eb4JSoAhteUkGpkrz4FsM22KkIscOqBNKDWfBjwOu_QITQCmQo4GUCy9fFeX38ca7360rqJ-Bm-13GNY3sNSZkbPJohVVWlzKDi3PU5AIktTD3xh4ldl1MfyW0sVwTRx6_jITz_PzCUfLtfCLtgCpA1rgkyG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-headline text-[10px] text-tertiary tracking-widest uppercase mb-2 block">Reality Merge</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface">Spatial Computing</h3>
+<p class="font-body text-on-surface-variant text-xs mt-2 leading-relaxed max-w-[240px]">Breaking the screen barrier to inhabit data-rich environments.</p>
+</div>
+</div>
+<div class="flex justify-between items-center px-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(172,137,255,0.8)]"></div>
+<span class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest">Immersive</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="north_east">north_east</span>
+</div>
+</div>
+<!-- Technical Breakdown Bento Section -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 glass-card p-6 rounded-2xl rim-light-cyan border border-white/5 neomorph-inner">
+<h4 class="font-headline text-lg font-bold text-on-surface mb-2">Omni Layer Integration</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Cross protocol synergy between our core pillars ensures maximum scalability and zero friction.</p>
+</div>
+<div class="glass-card p-5 rounded-2xl rim-light-purple flex flex-col justify-between aspect-square border border-white/5 neomorph-inner">
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+<div>
+<span class="block font-headline text-2xl font-bold text-white">99.9%</span>
+<span class="text-[10px] uppercase text-on-surface-variant font-label tracking-tighter">Throughput</span>
+</div>
+</div>
+<div class="glass-card p-5 rounded-2xl rim-light-cyan flex flex-col justify-between aspect-square border border-white/5 neomorph-inner">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<div>
+<span class="block font-headline text-2xl font-bold text-white">ZERO</span>
+<span class="text-[10px] uppercase text-on-surface-variant font-label tracking-tighter">Vulnerability</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-slate-900/80 backdrop-blur-2xl rounded-t-2xl border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-cyan-500/10 text-cyan-300 rounded-xl px-4 py-2 border border-cyan-500/20 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+<span class="material-symbols-outlined text-2xl" data-icon="wb_iridescent" style="font-variation-settings: 'FILL' 1;">wb_iridescent</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] mt-1 font-bold">Solutions</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="layers">layers</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] mt-1">Matrix</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 p-2 hover:text-cyan-200 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="terminal">terminal</span>
+<span class="font-label text-[10px] uppercase tracking-[0.1em] mt-1">Console</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, height=844, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffa8a3",
+              "secondary-container": "#9900cf",
+              "surface": "#070e1b",
+              "outline-variant": "#414857",
+              "on-surface": "#e2e8fb",
+              "on-primary": "#005d63",
+              "tertiary": "#ac89ff",
+              "background": "#070e1b",
+              "on-primary-container": "#005359",
+              "on-tertiary": "#290067",
+              "surface-variant": "#1c2639",
+              "on-secondary-fixed": "#580079",
+              "tertiary-dim": "#874cff",
+              "surface-dim": "#070e1b",
+              "primary": "#8ff5ff",
+              "on-secondary-container": "#fff5fc",
+              "on-primary-fixed": "#003f43",
+              "on-error": "#490006",
+              "on-tertiary-container": "#f8f1ff",
+              "on-background": "#e2e8fb",
+              "surface-tint": "#8ff5ff",
+              "secondary-dim": "#bb00fc",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#00deec",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-on-surface": "#4e5565",
+              "secondary": "#d674ff",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "surface-container-low": "#0c1322",
+              "surface-container-high": "#172031",
+              "primary-container": "#00eefc",
+              "on-tertiary-fixed": "#1f0052",
+              "error-container": "#9f0519",
+              "primary-fixed-dim": "#00deec",
+              "inverse-surface": "#f9f9ff",
+              "surface-container": "#11192a",
+              "on-surface-variant": "#a5abbd",
+              "outline": "#6f7586",
+              "on-secondary": "#390050",
+              "inverse-primary": "#006a71",
+              "on-secondary-fixed-variant": "#8400b3",
+              "tertiary-container": "#7000ff",
+              "error": "#ff716c",
+              "surface-bright": "#222c41",
+              "secondary-fixed-dim": "#eaaeff",
+              "error-dim": "#d7383b",
+              "surface-container-highest": "#1c2639",
+              "primary-fixed": "#00eefc",
+              "tertiary-fixed": "#bda1ff",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-fixed": "#f1c1ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { background-color: #070e1b; color: #e2e8fb; font-family: 'Manrope', sans-serif; }
+      .glass-card { background: rgba(28, 38, 57, 0.4); backdrop-filter: blur(20px); }
+      .neomorph-inner {
+        box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.05), inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .text-glow { text-shadow: 0 0 15px rgba(143, 245, 255, 0.5); }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      body { min-height: max(884px, 100dvh); }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cyan-400 dark:text-cyan-300" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-xl font-bold tracking-widest text-cyan-400 dark:text-cyan-300 font-headline uppercase">SYNTHETIC ETHER</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/5 transition-all duration-300 text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/5 transition-all duration-300 text-slate-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-5 space-y-12">
+<!-- Hero Section -->
+<section class="relative pt-4 flex flex-col items-center">
+<div class="absolute -top-10 -right-20 w-80 h-80 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-20 w-64 h-64 bg-secondary/10 blur-[80px] rounded-full pointer-events-none"></div>
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full animate-pulse blur-2xl"></div>
+<div class="relative w-full h-full rounded-full border border-outline-variant/30 flex items-center justify-center p-1 overflow-hidden">
+<img alt="Neural Sphere" class="w-full h-full object-cover rounded-full mix-blend-screen opacity-90 scale-105" data-alt="Complex 4K ultra-high definition data visualization glowing neural sphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ODe_zh9H-oxUmW_RBBmMLGr1A8AaUJposHSISjQtA7XXnBni2EomqYx3-y6SHNYiSL0Ir-HLQAGOqVQYkh1baqIKSSQ6loNYiPSAHj6aL9x6ho-3ZH56Jo9GioqMaeIaD18UgvFNDDdGYVWJcYnWrksrnPr2C90euD-V8ZH9aUmEvVpmWMsa3VT1D3MMXiy9BFn6e2T7auoNjZiVnOqYwXoDhGMvYipiUrVqLJsqQe4wYI0H-U68JsHKFhxdf-R0CPNqMRGG6a2h"/>
+</div>
+</div>
+<div class="mt-10 text-center space-y-3 px-2">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-[10px] font-bold">CORE NEURAL ENGINE v4.2</span>
+<h2 class="font-headline text-4xl font-bold text-on-surface -tracking-[0.02em] leading-[1.1]">SYNTHESIZING REALITY</h2>
+<p class="font-body text-on-surface-variant max-w-[300px] mx-auto text-sm leading-relaxed">Encoding the void through recursive crystalline intelligence architectures.</p>
+</div>
+<div class="mt-10 w-full px-2">
+<button class="w-full py-4 rounded-lg bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold tracking-widest text-sm shadow-[0_0_20px_rgba(0,238,252,0.3)] active:scale-[0.98] transition-all duration-300">
+                    INITIALIZE SYNC
+                </button>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="surface-container-high rounded-xl p-5 border-l-2 border-primary/40 neomorph-inner">
+<p class="font-label text-[10px] uppercase tracking-widest text-primary-dim mb-1">LATENCY</p>
+<h3 class="font-headline text-2xl font-bold">0.02ms</h3>
+<div class="w-full h-1 bg-surface-variant mt-3 rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-primary shadow-[0_0_8px_rgba(143,245,255,0.8)]"></div>
+</div>
+</div>
+<div class="surface-container-high rounded-xl p-5 border-l-2 border-secondary/40 neomorph-inner">
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-1">SYNAPSE</p>
+<h3 class="font-headline text-2xl font-bold">14.8P</h3>
+<div class="w-full h-1 bg-surface-variant mt-3 rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-secondary shadow-[0_0_8px_rgba(214,116,255,0.8)]"></div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="space-y-6">
+<div class="flex justify-between items-end px-1">
+<h3 class="font-headline text-xl font-bold tracking-tight">VOID PROTOCOL</h3>
+<span class="font-label text-[10px] text-primary underline cursor-pointer">VIEW ALL</span>
+</div>
+<div class="space-y-4">
+<div class="group flex items-center gap-5 p-4 surface-container-low rounded-xl hover:bg-surface-container-high transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0">
+<img alt="Abstract 1" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Ultra-high definition 4K geometric crystalline abstract blue pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRVScXz1aP_Ocj50M-c6B5Nl22-5oNJNEF1aabgFzcVJK5KQVvr45AOMnb5yYIsgIHKaAZ3BAxBaSjmwIQAZcO5ObrsoIJGiRJcPKndk9PyR7kHT5K1HqGiimwkZPl_7_q_1pP1oOhwgX6ldnrH6MRvId0N88umkSovHXIb6DR4i7oZs3HdHRgIkpyqqeianK01SFM_WUu0dxODNUlTMYyWVXUuKwif-beyOWJ13cJVehxU2vKXpOkVzGEtqzaoVVw2ZJ9RJenLHxm"/>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-bold text-sm truncate">Crystalline Mesh Expansion</h4>
+<p class="text-xs text-on-surface-variant truncate">Automated node resolution logic</p>
+</div>
+<span class="material-symbols-outlined flex-shrink-0 text-on-surface-variant text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="group flex items-center gap-5 p-4 surface-container-low rounded-xl hover:bg-surface-container-high transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0">
+<img alt="Abstract 2" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Ultra-high definition 4K dark obsidian geometric pattern with purple glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOoauZGWGw9CfriYXLWDcVSnV3g7ebBR2aIKue2XWLSF44WZSo-pYHglj402oypwyN6erNwDdJlDbuMElFbAnqUPR942VsJtAJ20ghit7MtUAKnHoKPxUlSrm-Zf4k0RfRFut2A2-xDT7lgRixu_jfaI5m-9rIOho0bO1B_S2N59Uo79wQU8SJQLjXItBj82AbTz3-1Oeex5UfL4sKflYHdWV-YdJ12I-H60o6Tt-m4KnpjNJmq6OwD6sRPnAzXB4uhDW1CDvfZKf8"/>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-bold text-sm truncate">Obsidian Shard Processing</h4>
+<p class="text-xs text-on-surface-variant truncate">Non-linear data filtration</p>
+</div>
+<span class="material-symbols-outlined flex-shrink-0 text-on-surface-variant text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="space-y-8">
+<div class="text-center px-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight">ARCHITECTS OF THE VOID</h3>
+<p class="font-body text-xs text-on-surface-variant mt-2 tracking-widest">THE FACES BEHIND THE MACHINE</p>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Team Member 1 -->
+<div class="relative w-full aspect-[4/5] surface-container-highest rounded-2xl overflow-hidden group">
+<img alt="Architect Alpha" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Ultra-high definition 4K 3D high-fidelity portrait of futuristic technologist Alpha" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw7NfJ9SRvy2BngcRWY2kO1G1bM8cS_5-z8uUtAEb2Cu9DaV2mMXsrZzG1jWse_yWcsQnIwwgigPER9ET3lmJdnv60MOEl0bhSY5tLlm2HMvLLD_qqqOCo1ffA1Ch7OdKFuMmCl43Qdz7rlRrFox6pRajXQ7EjV-OUjYztBAds3dW1js3KflFJRml1QfiW4UfkJStTdVFfTfnLSLor4CWqH83tzoNC-9sy1LWlwJzIcCor6NTi9a6Z5aBAKVehmfXmpGfZ2cOivDo4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-label text-[10px] text-primary font-bold tracking-widest">LEAD SYNAPSE</span>
+<h4 class="font-headline text-xl font-bold text-white uppercase mt-1 tracking-wider">AETHER X1</h4>
+<div class="mt-3 flex gap-2">
+<span class="w-8 h-[2px] bg-primary"></span>
+<span class="w-4 h-[2px] bg-white/20"></span>
+<span class="w-4 h-[2px] bg-white/20"></span>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="relative w-full aspect-[4/5] surface-container-highest rounded-2xl overflow-hidden group">
+<img alt="Architect Beta" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Ultra-high definition 4K 3D high-fidelity portrait of futuristic technologist Beta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG2BcvbfpLgZH2t0xTusmSX8UmtiK0cBgsuvMdHr07S3T5PHxsMowNJ3ZsYYKnPgS-6l47IsU00_JeDDnWih8EVG3LfwXBKHMG7CSmGbVJpIrJyT0UsvklINvhMqVafOLZR6q5P15eEUjcmVUrD8uJLs8hHPSR9kCbu_9VJ0PRsE178-VI-0y2YC_zwZw64vvzvLvsbCczayjQJtLR_4c69ktmaQ3YjBElaymmrABWZK0XbderksHB5UKwOzhZW9PmRr6sOVUtSyQO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-label text-[10px] text-secondary font-bold tracking-widest">VOID DESIGNER</span>
+<h4 class="font-headline text-xl font-bold text-white uppercase mt-1 tracking-wider">LUNA SHADE</h4>
+<div class="mt-3 flex gap-2">
+<span class="w-4 h-[2px] bg-white/20"></span>
+<span class="w-8 h-[2px] bg-secondary"></span>
+<span class="w-4 h-[2px] bg-white/20"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="pb-12 px-1">
+<div class="surface-container-highest rounded-2xl p-8 text-center border border-primary/10 relative overflow-hidden">
+<div class="absolute -top-20 -left-20 w-40 h-40 bg-tertiary/20 blur-[60px] rounded-full"></div>
+<h3 class="font-headline text-2xl font-bold mb-4">READY FOR DESCENT?</h3>
+<p class="font-body text-sm text-on-surface-variant mb-8 px-4">Access the underlying layers of the neural network ecosystem today.</p>
+<div class="flex flex-col gap-4">
+<button class="w-full py-4 bg-white text-black font-bold text-xs tracking-widest rounded-lg uppercase active:scale-[0.98] transition-transform">ENTER ECOSYSTEM</button>
+<button class="w-full py-4 bg-white/5 text-white font-bold text-xs tracking-widest rounded-lg border border-white/10 uppercase active:scale-[0.98] transition-transform">DOCUMENTATION</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-2 bg-slate-900/80 backdrop-blur-2xl rounded-t-2xl shadow-[0_-4px_20px_rgba(0,240,255,0.1)]">
+<!-- Home (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-200 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label text-[10px] uppercase tracking-widest">HOME</span>
+</div>
+<!-- ETHER (Active) -->
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500/20 to-purple-500/20 text-cyan-300 rounded-xl p-3 shadow-[0_0_15px_rgba(0,240,255,0.3)] transition-all scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="wb_iridescent">wb_iridescent</span>
+<span class="font-label text-[10px] uppercase tracking-widest">ETHER</span>
+</div>
+<!-- VOID (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-200 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="layers">layers</span>
+<span class="font-label text-[10px] uppercase tracking-widest">VOID</span>
+</div>
+<!-- CORE (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-200 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="terminal">terminal</span>
+<span class="font-label text-[10px] uppercase tracking-widest">CORE</span>
+</div>
+</nav>
+</body></html>

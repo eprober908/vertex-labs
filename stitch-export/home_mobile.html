@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffa8a3",
+              "secondary-container": "#9900cf",
+              "surface": "#070e1b",
+              "outline-variant": "#414857",
+              "on-surface": "#e2e8fb",
+              "on-primary": "#005d63",
+              "tertiary": "#ac89ff",
+              "background": "#070e1b",
+              "on-primary-container": "#005359",
+              "on-tertiary": "#290067",
+              "surface-variant": "#1c2639",
+              "on-secondary-fixed": "#580079",
+              "tertiary-dim": "#874cff",
+              "surface-dim": "#070e1b",
+              "primary": "#8ff5ff",
+              "on-secondary-container": "#fff5fc",
+              "on-primary-fixed": "#003f43",
+              "on-error": "#490006",
+              "on-tertiary-container": "#f8f1ff",
+              "on-background": "#e2e8fb",
+              "surface-tint": "#8ff5ff",
+              "secondary-dim": "#bb00fc",
+              "surface-container-lowest": "#000000",
+              "primary-dim": "#00deec",
+              "tertiary-fixed-dim": "#b190ff",
+              "inverse-on-surface": "#4e5565",
+              "secondary": "#d674ff",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "surface-container-low": "#0c1322",
+              "surface-container-high": "#172031",
+              "primary-container": "#00eefc",
+              "on-tertiary-fixed": "#1f0052",
+              "error-container": "#9f0519",
+              "primary-fixed-dim": "#00deec",
+              "inverse-surface": "#f9f9ff",
+              "surface-container": "#11192a",
+              "on-surface-variant": "#a5abbd",
+              "outline": "#6f7586",
+              "on-secondary": "#390050",
+              "inverse-primary": "#006a71",
+              "on-secondary-fixed-variant": "#8400b3",
+              "tertiary-container": "#7000ff",
+              "error": "#ff716c",
+              "surface-bright": "#222c41",
+              "secondary-fixed-dim": "#eaaeff",
+              "error-dim": "#d7383b",
+              "surface-container-highest": "#1c2639",
+              "primary-fixed": "#00eefc",
+              "tertiary-fixed": "#bda1ff",
+              "on-primary-fixed-variant": "#005e64",
+              "secondary-fixed": "#f1c1ff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 38, 57, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .neon-glow-primary {
+        box-shadow: 0 0 15px rgba(143, 245, 255, 0.3);
+      }
+      body {
+        background-color: #070e1b;
+        color: #e2e8fb;
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="min-h-screen max-w-[390px] mx-auto overflow-x-hidden bg-surface selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cyan-400 dark:text-cyan-300" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-xl font-bold tracking-widest text-cyan-400 dark:text-cyan-300 font-headline uppercase">SYNTHETIC ETHER</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:bg-white/5 transition-all duration-300 p-2 rounded-lg active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pb-28 pt-16">
+<!-- Hero Section -->
+<section class="relative w-full h-[540px] flex items-center justify-center overflow-hidden bg-surface-container-lowest">
+<!-- Background mirror surface -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface-container-low/20 to-surface"></div>
+<!-- 3D Sphere Render Placeholder -->
+<div class="relative z-10 w-80 h-80 rounded-full flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/40 via-purple-600/40 to-cyan-300/40 blur-3xl animate-pulse"></div>
+<div class="w-64 h-64 rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary opacity-90 shadow-[0_0_80px_rgba(143,245,255,0.4)] relative overflow-hidden group border border-white/10">
+<!-- Reflection layer -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.5),transparent_60%)] z-20"></div>
+<img alt="Ultra HD glowing glass sphere" class="w-full h-full object-cover mix-blend-overlay scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi-ezb6pcHdZBKmqcnwBdBVSnIWTr8PjJSMY3GJTLdOkc0HA2yhlH03YMbJ_vvbN9rvvtae1-nrpd7Y_TLFBVncgci_gyaew_ff6xerFG8O3fA3krRKUgOi0iIpYfwP16qZTJfPHgcqiDHsjSiCjT08pXAnDJyh-8BaR6yTv7sjui8-F-96JFNnp3O4xPbLvBaVX2EoIW0SsWxLiWfTNzqYD8o1aNKtubaEEBKzFeafo_WeQuTWGr4uuXyaXCg8IUWlZV1c9QngkfE"/>
+</div>
+</div>
+<!-- Hero Text Overlay -->
+<div class="absolute bottom-12 left-0 w-full px-6 z-20">
+<span class="font-label text-primary text-[10px] tracking-[0.2em] uppercase mb-2 block">System Status: Optimal</span>
+<h1 class="font-headline text-4xl font-bold tracking-tight leading-[1.1] mb-6">TRANSCEND THE<br/>BIOLOGICAL LIMIT</h1>
+<div class="flex gap-3">
+<button class="px-8 py-3.5 rounded-lg bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-bold text-sm shadow-[0_0_20px_rgba(0,240,255,0.4)] active:scale-95 transition-all uppercase tracking-wider">
+                        INITIATE SYNC
+                    </button>
+</div>
+</div>
+</section>
+<!-- SOLUTIONS MATRIX Bento Grid -->
+<section class="px-6 py-12">
+<div class="mb-10">
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-surface uppercase">SOLUTIONS MATRIX</h2>
+<div class="h-1 w-12 bg-primary mt-2"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Neural Architecture -->
+<div class="col-span-2 glass-card p-6 rounded-xl flex flex-col justify-between h-52 group hover:bg-surface-container-highest transition-all duration-300 border border-white/5">
+<div>
+<span class="material-symbols-outlined text-secondary mb-4 block scale-125" data-icon="neurology">neurology</span>
+<h3 class="font-headline font-bold text-xl">Neural Architecture</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed font-body">Synthetic synapse routing for high-density compute environments.</p>
+</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Web3 -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-48 hover:bg-surface-container-highest transition-all duration-300 border border-white/5">
+<span class="material-symbols-outlined text-primary scale-110" data-icon="token">token</span>
+<div>
+<h3 class="font-headline font-bold text-lg mb-1">Web3</h3>
+<span class="text-[9px] font-label text-primary/70 tracking-[0.15em] uppercase">DECENTRALIZED CORE</span>
+</div>
+</div>
+<!-- Spatial UI -->
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-48 hover:bg-surface-container-highest transition-all duration-300 border border-white/5">
+<span class="material-symbols-outlined text-tertiary scale-110" data-icon="view_in_ar">view_in_ar</span>
+<div>
+<h3 class="font-headline font-bold text-lg mb-1">Spatial UI</h3>
+<span class="text-[9px] font-label text-tertiary/70 tracking-[0.15em] uppercase">DIMENSIONAL UX</span>
+</div>
+</div>
+<!-- Mobile -->
+<div class="col-span-2 glass-card p-6 rounded-xl flex items-center justify-between hover:bg-surface-container-highest transition-all duration-300 border border-white/5">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary scale-110" data-icon="smartphone">smartphone</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg uppercase tracking-wide">Mobile</h3>
+<p class="text-[10px] font-body text-on-surface-variant uppercase tracking-widest mt-1">Edge compute optimization</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- THE EXTRACTION PROCESS -->
+<section class="px-6 py-16 bg-surface-container-low/30">
+<div class="mb-12 text-center">
+<span class="font-label text-secondary text-[10px] tracking-[0.25em] uppercase">Phase Execution</span>
+<h2 class="font-headline text-3xl font-bold tracking-tight mt-2 uppercase">THE EXTRACTION PROCESS</h2>
+</div>
+<div class="space-y-16 relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 top-4 bottom-4 w-[1px] bg-gradient-to-b from-primary via-secondary to-transparent opacity-30"></div>
+<!-- Step 1 -->
+<div class="relative pl-12">
+<div class="absolute left-2.5 top-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_12px_rgba(143,245,255,1)]"></div>
+<div class="flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl bg-slate-900 overflow-hidden relative group border border-white/10 shadow-2xl">
+<img alt="Ultra HD digital stream mapping render" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhzNIt4PVSs56o4JqzI44p3Kg8oTY2WbBQIfQHWrtBnas6lD5q1GLjK9SDyf21Te4T-A3Bagu86kw7wvqK0lSO71qVfVzaloffh8SQxQRgExAXfXai8zVy3nhEEHy5vXnwsmHLrOUZFqTCAU7ntUcclNWgXerIjPrsBTrAnhvysjTWUCJMcX7woSA6JHEQFSE7rR-ZIO70DGPmkHaF06r4mp3_DfI3NsxpKLncdX-QgjJic1LqZ8hs413sNl1DLmguZScYN8Paug2Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div>
+<span class="font-label text-primary text-[10px] mb-2 block tracking-[0.1em] uppercase">01 / INGESTION</span>
+<h4 class="font-headline font-bold text-xl">Data Stream Mapping</h4>
+<p class="font-body text-base text-on-surface-variant mt-3 leading-relaxed">Capturing raw ether signals from the decentralized mesh network with sub-millisecond latency.</p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-12">
+<div class="absolute left-2.5 top-0 w-3 h-3 rounded-full bg-secondary shadow-[0_0_12px_rgba(214,116,255,1)]"></div>
+<div class="flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl bg-slate-900 overflow-hidden relative group border border-white/10 shadow-2xl">
+<img alt="Ultra HD neural filter rendering" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-U2IEiBY2Uatb-pvSxbcvugW1nywb4kSwfS2eKKYoqgt_OFmJ0gRGv10eQ6FQzTrrZ6jUbEIU_XepDRL1oXIIXnAStcD6kkqSoOBxXv1KOrg6mUNCVGfPmtSs4Ek22n-UbsL64FF-ak2s25h06tOhJ0rczJOIqg363lpP_bmlRNrATqcH9udTKmSaoWTGjaQ45Gijk2W_XkoJDgsiAwQh57FIv9AJIdEbiDazZe39sh8iFpw4wYIDGA0nqVLY0nl-FHslUXK3jfkV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div>
+<span class="font-label text-secondary text-[10px] mb-2 block tracking-[0.1em] uppercase">02 / REFINEMENT</span>
+<h4 class="font-headline font-bold text-xl">Neural Filtering</h4>
+<p class="font-body text-base text-on-surface-variant mt-3 leading-relaxed">Distilling core intelligence from noise using high-frequency crystalline logic gates.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="px-6 py-20 text-center">
+<div class="p-10 rounded-2xl bg-gradient-to-br from-surface-container-high to-surface-container-low shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-bold mb-6 tracking-tight uppercase">READY TO ETHERIZE?</h2>
+<p class="font-body text-on-surface-variant text-base mb-10 leading-relaxed">Join 12.4k entities already synchronized with the global network core.</p>
+<button class="w-full py-5 rounded-xl bg-surface text-primary border border-primary/30 font-bold tracking-[0.2em] uppercase text-xs hover:bg-primary hover:text-on-primary-container transition-all shadow-[0_0_20px_rgba(143,245,255,0.1)] active:scale-95">
+                        ESTABLISH UPLINK
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-2 bg-slate-900/80 backdrop-blur-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.8)] border-t border-white/5 rounded-t-3xl">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500/25 to-purple-500/25 text-cyan-300 rounded-2xl px-5 py-3 shadow-[0_0_20px_rgba(0,240,255,0.3)] border border-cyan-400/20 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label uppercase text-[9px] tracking-[0.15em] mt-1.5 font-bold">HOME</span>
+</a>
+<!-- Solutions -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-3 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="wb_iridescent">wb_iridescent</span>
+<span class="font-label uppercase text-[9px] tracking-[0.15em] mt-1.5">CORE</span>
+</a>
+<!-- Layers -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-3 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label uppercase text-[9px] tracking-[0.15em] mt-1.5">MATRIX</span>
+</a>
+<!-- Terminal -->
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-3 hover:text-cyan-200 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-label uppercase text-[9px] tracking-[0.15em] mt-1.5">EXEC</span>
+</a>
+</nav>
+</body></html>
